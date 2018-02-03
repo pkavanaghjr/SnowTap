@@ -1,0 +1,1762 @@
+body{
+	/*background-color:rgba(62,69,76,1);*/
+	overflow: hidden;
+	background-image: url("../images/backgroundCloudsBlue.jpg");
+	background-size: 100% 100vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+}
+
+/* RGB VALUES
+DARK BLUE
+background-color:rgba(33,133,196,1);
+
+LIGHT BLUE
+background-color:rgba(133,203,240,1)
+
+TAP BLACK
+background-color:rgba(62,69,76,1)
+*/
+
+
+#snowCanvas {
+	width:100%;
+	height:100%;
+	position: fixed;
+	z-index: 4;
+	opacity: 0;
+	pointer-events:none;
+}
+
+.clear{
+	clear:both;
+}
+
+ .avoidPointer{
+	pointer-events:none;	
+}
+
+/*============================================= FMA ===================*/
+#fma{
+	width:100%;
+	height: 100vh;
+	position: relative;
+}
+
+#fma div{
+	pointer-events:none;	
+}
+
+#loadColor{
+	width:100%;
+	height:100%;
+	background-color: #3E454C;
+	z-index: 100px;
+}
+
+/*================================================ NAVIGATION ===================*/
+ #navSection{
+	height:100vh;
+	z-index:100;
+	left:-125px;
+	position:fixed;
+}
+
+#navigation{
+	width:125px;
+	display:block;
+	z-index:100;
+	position:relative;
+}
+
+#logo{
+	cursor:pointer;
+	font-size:16px;
+	line-height:50px;	
+	margin-bottom:3%;
+	margin-left:3%;
+	color:#2185C4;	
+	transition:color .5s;	
+	-moz-transition:color .5s;	
+	-o-transition:color .5s;	
+	-webkit-transition:color .5s;	
+}
+
+#logoSpan{
+	font-family: "josefinRegular", helvetica;
+	color:#fff;
+	margin-left:2%;
+}
+
+#navList nav{
+	margin-bottom:3%;
+	margin-left:5%;
+}
+
+#navList h2{
+	font-size:22px;
+	line-height:50px;
+	color:#2185C4;
+	transition:color .5s;	
+	-moz-transition:color .5s;	
+	-o-transition:color .5s;	
+	-webkit-transition:color .5s;		
+}
+
+#navList nav:hover{
+	color:#fff;
+	transition:color .5s;	
+	-moz-transition:color .5s;	
+	-o-transition:color .5s;	
+	-webkit-transition:color .5s;	
+}
+
+#logo h2:hover{
+	color:#fff;
+	transition:color .5s;	
+	-moz-transition:color .5s;	
+	-o-transition:color .5s;	
+	-webkit-transition:color .5s;	
+}
+
+#navList h1{
+	font-size:18px;
+	line-height:30px;
+	color:#2185C4;
+	transition:color .5s;	
+	-moz-transition:color .5s;	
+	-o-transition:color .5s;	
+	-webkit-transition:color .5s;	
+}
+
+#navList h1:hover{
+	color:#fff;
+	transition:color .5s;	
+	-moz-transition:color .5s;	
+	-o-transition:color .5s;	
+	-webkit-transition:color .5s;	
+}
+
+.activeNav{
+	color:#fff;
+}
+
+/*================================================ HIDDEN CONTENT ===================*/
+ .whiteTitle{
+	color:#fff;
+ }
+
+ .closeButton {
+  	color:#3E454C;	
+	position:absolute; 
+	top:3%;
+	right:3%;
+	z-index: 2;
+}
+
+ .closeButton h2{
+ 	font-family: 'arborcrestHeavy';
+ 	font-size: 18px;
+	color:#3E454C;
+	cursor:pointer;	
+ 	opacity: 0;		
+	transition:color .5s;
+	-o-transition:color .5s;
+	-moz-transition:color .5s;
+	-webkit-transition:color .5s;
+}
+
+.closeButton h2:hover{
+	color:#fff;
+	transition:color .5s;
+	-o-transition:color .5s;
+	-moz-transition:color .5s;
+	-webkit-transition:color .5s;
+}
+
+.moreButton{
+	width:47%;
+	height:4vh;
+	background-color:#2185C4;
+	position: absolute;
+	bottom:5%;
+	right:5%;
+	border-radius: 3px;
+	opacity: 0;
+	cursor:pointer;
+	z-index: 50;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+.moreButton:hover{
+	background-color:#3E454C;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+.moreButton h6{
+	color:#fff;
+	line-height: 4vh;
+	text-align: center;
+}
+
+.buyButton{
+	width:47%;
+	height:4vh;
+	background-color:#2185C4;
+	border-radius: 3px;
+	float:right;
+	opacity: 0;
+	z-index: 50;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+/*.buyButton:hover{
+	background-color:#3E454C;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+*/
+.buyButton h6{
+	color:#fff;
+	line-height: 4vh;
+	text-align: center;
+}
+
+.doneButton{
+	width:100%;
+	height:4vh;
+	background-color:#3E454C;
+	border-radius: 3px;
+	opacity: 0;
+	float:left;
+	cursor:pointer;
+	z-index: 50;
+	margin-top:5%;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;	
+}
+
+.doneButton:hover{
+	background-color:#2185C4;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+.doneButton h3{
+	font-size:14px;
+	color:#fff;
+	line-height: 4vh;
+	text-align: center;
+}
+
+.moreContent{
+	opacity:0;
+}
+
+.moreList{
+	margin:5% 0% 5% 0%;
+}
+
+.moreList li{
+	margin-bottom:3%;
+}
+
+.bullet{
+	width:8px;
+	height:8px;
+	background:url(../images/bulletPoint.png) center no-repeat;
+	z-index: 2;
+	display: inline-block;
+	margin-right: 1%;
+	line-height: 2px;
+}
+
+.boldMore{
+	font-family:josefinBold, Helvetica, Arial, sans-serif;
+	font-size:18px;
+}
+
+/*================================================ SECTIONS ===================*/
+.snowflakeOne{
+	z-index: 4;
+	position: absolute;
+	width:20%;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;	
+	cursor: pointer;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+.snowflakeOne:hover{
+ 	width:21%;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;
+ }
+
+.snowflakeTwo{
+	z-index: 2;
+	cursor: pointer;	
+	width:15%;	
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;	
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+ .snowflakeTwo:hover{
+ 	width:16%;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;
+ }
+
+.snowflakeThree{
+	z-index: 2;
+	cursor: pointer;
+	width:10%;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;	
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+ .snowflakeThree:hover{
+ 	width:10.5%;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;
+ }
+
+/*================================================ ABOUT SECTION ===================*/
+#aboutCloudOne{
+	z-index: 2;
+	position: absolute;
+	width:20%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity:1;
+	top:30%;
+	left:-20%;
+}
+
+#aboutCloudTwo{
+	z-index: 1;
+	position: absolute;
+	width:8%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+#aboutCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:12%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+}
+
+#aboutCloudFour{
+	z-index: 4;
+	position: absolute;
+	width:40%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+}
+
+#aboutCloudFive{
+	z-index: 2;
+	position: absolute;
+	width:35%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+#aboutCloudSix{
+	z-index: 4;
+	position: absolute;
+	width:55%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+/*================================================ CRISIS SECTION ===================*/
+#crisisCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:30%;
+}
+
+#crisisCloudTwo{
+	z-index: 1;
+	position: absolute;
+	width:20%;
+}
+
+#crisisCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:20%;
+}
+
+#crisisCloudFour{
+	z-index: 4;
+	position: absolute;
+	width:60%;
+}
+
+#crisisCloudFive{
+	z-index: 2;
+	position: absolute;
+	width:40%;
+}
+
+#crisisCloudSix{
+	z-index: 2;
+	position: absolute;
+	width:60%;
+}
+
+
+/*================================================ PRODUCT SECTION ===================*/
+#productCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:30%;
+}
+
+#productCloudTwo{
+	z-index: 1;
+	position: absolute;
+	width:25%;
+}
+
+#productCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:20%;
+}
+
+#productCloudFour{
+	z-index: 4;
+	position: absolute;
+	width:60%;
+}
+
+#productCloudFive{
+	z-index: 2;
+	position: absolute;
+	width:55%;
+}
+
+#productCloudSix{
+	z-index: 2;
+	position: absolute;
+	width:40%;
+}
+
+
+/*================================================ CAUSE SECTION ===================*/
+#causeCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:40%;
+}
+
+#causeCloudTwo{
+	z-index: 1;
+	position: absolute;
+	width:25%;
+}
+
+#causeCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:20%;
+}
+
+#causeCloudFour{
+	z-index: 4;
+	position: absolute;
+	width:60%;
+	opacity:1;
+}
+
+#causeCloudFive{
+	z-index: 2;
+	position: absolute;
+	width:50%;
+}
+
+#causeCloudSix{
+	z-index: 2;
+	position: absolute;
+	width:30%;
+}
+
+
+#causeFlakeThree{
+	cursor:default;
+ }
+
+#causeFlakeThree:hover{
+ 	width:10%;
+}
+
+/*================================================ FOOTER SECTION ===================*/
+#timeHolder{
+	color:#2185C4;
+}
+
+.snowStatsHolder, #waterStatsHolder{
+	color:#2185C4;
+	font-family:josefinBold, Helvetica, Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 978px) and (max-width: 1499px){
+.hideForDesk{
+	display:none;
+}
+
+#extendBrowser{
+	display:none;
+}
+
+#minimizeBrowser{
+	display:none;
+}
+
+#mainScrollArea{
+	overflow: hidden;
+	height:2100vh;	
+}
+
+#scrollDownArrow{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 50%;
+	top: 95%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#backgroundCloudsOne{
+	position: fixed;
+	pointer-events:none;	
+	width:130%;
+	top:0%;
+	z-index: -1;	
+}
+
+#logoDrop{
+	z-index: 2;
+	position: absolute;
+	width:8.5%;
+	left: 50%;
+	top: -15%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#logoText{
+	z-index: 2;
+	position: absolute;
+	width:20%;
+	left: 50%;
+	top: 62%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:90%;
+	left: 0%;
+	top: 95%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudTwo{
+	z-index: 3;
+	position: absolute;
+	width:35%;
+	left: 85%;
+	top: 67%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:12%;
+	left: 40%;
+	top: 45%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudFour{
+	z-index: 1;
+	position: absolute;
+	width:7%;
+	left: 57%;
+	top: 38%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+
+/*======================================= HIDDEN CONTENT STYlES ===================*/
+ h3{
+ 	font-size:28px;
+ 	color:#fff;
+ }
+
+ h4{
+ 	font-size:24px;
+ 	color:#fff;
+ }
+
+ h5{
+ 	font-size:21px;
+ 	color:#fff;
+ }
+
+.hiddenContent{
+ 	background-color:rgba(250,250,250,.6);
+ 	padding:3% 3% 3% 3%;
+ 	border-radius: 3%;
+ 	opacity: 0;
+ 	position:fixed;
+ 	left:50%;
+ 	top:50%;
+	overflow: hidden;	
+}
+
+ .hiddenContent h1{
+ 	font-size: 24px;
+ 	color:#2185C4;
+	margin-bottom: 2%;
+}
+
+ .hiddenContent p{
+ 	color:#3E454C;
+ 	font-size: 16px;
+ 	line-height: 21px;
+ 	margin-bottom: 2%;
+}
+
+.moreIcon{
+	width:15%;
+	margin:13% auto 2% auto;
+}
+
+.productIcon{
+	width:30%;
+	margin:13% auto 2% auto;	
+}
+
+#productMock{
+	width:80%;
+	margin:13% auto 2% auto;
+}
+
+.moreList p{
+	font-family:josefinSemibold, Helvetica, Arial, sans-serif;
+ 	color:#3E454C;
+ 	font-size: 18px;
+ 	line-height: 24px;
+}
+
+/*======================================== ABOUT SECTION ===================*/
+#aboutSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-170vh;
+}
+
+ #aboutContent{
+ 	width:35%;
+ 	height: 42vh;
+ 	z-index:1;
+	transform:translate(-10%,-50%);
+	-o-transform:translate(-10%,-50%);
+	-webkit-transform:translate(-10%,-50%);
+	-moz-transform:translate(-10%,-50%);
+ }
+
+/*========================================== CRISIS SECTION ===================*/
+#crisisSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-600vh;
+}
+
+ #crisisContent{
+ 	width:35%;
+ 	height: 42vh;
+ 	z-index:1;
+	transform:translate(-90%,-50%);
+	-o-transform:translate(-90%,-50%);
+	-webkit-transform:translate(-90%,-50%);
+	-moz-transform:translate(-90%,-50%);
+ }
+
+
+/*============================================ PRODUCT SECTION ===================*/
+#productSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-980vh;
+	z-index: 3;
+}
+
+#mountainPeak{
+	position: fixed;
+	width:120%;
+	z-index: 2;
+	left:-10%;
+	top:240vh;
+}
+
+#mountainLeft{
+	position: fixed;
+	width:40%;
+	z-index: 1;
+	left:0%;
+	top:250vh;
+	opacity: .9;
+}
+
+#mountainRight{
+	position: fixed;
+	width:40%;
+	z-index: 1;
+	left:60%;
+	top:240vh;
+	opacity: .8;
+}
+
+ #productContent{
+ 	width:35%;
+ 	height: 42vh;
+ 	z-index:1;
+	transform:translate(-10%,-50%);
+	-o-transform:translate(-10%,-50%);
+	-webkit-transform:translate(-10%,-50%);
+	-moz-transform:translate(-10%,-50%);
+ }
+
+/*============================================ CAUSE SECTION ===================*/
+#causeSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-1370vh;
+	z-index: 3;
+}
+
+
+ #causeContent{
+ 	width:35%;
+ 	height: 42vh;
+ 	z-index:3;
+	transform:translate(-90%,-50%);
+	-o-transform:translate(-90%,-50%);
+	-webkit-transform:translate(-90%,-50%);
+	-moz-transform:translate(-90%,-50%);
+ }
+
+
+/*=========================================== FOOTER SECTION ===================*/
+#footerSection{
+	width:100%;
+	height: 100vh;	
+	position: relative;
+	top:-1700vh;
+	z-index: 10;
+}
+
+ #snowingStats{
+ 	pointer-events:none;
+ 	width:35%;
+ 	height: 50vh;
+ 	z-index:3;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+.statsIcon{
+ 	float:left;
+	width:15%;
+	margin:10% 18% 2% 17%;
+}
+
+.statsText{
+	float:left;
+	width:45%;
+	margin:0% 2.5% 0% 2.5%;	
+}
+
+#footerSection .social{
+	z-index: 4;
+	cursor: pointer;
+	width:3%;
+	opacity: 1;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+/*============== COPYRIGHT =========**/
+#copyright{
+	position: absolute;
+	width:100%;
+	z-index: 10;
+}
+
+#copyright p{
+	font-size:16px;
+	line-height:16px;	
+	color:#fff;
+}
+
+#designby{
+	position:absolute;
+	left:3%;
+	color:#fff;
+}
+
+#copyrightText{
+	position:absolute;
+	right:3%;
+	color:#fff;
+}
+
+span{
+	color:#fff;
+	text-decoration:none;
+}
+
+span:hover{
+	text-decoration:underline;
+}
+
+
+
+}/*======== CLOSE DESKTOP RESPONSIVE =========*/
+
+
+
+
+
+
+
+
+
+
+
+
+/* LARGE-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1500px) and (max-width: 2299px){
+.hideForDesk{
+	display:none;
+}
+
+#extendBrowser{
+	display: none;
+}
+
+#minimizeBrowser{
+	display: none;
+}
+
+#mainScrollArea{
+	overflow: hidden;
+	height:1400vh;
+	/*background-image: url("../images/backgroundCloudsBlue.jpg");
+	width:100%;	
+*/}
+
+#scrollDownArrow{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 50%;
+	top: 95%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#backgroundCloudsOne{
+	position: fixed;
+	pointer-events:none;	
+	width:150%;
+	top:0%;
+	z-index: -1;	
+}
+
+#logoDrop{
+	z-index: 2;
+	position: absolute;
+	width:8.5%;
+	left: 50%;
+	top: -15%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#logoText{
+	z-index: 2;
+	position: absolute;
+	width:20%;
+	left: 50%;
+	top: 60%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:90%;
+	left: 0%;
+	top: 95%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudTwo{
+	z-index: 3;
+	position: absolute;
+	width:35%;
+	left: 85%;
+	top: 67%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:12%;
+	left: 40%;
+	top: 45%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudFour{
+	z-index: 1;
+	position: absolute;
+	width:7%;
+	left: 57%;
+	top: 38%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+
+/*======================================= HIDDEN CONTENT STYlES ===================*/
+ h3{
+ 	font-size:28px;
+ 	color:#fff;
+ }
+
+ h4{
+ 	font-size:24px;
+ 	color:#fff;
+ }
+
+ h5{
+ 	font-size:21px;
+ 	color:#fff;
+ }
+
+.hiddenContent{
+ 	background-color:rgba(250,250,250,.6);
+ 	padding:3% 3% 3% 3%;
+ 	border-radius: 3%;
+ 	opacity: 0;
+ 	position:fixed;
+ 	left:50%;
+ 	top:50%;
+	overflow: hidden;	
+}
+
+ .hiddenContent h1{
+ 	font-size: 28px;
+ 	color:#2185C4;
+	margin-bottom: 2%;
+}
+
+ .hiddenContent p{
+ 	color:#3E454C;
+ 	font-size: 21px;
+ 	line-height: 26px;
+ 	margin-bottom: 2%;
+}
+
+.moreIcon{
+	width:15%;
+	margin:13% auto 2% auto;
+}
+
+.productIcon{
+	width:30%;
+	margin:13% auto 2% auto;	
+}
+
+#productMock{
+	width:80%;
+	margin:13% auto 2% auto;
+}
+
+.moreList p{
+	font-family:josefinSemibold, Helvetica, Arial, sans-serif;
+ 	color:#3E454C;
+ 	font-size: 23px;
+ 	line-height: 28px;
+}
+
+/*======================================== ABOUT SECTION ===================*/
+#aboutSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-100vh;
+}
+
+ #aboutContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	transform:translate(-10%,-50%);
+	-o-transform:translate(-10%,-50%);
+	-webkit-transform:translate(-10%,-50%);
+	-moz-transform:translate(-10%,-50%);
+ }
+
+/*========================================== CRISIS SECTION ===================*/
+#crisisSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-430vh;
+}
+
+ #crisisContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	transform:translate(-90%,-50%);
+	-o-transform:translate(-90%,-50%);
+	-webkit-transform:translate(-90%,-50%);
+	-moz-transform:translate(-90%,-50%);
+ }
+
+
+/*============================================ PRODUCT SECTION ===================*/
+#productSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-720vh;
+	z-index: 3;
+}
+
+#mountainPeak{
+	position: fixed;
+	width:120%;
+	z-index: 2;
+	left:-10%;
+	top:240vh;
+}
+
+#mountainLeft{
+	position: fixed;
+	width:40%;
+	z-index: 1;
+	left:0%;
+	top:250vh;
+	opacity: .9;
+}
+
+#mountainRight{
+	position: fixed;
+	width:40%;
+	z-index: 1;
+	left:60%;
+	top:240vh;
+	opacity: .8;
+}
+
+ #productContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	transform:translate(-10%,-50%);
+	-o-transform:translate(-10%,-50%);
+	-webkit-transform:translate(-10%,-50%);
+	-moz-transform:translate(-10%,-50%);
+ }
+
+/*============================================ CAUSE SECTION ===================*/
+#causeSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-1030vh;
+	z-index: 3;
+}
+
+
+ #causeContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	transform:translate(-90%,-50%);
+	-o-transform:translate(-90%,-50%);
+	-webkit-transform:translate(-90%,-50%);
+	-moz-transform:translate(-90%,-50%);
+ }
+
+
+/*=========================================== FOOTER SECTION ===================*/
+#footerSection{
+	width:100%;
+	height: 100vh;	
+	position: relative;
+	top:-1350vh;
+	z-index: 10;
+}
+
+ #snowingStats{
+ 	width:35%;
+ 	height: 42vh;
+ 	z-index:3;
+ 	overflow: scroll;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+.statsIcon{
+ 	float:left;
+	width:15%;
+	margin:10% 18% 2% 17%;
+}
+
+.statsText{
+	float:left;
+	width:45%;
+	margin:0% 0% 0% 5%;	
+}
+
+#footerSection .social{
+	z-index: 4;
+	cursor: pointer;
+	width:3%;
+	opacity: 1;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+/*============== COPYRIGHT =========**/
+#copyright{
+	position: absolute;
+	width:100%;
+	z-index: 10;
+}
+
+#copyright p{
+	font-size:16px;
+	line-height:16px;	
+	color:#fff;
+}
+
+#designby{
+	position:absolute;
+	left:3%;
+	color:#fff;
+}
+
+#copyrightText{
+	position:absolute;
+	right:3%;
+	color:#fff;
+}
+
+span{
+	color:#fff;
+	text-decoration:none;
+}
+
+span:hover{
+	text-decoration:underline;
+}
+
+
+}/*======== CLOSE LARGE-DESKTOP RESPONSIVE =========*/
+
+
+
+/* XL-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 2300px) and (max-width: 2599px){
+.hideForDesk{
+	display: none;
+}
+
+#extendBrowser{
+	display: none;
+}
+
+#minimizeBrowser{
+	display: none;
+}
+
+#mainScrollArea{
+	overflow: hidden;
+	height:900vh;
+	/*background-image: url("../images/backgroundCloudsBlue.jpg");
+	width:100%;	
+*/}
+
+#scrollDownArrow{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 50%;
+	top: 95%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#backgroundCloudsOne{
+	position: fixed;
+	pointer-events:none;	
+	width:170%;
+	top:0%;
+	z-index: -1;	
+}
+
+#logoDrop{
+	z-index: 2;
+	position: absolute;
+	width:8.5%;
+	left: 50%;
+	top: -15%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#logoText{
+	z-index: 2;
+	position: absolute;
+	width:20%;
+	left: 50%;
+	top: 62%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:90%;
+	left: 0%;
+	top: 95%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudTwo{
+	z-index: 3;
+	position: absolute;
+	width:35%;
+	left: 85%;
+	top: 67%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:12%;
+	left: 40%;
+	top: 45%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+#fmaCloudFour{
+	z-index: 1;
+	position: absolute;
+	width:7%;
+	left: 57%;
+	top: 38%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	opacity: 0;
+ }
+
+
+/*======================================= HIDDEN CONTENT STYlES ===================*/
+ h3{
+ 	font-size:28px;
+ 	color:#fff;
+ }
+
+ h4{
+ 	font-size:24px;
+ 	color:#fff;
+ }
+
+ h5{
+ 	font-size:21px;
+ 	color:#fff;
+ }
+
+.hiddenContent{
+ 	background-color:rgba(250,250,250,.6);
+ 	padding:3% 3% 3% 3%;
+ 	border-radius: 3%;
+ 	opacity: 0;
+ 	position:fixed;
+ 	left:50%;
+ 	top:50%;
+	overflow: hidden;	
+}
+
+ .hiddenContent h1{
+ 	font-size: 28px;
+ 	color:#2185C4;
+	margin-bottom: 2%;
+}
+
+ .hiddenContent p{
+ 	color:#3E454C;
+ 	font-size: 21px;
+ 	line-height: 26px;
+ 	margin-bottom: 2%;
+}
+
+.moreIcon{
+	width:15%;
+	margin:13% auto 2% auto;
+}
+
+.productIcon{
+	width:30%;
+	margin:13% auto 2% auto;	
+}
+
+#productMock{
+	width:80%;
+	margin:13% auto 2% auto;
+}
+
+.moreList p{
+	font-family:josefinSemibold, Helvetica, Arial, sans-serif;
+ 	color:#3E454C;
+ 	font-size: 23px;
+ 	line-height: 28px;
+}
+
+/*======================================== ABOUT SECTION ===================*/
+#aboutSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-100vh;
+}
+
+ #aboutContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	transform:translate(-10%,-50%);
+	-o-transform:translate(-10%,-50%);
+	-webkit-transform:translate(-10%,-50%);
+	-moz-transform:translate(-10%,-50%);
+ }
+
+/*========================================== CRISIS SECTION ===================*/
+#crisisSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-430vh;
+}
+
+ #crisisContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	transform:translate(-90%,-50%);
+	-o-transform:translate(-90%,-50%);
+	-webkit-transform:translate(-90%,-50%);
+	-moz-transform:translate(-90%,-50%);
+ }
+
+
+/*============================================ PRODUCT SECTION ===================*/
+#productSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-720vh;
+	z-index: 3;
+}
+
+#mountainPeak{
+	position: fixed;
+	width:120%;
+	z-index: 2;
+	left:-10%;
+	top:240vh;
+}
+
+#mountainLeft{
+	position: fixed;
+	width:40%;
+	z-index: 1;
+	left:0%;
+	top:250vh;
+	opacity: .9;
+}
+
+#mountainRight{
+	position: fixed;
+	width:40%;
+	z-index: 1;
+	left:60%;
+	top:240vh;
+	opacity: .8;
+}
+
+ #productContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	transform:translate(-10%,-50%);
+	-o-transform:translate(-10%,-50%);
+	-webkit-transform:translate(-10%,-50%);
+	-moz-transform:translate(-10%,-50%);
+ }
+
+/*============================================ CAUSE SECTION ===================*/
+#causeSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-1030vh;
+	z-index: 3;
+}
+
+
+ #causeContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	transform:translate(-90%,-50%);
+	-o-transform:translate(-90%,-50%);
+	-webkit-transform:translate(-90%,-50%);
+	-moz-transform:translate(-90%,-50%);
+ }
+
+
+/*=========================================== FOOTER SECTION ===================*/
+#footerSection{
+	width:100%;
+	height: 100vh;	
+	z-index: 10;
+	position: relative;
+	top:-1350vh;
+}
+
+#footerSection .social{
+	z-index: 4;
+	cursor: pointer;
+	width:3%;
+	opacity: 1;
+ 	transition:width 1s;
+ 	-o-transition:width 1s;
+ 	-moz-transition:width 1s;
+ 	-webkit-transition:width 1s;
+	position: absolute;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+ #snowingStats{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+.statsIcon{
+ 	float:left;
+	width:15%;
+	margin:10% 18% 2% 17%;
+}
+
+.statsText{
+	float:left;
+	width:45%;
+	margin:0% 0% 0% 5%;	
+}
+
+/*============== COPYRIGHT =========**/
+#copyright{
+	position: absolute;
+	width:100%;
+	z-index: 10;
+}
+
+#copyright p{
+	font-size:16px;
+	line-height:16px;	
+	color:#fff;
+}
+
+#designby{
+	position:absolute;
+	left:3%;
+	color:#fff;
+}
+
+#copyrightText{
+	position:absolute;
+	right:3%;
+	color:#fff;
+}
+
+span{
+	color:#fff;
+	text-decoration:none;
+}
+
+span:hover{
+	text-decoration:underline;
+}
+
+
+
+}/*======== CLOSE XL-DESKTOP RESPONSIVE =========*/
+
+
+
+/* BEYOND STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 2600px){
+.hideForMobile{
+	display:none;
+}
+
+#mainScrollArea{
+	overflow: hidden;
+	height:100vh;
+}
+
+#scrollDownArrow{
+	display:none;
+}
+
+#backgroundCloudsOne{
+	position: fixed;
+	pointer-events:none;	
+	width:300%;
+	top:0%;
+	z-index: -1;	
+}
+
+#extendBrowser{
+	display: none;
+}
+
+#minimizeBrowser{
+	color:#3E454C;
+	font-size: 24px;
+	position: absolute;
+	text-align: center;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);	
+}
+
+#fma{
+	display:none;
+ }
+
+#aboutSection{
+	display:none;
+ }
+
+#crisisSection{
+	display:none;
+ }
+
+#productSection{
+	display:none;
+ }
+
+#causeSection{
+	display:none;
+ }
+
+#footerSection{
+	display: none;
+}
+
+
+}/*<-- CLOSE MOBILE RESPONSIVE*/
+
