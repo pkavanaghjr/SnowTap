@@ -1,0 +1,36 @@
+/*///////////////////////////////////////////////////////////
+						VARIABLES
+///////////////////////////////////////////////////////////*/
+
+$white: #FFFFFF;
+$black: #000000;
+
+$primaryColor: #244343;
+// $secondaryColor: #244343;
+
+$gray1: #EEEEEE;
+$gray2: #B7B5B2;
+$gray3: #807E82;
+
+$red: #993741;
+$orange: #E88641;
+$yellow: #EEB111;
+$green: #859E62;
+$blue: #2F5E78;
+// $purple: #2F5E78;
+
+
+$light: 300;
+$semibold: 500;
+$bold: 700;
+
+
+/* WIDTHS */
+$max-width: 1220px; /* CONTENT CONTAINER MAX WIDTH */
+$min-width: 325px;
+
+$mobile-width: 550px;
+$tablet-width: 768px;
+$desktop-width: 1080px;
+
+$baseFontSize: 14px; /* Henseforth known as 1em  |  used for em() mixin */

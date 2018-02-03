@@ -1,0 +1,17 @@
+/*============================================= FMA ===================*/
+#fma{
+	width:100%;
+	height: 100vh;
+	position: relative;
+}
+
+#fma div{
+	pointer-events:none;	
+}
+
+#loadColor{
+	width:100%;
+	height:100%;
+	background-color: #3E454C;
+	z-index: 100px;
+}

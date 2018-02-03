@@ -1,0 +1,204 @@
+/*============================================================================
+	Table of Contents
+
+	** GENERAL
+		* LAYOUT
+		* BUTTON
+		* SHOW / HIDE
+		* SLICK
+
+
+==============================================================================*/
+
+/*************************************************************
+	** GENERAL
+*************************************************************/
+body{
+	/*background-color:rgba(62,69,76,1);*/
+	overflow: hidden;
+	background-image: url("../images/backgroundCloudsBlue.jpg");
+	background-size: 100% 100vh;
+	background-repeat: no-repeat;
+	background-attachment: fixed;	
+}
+
+/* RGB VALUES
+DARK BLUE
+background-color:rgba(33,133,196,1);
+
+LIGHT BLUE
+background-color:rgba(133,203,240,1)
+
+TAP BLACK
+background-color:rgba(62,69,76,1)
+*/
+
+
+#snowCanvas {
+	width:100%;
+	height:100%;
+	position: fixed;
+	z-index: 4;
+	opacity: 0;
+	pointer-events:none;
+}
+
+.clear{
+	clear:both;
+}
+
+ .avoidPointer{
+	pointer-events:none;	
+}
+
+
+
+/*================================================ HIDDEN CONTENT ===================*/
+ .whiteTitle{
+	color:#fff;
+ }
+
+ .closeButton {
+  	color:#3E454C;	
+	position:absolute; 
+	top:3%;
+	right:3%;
+	z-index: 2;
+}
+
+ .closeButton h2{
+ 	font-family: 'arborcrestHeavy';
+ 	font-size: 18px;
+	color:#3E454C;
+	cursor:pointer;	
+ 	opacity: 0;		
+	transition:color .5s;
+	-o-transition:color .5s;
+	-moz-transition:color .5s;
+	-webkit-transition:color .5s;
+}
+
+.closeButton h2:hover{
+	color:#fff;
+	transition:color .5s;
+	-o-transition:color .5s;
+	-moz-transition:color .5s;
+	-webkit-transition:color .5s;
+}
+
+.moreButton{
+	width:47%;
+	height:4vh;
+	background-color:#2185C4;
+	position: absolute;
+	bottom:5%;
+	right:5%;
+	border-radius: 3px;
+	opacity: 0;
+	cursor:pointer;
+	z-index: 50;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+.moreButton:hover{
+	background-color:#3E454C;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+.moreButton h6{
+	color:#fff;
+	line-height: 4vh;
+	text-align: center;
+}
+
+.buyButton{
+	width:47%;
+	height:4vh;
+	background-color:#2185C4;
+	border-radius: 3px;
+	float:right;
+	opacity: 0;
+	z-index: 50;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+/*.buyButton:hover{
+	background-color:#3E454C;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+*/
+.buyButton h6{
+	color:#fff;
+	line-height: 4vh;
+	text-align: center;
+}
+
+.doneButton{
+	width:100%;
+	height:4vh;
+	background-color:#3E454C;
+	border-radius: 3px;
+	opacity: 0;
+	float:left;
+	cursor:pointer;
+	z-index: 50;
+	margin-top:5%;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;	
+}
+
+.doneButton:hover{
+	background-color:#2185C4;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+
+.doneButton h3{
+	font-size:14px;
+	color:#fff;
+	line-height: 4vh;
+	text-align: center;
+}
+
+.moreContent{
+	opacity:0;
+}
+
+.moreList{
+	margin:5% 0% 5% 0%;
+}
+
+.moreList li{
+	margin-bottom:3%;
+}
+
+.bullet{
+	width:8px;
+	height:8px;
+	background:url(../images/bulletPoint.png) center no-repeat;
+	z-index: 2;
+	display: inline-block;
+	margin-right: 1%;
+	line-height: 2px;
+}
+
+.boldMore{
+	font-family:josefinBold, Helvetica, Arial, sans-serif;
+	font-size:18px;
+}

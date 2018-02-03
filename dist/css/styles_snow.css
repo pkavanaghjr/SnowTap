@@ -1,0 +1,2384 @@
+/*
+Theme Name: SnowTap
+Author: Pat Kavanagh
+Text Domain: snowtap
+*/
+/* GLOBAL DEPENDENCIES */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, src/sass/components/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, src/sass/components/reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, src/sass/components/reset.scss */
+body {
+  line-height: 1; }
+
+/* line 34, src/sass/components/reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, src/sass/components/reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, src/sass/components/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, src/sass/components/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*///////////////////////////////////////////////////////////
+						VARIABLES
+///////////////////////////////////////////////////////////*/
+/* WIDTHS */
+/* CONTENT CONTAINER MAX WIDTH */
+/* Henseforth known as 1em  |  used for em() mixin */
+/*///////////////////////////////////////////////////////////
+						FONTS
+///////////////////////////////////////////////////////////*/
+/* line 5, src/sass/components/fonts.scss */
+h1 {
+  font-family: arborcrestHeavy; }
+
+/* line 9, src/sass/components/fonts.scss */
+h2 {
+  font-family: josefinBold, Helvetica, Arial, sans-serif; }
+
+/* line 13, src/sass/components/fonts.scss */
+h3 {
+  font-family: josefinBold, Helvetica, Arial, sans-serif; }
+
+/* line 17, src/sass/components/fonts.scss */
+h4 {
+  font-family: josefinSemibold, Helvetica, Arial, sans-serif; }
+
+/* line 21, src/sass/components/fonts.scss */
+h5 {
+  font-family: josefinSemibold, Helvetica, Arial, sans-serif; }
+
+/* line 25, src/sass/components/fonts.scss */
+h6 {
+  font-family: josefinRegular, Helvetica, Arial, sans-serif; }
+
+/* line 29, src/sass/components/fonts.scss */
+p {
+  font-family: josefinRegular, Helvetica, Arial, sans-serif; }
+
+/* line 33, src/sass/components/fonts.scss */
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'josefinBold';
+  src: url("../../fonts/josefinsans-bold-webfont.eot");
+  src: url("../../fonts/josefinsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-bold-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-bold-webfont.woff") format("woff"), url("../../fonts/josefinsans-bold-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-bold-webfont.svg#josefinBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefinLight';
+  src: url("../../fonts/josefinsans-light-webfont.eot");
+  src: url("../../fonts/josefinsans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-light-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-light-webfont.woff") format("woff"), url("../../fonts/josefinsans-light-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-light-webfont.svg#josefinLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefinRegular';
+  src: url("../../fonts/josefinsans-regular-webfont.eot");
+  src: url("../../fonts/josefinsans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-regular-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-regular-webfont.woff") format("woff"), url("../../fonts/josefinsans-regular-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-regular-webfont.svg#josefinRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefinSemibold';
+  src: url("../../fonts/josefinsans-semibold-webfont.eot");
+  src: url("../../fonts/josefinsans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-semibold-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-semibold-webfont.woff") format("woff"), url("../../fonts/josefinsans-semibold-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-semibold-webfont.svg#josefinSemibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'arborcrestHeavy';
+  src: url("../../fonts/sf_arborcrest_heavy-webfont.eot");
+  src: url("../../fonts/sf_arborcrest_heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sf_arborcrest_heavy-webfont.woff2") format("woff2"), url("../../fonts/sf_arborcrest_heavy-webfont.woff") format("woff"), url("../../fonts/sf_arborcrest_heavy-webfont.ttf") format("truetype"), url("../../fonts/sf_arborcrest_heavy-webfont.svg#arborcrestHeavy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'arborcrestLight';
+  src: url("../../fonts/sf_arborcrest_light-webfont.eot");
+  src: url("../../fonts/sf_arborcrest_light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sf_arborcrest_light-webfont.woff2") format("woff2"), url("../../fonts/sf_arborcrest_light-webfont.woff") format("woff"), url("../../fonts/sf_arborcrest_light-webfont.ttf") format("truetype"), url("../../fonts/sf_arborcrest_light-webfont.svg#arborcrestLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../../fonts/fontawesome-webfont.eot");
+  src: url("../../fonts/fontawesome-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/fontawesome-webfont.woff2") format("woff2"), url("../../fonts/fontawesome-webfont.woff") format("woff"), url("../../fonts/fontawesome-webfont.ttf") format("truetype"), url("../../fonts/fontawesome-webfont.svg#FontAwesome") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/*///////////////////////////////////////////////////////////
+						MIXINS
+///////////////////////////////////////////////////////////*/
+/* FLUID TYPE MIXIN - VW */
+/* USE PX VALUES TO CREATE EM VALUES.  |  ex: font-size:em(12px); */
+/* BREAKPOINT MIXIN  |  ex: @include media-query ($max, $tablet-width) { ..styles.. } */
+/* ===================== * RESPONSIVE 2X BG IMG ==================== */
+/*//////////////////////////////////
+		F L E X  B O X
+//////////////////////////////////*/
+/* line 1, src/sass/components/formalize.scss */
+.input_tiny {
+  width: 50px; }
+
+/* line 5, src/sass/components/formalize.scss */
+.input_small {
+  width: 100px; }
+
+/* line 9, src/sass/components/formalize.scss */
+.input_medium {
+  width: 150px; }
+
+/* line 13, src/sass/components/formalize.scss */
+.input_large {
+  width: 200px; }
+
+/* line 17, src/sass/components/formalize.scss */
+.input_xlarge {
+  width: 250px; }
+
+/* line 21, src/sass/components/formalize.scss */
+.input_xxlarge {
+  width: 300px; }
+
+/* line 25, src/sass/components/formalize.scss */
+.input_full {
+  width: 100%; }
+
+/* line 29, src/sass/components/formalize.scss */
+.input_full_wrap {
+  display: block;
+  padding-right: 8px; }
+
+/* line 34, src/sass/components/formalize.scss */
+input[type="search"]::-webkit-search-decoration {
+  display: none; }
+
+/* line 38, src/sass/components/formalize.scss */
+input:invalid,
+button:invalid,
+a.button:invalid,
+select:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 47, src/sass/components/formalize.scss */
+input:focus,
+button:focus,
+a.button:focus,
+select:focus,
+textarea:focus {
+  -webkit-box-shadow: #0066ff 0 0 5px 0;
+  box-shadow: #0066ff 0 0 5px 0;
+  z-index: 1; }
+
+/* line 58, src/sass/components/formalize.scss */
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 68, src/sass/components/formalize.scss */
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  border-radius: 4px;
+  background-clip: padding-box;
+  background: #dddddd url("../images/button.png?1298351022") repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
+  background-image: linear-gradient(#ffffff, #dddddd);
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #999999;
+  cursor: pointer;
+  color: #333333;
+  display: inline-block;
+  font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  padding: 3px 10px;
+  text-shadow: white 0 1px 1px;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+  *padding-top: 2px;
+  *padding-bottom: 0; }
+
+/* line 105, src/sass/components/formalize.scss */
+button:hover,
+a.button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  text-decoration: none; }
+
+/* line 117, src/sass/components/formalize.scss */
+button:active,
+a.button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
+  background-image: linear-gradient(#dddddd, #eeeeee);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  border-color: #999999 #bbbbbb #dddddd; }
+
+/* line 132, src/sass/components/formalize.scss */
+button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 141, src/sass/components/formalize.scss */
+a.button {
+  *padding-bottom: 3px; }
+
+/* line 145, src/sass/components/formalize.scss */
+button {
+  *padding-top: 1px;
+  *padding-bottom: 1px; }
+
+/* line 150, src/sass/components/formalize.scss */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 2px 3px;
+  text-align: left;
+  font-size: 13px;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  height: 1.8em;
+  vertical-align: top;
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto; }
+
+/* line 193, src/sass/components/formalize.scss */
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee; }
+
+/* line 211, src/sass/components/formalize.scss */
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  color: #888888;
+  cursor: default; }
+
+/* line 229, src/sass/components/formalize.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888888; }
+
+/* line 234, src/sass/components/formalize.scss */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888; }
+
+/* line 239, src/sass/components/formalize.scss */
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888888; }
+
+/* line 244, src/sass/components/formalize.scss */
+textarea,
+select[size],
+select[multiple] {
+  height: auto; }
+
+/* line 250, src/sass/components/formalize.scss */
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+  *height: auto; }
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  /* line 257, src/sass/components/formalize.scss */
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px; }
+  /* line 264, src/sass/components/formalize.scss */
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px; }
+  /* line 273, src/sass/components/formalize.scss */
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    min-height: 16px; }
+  /* line 286, src/sass/components/formalize.scss */
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border-color: #666666; } }
+
+/* line 295, src/sass/components/formalize.scss */
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%; }
+
+/* line 302, src/sass/components/formalize.scss */
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif; }
+
+/* line 308, src/sass/components/formalize.scss */
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 313, src/sass/components/formalize.scss */
+.ie6_button,
+* html button,
+* html a.button {
+  background: #dddddd url("../images/button.png?1298351022") repeat-x;
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #999999;
+  cursor: pointer;
+  color: #333333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  padding: 2px 10px 0;
+  text-decoration: none;
+  overflow: visible;
+  vertical-align: top;
+  width: auto; }
+
+/* line 329, src/sass/components/formalize.scss */
+* html a.button {
+  position: relative;
+  top: 3px;
+  padding-bottom: 2px; }
+
+/* line 335, src/sass/components/formalize.scss */
+* html button {
+  padding-top: 1px;
+  padding-bottom: 1px; }
+
+/* line 340, src/sass/components/formalize.scss */
+.ie6_input,
+* html textarea,
+* html select {
+  background: white;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: black;
+  padding: 2px 3px 1px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  vertical-align: top; }
+
+/* line 353, src/sass/components/formalize.scss */
+* html select {
+  margin-top: 1px; }
+
+/* line 357, src/sass/components/formalize.scss */
+.placeholder_text,
+.ie6_input_disabled,
+.ie6_button_disabled {
+  color: #888888; }
+
+/* line 363, src/sass/components/formalize.scss */
+.ie6_input_disabled {
+  background: #eeeeee; }
+
+/* ELEMENTS */
+/*============================================================================
+	Table of Contents
+
+	** GENERAL
+		* LAYOUT
+		* BUTTON
+		* SHOW / HIDE
+		* SLICK
+
+
+==============================================================================*/
+/*************************************************************
+	** GENERAL
+*************************************************************/
+/* line 16, src/sass/components/global.scss */
+body {
+  /*background-color:rgba(62,69,76,1);*/
+  overflow: hidden;
+  background-image: url("../images/backgroundCloudsBlue.jpg");
+  background-size: 100% 100vh;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+
+/* RGB VALUES
+DARK BLUE
+background-color:rgba(33,133,196,1);
+
+LIGHT BLUE
+background-color:rgba(133,203,240,1)
+
+TAP BLACK
+background-color:rgba(62,69,76,1)
+*/
+/* line 37, src/sass/components/global.scss */
+#snowCanvas {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 4;
+  opacity: 0;
+  pointer-events: none; }
+
+/* line 46, src/sass/components/global.scss */
+.clear {
+  clear: both; }
+
+/* line 50, src/sass/components/global.scss */
+.avoidPointer {
+  pointer-events: none; }
+
+/*================================================ HIDDEN CONTENT ===================*/
+/* line 57, src/sass/components/global.scss */
+.whiteTitle {
+  color: #fff; }
+
+/* line 61, src/sass/components/global.scss */
+.closeButton {
+  color: #3E454C;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  z-index: 2; }
+
+/* line 69, src/sass/components/global.scss */
+.closeButton h2 {
+  font-family: 'arborcrestHeavy';
+  font-size: 18px;
+  color: #3E454C;
+  cursor: pointer;
+  opacity: 0;
+  transition: color .5s;
+  -o-transition: color .5s;
+  -moz-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 81, src/sass/components/global.scss */
+.closeButton h2:hover {
+  color: #fff;
+  transition: color .5s;
+  -o-transition: color .5s;
+  -moz-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 89, src/sass/components/global.scss */
+.moreButton {
+  width: 47%;
+  height: 4vh;
+  background-color: #2185C4;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 50;
+  transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s; }
+
+/* line 106, src/sass/components/global.scss */
+.moreButton:hover {
+  background-color: #3E454C;
+  transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s; }
+
+/* line 114, src/sass/components/global.scss */
+.moreButton h6 {
+  color: #fff;
+  line-height: 4vh;
+  text-align: center; }
+
+/* line 120, src/sass/components/global.scss */
+.buyButton {
+  width: 47%;
+  height: 4vh;
+  background-color: #2185C4;
+  border-radius: 3px;
+  float: right;
+  opacity: 0;
+  z-index: 50;
+  transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s; }
+
+/*.buyButton:hover{
+	background-color:#3E454C;
+	transition:background-color 1s;
+	-o-transition:background-color 1s;
+	-moz-transition:background-color 1s;
+	-webkit-transition:background-color 1s;
+}
+*/
+/* line 142, src/sass/components/global.scss */
+.buyButton h6 {
+  color: #fff;
+  line-height: 4vh;
+  text-align: center; }
+
+/* line 148, src/sass/components/global.scss */
+.doneButton {
+  width: 100%;
+  height: 4vh;
+  background-color: #3E454C;
+  border-radius: 3px;
+  opacity: 0;
+  float: left;
+  cursor: pointer;
+  z-index: 50;
+  margin-top: 5%;
+  transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s; }
+
+/* line 164, src/sass/components/global.scss */
+.doneButton:hover {
+  background-color: #2185C4;
+  transition: background-color 1s;
+  -o-transition: background-color 1s;
+  -moz-transition: background-color 1s;
+  -webkit-transition: background-color 1s; }
+
+/* line 172, src/sass/components/global.scss */
+.doneButton h3 {
+  font-size: 14px;
+  color: #fff;
+  line-height: 4vh;
+  text-align: center; }
+
+/* line 179, src/sass/components/global.scss */
+.moreContent {
+  opacity: 0; }
+
+/* line 183, src/sass/components/global.scss */
+.moreList {
+  margin: 5% 0% 5% 0%; }
+
+/* line 187, src/sass/components/global.scss */
+.moreList li {
+  margin-bottom: 3%; }
+
+/* line 191, src/sass/components/global.scss */
+.bullet {
+  width: 8px;
+  height: 8px;
+  background: url(../images/bulletPoint.png) center no-repeat;
+  z-index: 2;
+  display: inline-block;
+  margin-right: 1%;
+  line-height: 2px; }
+
+/* line 201, src/sass/components/global.scss */
+.boldMore {
+  font-family: josefinBold, Helvetica, Arial, sans-serif;
+  font-size: 18px; }
+
+/*================================================ NAVIGATION ===================*/
+/* line 2, src/sass/components/_nav.scss */
+#navSection {
+  height: 100vh;
+  z-index: 100;
+  left: -125px;
+  position: fixed; }
+
+/* line 9, src/sass/components/_nav.scss */
+#navigation {
+  width: 125px;
+  display: block;
+  z-index: 100;
+  position: relative; }
+
+/* line 16, src/sass/components/_nav.scss */
+#logo {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 50px;
+  margin-bottom: 3%;
+  margin-left: 3%;
+  color: #2185C4;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 29, src/sass/components/_nav.scss */
+#logoSpan {
+  font-family: "josefinRegular", helvetica;
+  color: #fff;
+  margin-left: 2%; }
+
+/* line 35, src/sass/components/_nav.scss */
+#navList nav {
+  margin-bottom: 3%;
+  margin-left: 5%; }
+
+/* line 40, src/sass/components/_nav.scss */
+#navList h2 {
+  font-size: 22px;
+  line-height: 50px;
+  color: #2185C4;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 50, src/sass/components/_nav.scss */
+#navList nav:hover {
+  color: #fff;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 58, src/sass/components/_nav.scss */
+#logo h2:hover {
+  color: #fff;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 66, src/sass/components/_nav.scss */
+#navList h1 {
+  font-size: 18px;
+  line-height: 30px;
+  color: #2185C4;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 76, src/sass/components/_nav.scss */
+#navList h1:hover {
+  color: #fff;
+  transition: color .5s;
+  -moz-transition: color .5s;
+  -o-transition: color .5s;
+  -webkit-transition: color .5s; }
+
+/* line 84, src/sass/components/_nav.scss */
+.activeNav {
+  color: #fff; }
+
+/*============================================= FMA ===================*/
+/* line 2, src/sass/components/_fma.scss */
+#fma {
+  width: 100%;
+  height: 100vh;
+  position: relative; }
+
+/* line 8, src/sass/components/_fma.scss */
+#fma div {
+  pointer-events: none; }
+
+/* line 12, src/sass/components/_fma.scss */
+#loadColor {
+  width: 100%;
+  height: 100%;
+  background-color: #3E454C;
+  z-index: 100px; }
+
+/*================================================ SECTIONS ===================*/
+/* line 2, src/sass/components/_sections.scss */
+.snowflakeOne {
+  z-index: 4;
+  position: absolute;
+  width: 20%;
+  transition: width 1s;
+  -o-transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 17, src/sass/components/_sections.scss */
+.snowflakeOne:hover {
+  width: 21%;
+  transition: width 1s;
+  -o-transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s; }
+
+/* line 25, src/sass/components/_sections.scss */
+.snowflakeTwo {
+  z-index: 2;
+  cursor: pointer;
+  width: 15%;
+  transition: width 1s;
+  -o-transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 40, src/sass/components/_sections.scss */
+.snowflakeTwo:hover {
+  width: 16%;
+  transition: width 1s;
+  -o-transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s; }
+
+/* line 48, src/sass/components/_sections.scss */
+.snowflakeThree {
+  z-index: 2;
+  cursor: pointer;
+  width: 10%;
+  transition: width 1s;
+  -o-transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 63, src/sass/components/_sections.scss */
+.snowflakeThree:hover {
+  width: 10.5%;
+  transition: width 1s;
+  -o-transition: width 1s;
+  -moz-transition: width 1s;
+  -webkit-transition: width 1s; }
+
+/*================================================ ABOUT SECTION ===================*/
+/* line 72, src/sass/components/_sections.scss */
+#aboutCloudOne {
+  z-index: 2;
+  position: absolute;
+  width: 20%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  opacity: 1;
+  top: 30%;
+  left: -20%; }
+
+/* line 85, src/sass/components/_sections.scss */
+#aboutCloudTwo {
+  z-index: 1;
+  position: absolute;
+  width: 8%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 95, src/sass/components/_sections.scss */
+#aboutCloudThree {
+  z-index: 1;
+  position: absolute;
+  width: 12%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 105, src/sass/components/_sections.scss */
+#aboutCloudFour {
+  z-index: 4;
+  position: absolute;
+  width: 40%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 115, src/sass/components/_sections.scss */
+#aboutCloudFive {
+  z-index: 2;
+  position: absolute;
+  width: 35%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/* line 125, src/sass/components/_sections.scss */
+#aboutCloudSix {
+  z-index: 4;
+  position: absolute;
+  width: 55%;
+  transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%); }
+
+/*================================================ CRISIS SECTION ===================*/
+/* line 136, src/sass/components/_sections.scss */
+#crisisCloudOne {
+  z-index: 3;
+  position: absolute;
+  width: 30%; }
+
+/* line 142, src/sass/components/_sections.scss */
+#crisisCloudTwo {
+  z-index: 1;
+  position: absolute;
+  width: 20%; }
+
+/* line 148, src/sass/components/_sections.scss */
+#crisisCloudThree {
+  z-index: 1;
+  position: absolute;
+  width: 20%; }
+
+/* line 154, src/sass/components/_sections.scss */
+#crisisCloudFour {
+  z-index: 4;
+  position: absolute;
+  width: 60%; }
+
+/* line 160, src/sass/components/_sections.scss */
+#crisisCloudFive {
+  z-index: 2;
+  position: absolute;
+  width: 40%; }
+
+/* line 166, src/sass/components/_sections.scss */
+#crisisCloudSix {
+  z-index: 2;
+  position: absolute;
+  width: 60%; }
+
+/*================================================ PRODUCT SECTION ===================*/
+/* line 174, src/sass/components/_sections.scss */
+#productCloudOne {
+  z-index: 3;
+  position: absolute;
+  width: 30%; }
+
+/* line 180, src/sass/components/_sections.scss */
+#productCloudTwo {
+  z-index: 1;
+  position: absolute;
+  width: 25%; }
+
+/* line 186, src/sass/components/_sections.scss */
+#productCloudThree {
+  z-index: 1;
+  position: absolute;
+  width: 20%; }
+
+/* line 192, src/sass/components/_sections.scss */
+#productCloudFour {
+  z-index: 4;
+  position: absolute;
+  width: 60%; }
+
+/* line 198, src/sass/components/_sections.scss */
+#productCloudFive {
+  z-index: 2;
+  position: absolute;
+  width: 55%; }
+
+/* line 204, src/sass/components/_sections.scss */
+#productCloudSix {
+  z-index: 2;
+  position: absolute;
+  width: 40%; }
+
+/*================================================ CAUSE SECTION ===================*/
+/* line 212, src/sass/components/_sections.scss */
+#causeCloudOne {
+  z-index: 3;
+  position: absolute;
+  width: 40%; }
+
+/* line 218, src/sass/components/_sections.scss */
+#causeCloudTwo {
+  z-index: 1;
+  position: absolute;
+  width: 25%; }
+
+/* line 224, src/sass/components/_sections.scss */
+#causeCloudThree {
+  z-index: 1;
+  position: absolute;
+  width: 20%; }
+
+/* line 230, src/sass/components/_sections.scss */
+#causeCloudFour {
+  z-index: 4;
+  position: absolute;
+  width: 60%;
+  opacity: 1; }
+
+/* line 237, src/sass/components/_sections.scss */
+#causeCloudFive {
+  z-index: 2;
+  position: absolute;
+  width: 50%; }
+
+/* line 243, src/sass/components/_sections.scss */
+#causeCloudSix {
+  z-index: 2;
+  position: absolute;
+  width: 30%; }
+
+/* line 250, src/sass/components/_sections.scss */
+#causeFlakeThree {
+  cursor: default; }
+
+/* line 254, src/sass/components/_sections.scss */
+#causeFlakeThree:hover {
+  width: 10%; }
+
+/*================================================ FOOTER SECTION ===================*/
+/* line 2, src/sass/components/_footer.scss */
+#timeHolder {
+  color: #2185C4; }
+
+/* line 6, src/sass/components/_footer.scss */
+.snowStatsHolder, #waterStatsHolder {
+  color: #2185C4;
+  font-family: josefinBold, Helvetica, Arial, sans-serif; }
+
+/* XL-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 2300px) and (max-width: 2599px) {
+  /* line 3, src/sass/components/_r-xtra-26.scss */
+  .hideForDesk {
+    display: none; }
+  /* line 7, src/sass/components/_r-xtra-26.scss */
+  #extendBrowser {
+    display: none; }
+  /* line 11, src/sass/components/_r-xtra-26.scss */
+  #minimizeBrowser {
+    display: none; }
+  /* line 15, src/sass/components/_r-xtra-26.scss */
+  #mainScrollArea {
+    overflow: hidden;
+    height: 900vh;
+    /*background-image: url("../images/backgroundCloudsBlue.jpg");
+	width:100%;	
+*/ }
+  /* line 22, src/sass/components/_r-xtra-26.scss */
+  #scrollDownArrow {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 35, src/sass/components/_r-xtra-26.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    pointer-events: none;
+    width: 170%;
+    top: 0%;
+    z-index: -1; }
+  /* line 43, src/sass/components/_r-xtra-26.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 8.5%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 56, src/sass/components/_r-xtra-26.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 69, src/sass/components/_r-xtra-26.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 90%;
+    left: 0%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 82, src/sass/components/_r-xtra-26.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 35%;
+    left: 85%;
+    top: 67%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 95, src/sass/components/_r-xtra-26.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 40%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 108, src/sass/components/_r-xtra-26.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 7%;
+    left: 57%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /*======================================= HIDDEN CONTENT STYlES ===================*/
+  /* line 123, src/sass/components/_r-xtra-26.scss */
+  h3 {
+    font-size: 28px;
+    color: #fff; }
+  /* line 128, src/sass/components/_r-xtra-26.scss */
+  h4 {
+    font-size: 24px;
+    color: #fff; }
+  /* line 133, src/sass/components/_r-xtra-26.scss */
+  h5 {
+    font-size: 21px;
+    color: #fff; }
+  /* line 138, src/sass/components/_r-xtra-26.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.6);
+    padding: 3% 3% 3% 3%;
+    border-radius: 3%;
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    overflow: hidden; }
+  /* line 149, src/sass/components/_r-xtra-26.scss */
+  .hiddenContent h1 {
+    font-size: 28px;
+    color: #2185C4;
+    margin-bottom: 2%; }
+  /* line 155, src/sass/components/_r-xtra-26.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 2%; }
+  /* line 162, src/sass/components/_r-xtra-26.scss */
+  .moreIcon {
+    width: 15%;
+    margin: 13% auto 2% auto; }
+  /* line 167, src/sass/components/_r-xtra-26.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 172, src/sass/components/_r-xtra-26.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 177, src/sass/components/_r-xtra-26.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 23px;
+    line-height: 28px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 185, src/sass/components/_r-xtra-26.scss */
+  #aboutSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -100vh; }
+  /* line 192, src/sass/components/_r-xtra-26.scss */
+  #aboutContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 203, src/sass/components/_r-xtra-26.scss */
+  #crisisSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -430vh; }
+  /* line 210, src/sass/components/_r-xtra-26.scss */
+  #crisisContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 222, src/sass/components/_r-xtra-26.scss */
+  #productSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -720vh;
+    z-index: 3; }
+  /* line 230, src/sass/components/_r-xtra-26.scss */
+  #mountainPeak {
+    position: fixed;
+    width: 120%;
+    z-index: 2;
+    left: -10%;
+    top: 240vh; }
+  /* line 238, src/sass/components/_r-xtra-26.scss */
+  #mountainLeft {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 0%;
+    top: 250vh;
+    opacity: .9; }
+  /* line 247, src/sass/components/_r-xtra-26.scss */
+  #mountainRight {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 60%;
+    top: 240vh;
+    opacity: .8; }
+  /* line 256, src/sass/components/_r-xtra-26.scss */
+  #productContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 267, src/sass/components/_r-xtra-26.scss */
+  #causeSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -1030vh;
+    z-index: 3; }
+  /* line 276, src/sass/components/_r-xtra-26.scss */
+  #causeContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 3;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 288, src/sass/components/_r-xtra-26.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    top: -1350vh; }
+  /* line 296, src/sass/components/_r-xtra-26.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 3%;
+    opacity: 1;
+    transition: width 1s;
+    -o-transition: width 1s;
+    -moz-transition: width 1s;
+    -webkit-transition: width 1s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 312, src/sass/components/_r-xtra-26.scss */
+  #snowingStats {
+    width: 35%;
+    height: 30vh;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 322, src/sass/components/_r-xtra-26.scss */
+  .statsIcon {
+    float: left;
+    width: 15%;
+    margin: 10% 18% 2% 17%; }
+  /* line 328, src/sass/components/_r-xtra-26.scss */
+  .statsText {
+    float: left;
+    width: 45%;
+    margin: 0% 0% 0% 5%; }
+  /*============== COPYRIGHT =========**/
+  /* line 335, src/sass/components/_r-xtra-26.scss */
+  #copyright {
+    position: absolute;
+    width: 100%;
+    z-index: 10; }
+  /* line 341, src/sass/components/_r-xtra-26.scss */
+  #copyright p {
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff; }
+  /* line 347, src/sass/components/_r-xtra-26.scss */
+  #designby {
+    position: absolute;
+    left: 3%;
+    color: #fff; }
+  /* line 353, src/sass/components/_r-xtra-26.scss */
+  #copyrightText {
+    position: absolute;
+    right: 3%;
+    color: #fff; }
+  /* line 359, src/sass/components/_r-xtra-26.scss */
+  span {
+    color: #fff;
+    text-decoration: none; }
+  /* line 364, src/sass/components/_r-xtra-26.scss */
+  span:hover {
+    text-decoration: underline; } }
+
+/*======== CLOSE XL-DESKTOP RESPONSIVE =========*/
+/* LARGE-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 1500px) and (max-width: 2299px) {
+  /* line 3, src/sass/components/_r-large-23.scss */
+  .hideForDesk {
+    display: none; }
+  /* line 7, src/sass/components/_r-large-23.scss */
+  #extendBrowser {
+    display: none; }
+  /* line 11, src/sass/components/_r-large-23.scss */
+  #minimizeBrowser {
+    display: none; }
+  /* line 15, src/sass/components/_r-large-23.scss */
+  #mainScrollArea {
+    overflow: hidden;
+    height: 1400vh;
+    /*background-image: url("../images/backgroundCloudsBlue.jpg");
+	width:100%;	
+*/ }
+  /* line 22, src/sass/components/_r-large-23.scss */
+  #scrollDownArrow {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 35, src/sass/components/_r-large-23.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    pointer-events: none;
+    width: 150%;
+    top: 0%;
+    z-index: -1; }
+  /* line 43, src/sass/components/_r-large-23.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 8.5%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 56, src/sass/components/_r-large-23.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 69, src/sass/components/_r-large-23.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 90%;
+    left: 0%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 82, src/sass/components/_r-large-23.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 35%;
+    left: 85%;
+    top: 67%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 95, src/sass/components/_r-large-23.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 40%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 108, src/sass/components/_r-large-23.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 7%;
+    left: 57%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /*======================================= HIDDEN CONTENT STYlES ===================*/
+  /* line 123, src/sass/components/_r-large-23.scss */
+  h3 {
+    font-size: 28px;
+    color: #fff; }
+  /* line 128, src/sass/components/_r-large-23.scss */
+  h4 {
+    font-size: 24px;
+    color: #fff; }
+  /* line 133, src/sass/components/_r-large-23.scss */
+  h5 {
+    font-size: 21px;
+    color: #fff; }
+  /* line 138, src/sass/components/_r-large-23.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.6);
+    padding: 3% 3% 3% 3%;
+    border-radius: 3%;
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    overflow: hidden; }
+  /* line 149, src/sass/components/_r-large-23.scss */
+  .hiddenContent h1 {
+    font-size: 28px;
+    color: #2185C4;
+    margin-bottom: 2%; }
+  /* line 155, src/sass/components/_r-large-23.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 21px;
+    line-height: 26px;
+    margin-bottom: 2%; }
+  /* line 162, src/sass/components/_r-large-23.scss */
+  .moreIcon {
+    width: 15%;
+    margin: 13% auto 2% auto; }
+  /* line 167, src/sass/components/_r-large-23.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 172, src/sass/components/_r-large-23.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 177, src/sass/components/_r-large-23.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 23px;
+    line-height: 28px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 185, src/sass/components/_r-large-23.scss */
+  #aboutSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -100vh; }
+  /* line 192, src/sass/components/_r-large-23.scss */
+  #aboutContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 203, src/sass/components/_r-large-23.scss */
+  #crisisSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -430vh; }
+  /* line 210, src/sass/components/_r-large-23.scss */
+  #crisisContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 222, src/sass/components/_r-large-23.scss */
+  #productSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -720vh;
+    z-index: 3; }
+  /* line 230, src/sass/components/_r-large-23.scss */
+  #mountainPeak {
+    position: fixed;
+    width: 120%;
+    z-index: 2;
+    left: -10%;
+    top: 240vh; }
+  /* line 238, src/sass/components/_r-large-23.scss */
+  #mountainLeft {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 0%;
+    top: 250vh;
+    opacity: .9; }
+  /* line 247, src/sass/components/_r-large-23.scss */
+  #mountainRight {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 60%;
+    top: 240vh;
+    opacity: .8; }
+  /* line 256, src/sass/components/_r-large-23.scss */
+  #productContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 267, src/sass/components/_r-large-23.scss */
+  #causeSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -1030vh;
+    z-index: 3; }
+  /* line 276, src/sass/components/_r-large-23.scss */
+  #causeContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 3;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 288, src/sass/components/_r-large-23.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: -1350vh;
+    z-index: 10; }
+  /* line 296, src/sass/components/_r-large-23.scss */
+  #snowingStats {
+    width: 35%;
+    height: 42vh;
+    z-index: 3;
+    overflow: scroll;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 307, src/sass/components/_r-large-23.scss */
+  .statsIcon {
+    float: left;
+    width: 15%;
+    margin: 10% 18% 2% 17%; }
+  /* line 313, src/sass/components/_r-large-23.scss */
+  .statsText {
+    float: left;
+    width: 45%;
+    margin: 0% 0% 0% 5%; }
+  /* line 319, src/sass/components/_r-large-23.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 3%;
+    opacity: 1;
+    transition: width 1s;
+    -o-transition: width 1s;
+    -moz-transition: width 1s;
+    -webkit-transition: width 1s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*============== COPYRIGHT =========**/
+  /* line 336, src/sass/components/_r-large-23.scss */
+  #copyright {
+    position: absolute;
+    width: 100%;
+    z-index: 10; }
+  /* line 342, src/sass/components/_r-large-23.scss */
+  #copyright p {
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff; }
+  /* line 348, src/sass/components/_r-large-23.scss */
+  #designby {
+    position: absolute;
+    left: 3%;
+    color: #fff; }
+  /* line 354, src/sass/components/_r-large-23.scss */
+  #copyrightText {
+    position: absolute;
+    right: 3%;
+    color: #fff; }
+  /* line 360, src/sass/components/_r-large-23.scss */
+  span {
+    color: #fff;
+    text-decoration: none; }
+  /* line 365, src/sass/components/_r-large-23.scss */
+  span:hover {
+    text-decoration: underline; } }
+
+/*======== CLOSE LARGE-DESKTOP RESPONSIVE =========*/
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 978px) and (max-width: 1499px) {
+  /* line 3, src/sass/components/_r-desktop-15.scss */
+  .hideForDesk {
+    display: none; }
+  /* line 7, src/sass/components/_r-desktop-15.scss */
+  #extendBrowser {
+    display: none; }
+  /* line 11, src/sass/components/_r-desktop-15.scss */
+  #minimizeBrowser {
+    display: none; }
+  /* line 15, src/sass/components/_r-desktop-15.scss */
+  #mainScrollArea {
+    overflow: hidden;
+    height: 2100vh; }
+  /* line 20, src/sass/components/_r-desktop-15.scss */
+  #scrollDownArrow {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 33, src/sass/components/_r-desktop-15.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    pointer-events: none;
+    width: 130%;
+    top: 0%;
+    z-index: -1; }
+  /* line 41, src/sass/components/_r-desktop-15.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 8.5%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 54, src/sass/components/_r-desktop-15.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 20%;
+    left: 50%;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 67, src/sass/components/_r-desktop-15.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 90%;
+    left: 0%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 80, src/sass/components/_r-desktop-15.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 35%;
+    left: 85%;
+    top: 67%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 93, src/sass/components/_r-desktop-15.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 40%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 106, src/sass/components/_r-desktop-15.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 7%;
+    left: 57%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /*======================================= HIDDEN CONTENT STYlES ===================*/
+  /* line 121, src/sass/components/_r-desktop-15.scss */
+  h3 {
+    font-size: 28px;
+    color: #fff; }
+  /* line 126, src/sass/components/_r-desktop-15.scss */
+  h4 {
+    font-size: 24px;
+    color: #fff; }
+  /* line 131, src/sass/components/_r-desktop-15.scss */
+  h5 {
+    font-size: 21px;
+    color: #fff; }
+  /* line 136, src/sass/components/_r-desktop-15.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.6);
+    padding: 3% 3% 3% 3%;
+    border-radius: 3%;
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    overflow: hidden; }
+  /* line 147, src/sass/components/_r-desktop-15.scss */
+  .hiddenContent h1 {
+    font-size: 24px;
+    color: #2185C4;
+    margin-bottom: 2%; }
+  /* line 153, src/sass/components/_r-desktop-15.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 2%; }
+  /* line 160, src/sass/components/_r-desktop-15.scss */
+  .moreIcon {
+    width: 15%;
+    margin: 13% auto 2% auto; }
+  /* line 165, src/sass/components/_r-desktop-15.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 170, src/sass/components/_r-desktop-15.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 175, src/sass/components/_r-desktop-15.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 18px;
+    line-height: 24px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 183, src/sass/components/_r-desktop-15.scss */
+  #aboutSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -170vh; }
+  /* line 190, src/sass/components/_r-desktop-15.scss */
+  #aboutContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 201, src/sass/components/_r-desktop-15.scss */
+  #crisisSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -600vh; }
+  /* line 208, src/sass/components/_r-desktop-15.scss */
+  #crisisContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 1;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 220, src/sass/components/_r-desktop-15.scss */
+  #productSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -980vh;
+    z-index: 3; }
+  /* line 228, src/sass/components/_r-desktop-15.scss */
+  #mountainPeak {
+    position: fixed;
+    width: 120%;
+    z-index: 2;
+    left: -10%;
+    top: 240vh; }
+  /* line 236, src/sass/components/_r-desktop-15.scss */
+  #mountainLeft {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 0%;
+    top: 250vh;
+    opacity: .9; }
+  /* line 245, src/sass/components/_r-desktop-15.scss */
+  #mountainRight {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 60%;
+    top: 240vh;
+    opacity: .8; }
+  /* line 254, src/sass/components/_r-desktop-15.scss */
+  #productContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 265, src/sass/components/_r-desktop-15.scss */
+  #causeSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -1370vh;
+    z-index: 3; }
+  /* line 274, src/sass/components/_r-desktop-15.scss */
+  #causeContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 3;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 286, src/sass/components/_r-desktop-15.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    top: -1700vh;
+    z-index: 10; }
+  /* line 294, src/sass/components/_r-desktop-15.scss */
+  #snowingStats {
+    pointer-events: none;
+    width: 35%;
+    height: 50vh;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 305, src/sass/components/_r-desktop-15.scss */
+  .statsIcon {
+    float: left;
+    width: 15%;
+    margin: 10% 18% 2% 17%; }
+  /* line 311, src/sass/components/_r-desktop-15.scss */
+  .statsText {
+    float: left;
+    width: 45%;
+    margin: 0% 2.5% 0% 2.5%; }
+  /* line 317, src/sass/components/_r-desktop-15.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 3%;
+    opacity: 1;
+    transition: width 1s;
+    -o-transition: width 1s;
+    -moz-transition: width 1s;
+    -webkit-transition: width 1s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*============== COPYRIGHT =========**/
+  /* line 334, src/sass/components/_r-desktop-15.scss */
+  #copyright {
+    position: absolute;
+    width: 100%;
+    z-index: 10; }
+  /* line 340, src/sass/components/_r-desktop-15.scss */
+  #copyright p {
+    font-size: 16px;
+    line-height: 16px;
+    color: #fff; }
+  /* line 346, src/sass/components/_r-desktop-15.scss */
+  #designby {
+    position: absolute;
+    left: 3%;
+    color: #fff; }
+  /* line 352, src/sass/components/_r-desktop-15.scss */
+  #copyrightText {
+    position: absolute;
+    right: 3%;
+    color: #fff; }
+  /* line 358, src/sass/components/_r-desktop-15.scss */
+  span {
+    color: #fff;
+    text-decoration: none; }
+  /* line 363, src/sass/components/_r-desktop-15.scss */
+  span:hover {
+    text-decoration: underline; } }
+
+/*======== CLOSE DESKTOP RESPONSIVE =========*/
+/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px) and (max-width: 977px) {
+  /* line 3, src/sass/components/_r-tablet-977.scss */
+  .hideForMobile {
+    display: none; }
+  /* line 7, src/sass/components/_r-tablet-977.scss */
+  #extendBrowser {
+    display: none; }
+  /* line 11, src/sass/components/_r-tablet-977.scss */
+  #minimizeBrowser {
+    display: none; }
+  /* line 15, src/sass/components/_r-tablet-977.scss */
+  #mainScrollArea {
+    overflow: hidden;
+    height: 2000vh; }
+  /* line 20, src/sass/components/_r-tablet-977.scss */
+  #scrollDownArrow {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 33, src/sass/components/_r-tablet-977.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    pointer-events: none;
+    width: 200%;
+    top: 0%;
+    z-index: -1; }
+  /* line 41, src/sass/components/_r-tablet-977.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 12%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 54, src/sass/components/_r-tablet-977.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 30%;
+    left: 50%;
+    top: 64%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 67, src/sass/components/_r-tablet-977.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 90%;
+    left: 0%;
+    top: 95%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 80, src/sass/components/_r-tablet-977.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 35%;
+    left: 85%;
+    top: 67%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 93, src/sass/components/_r-tablet-977.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 40%;
+    top: 45%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 106, src/sass/components/_r-tablet-977.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 7%;
+    left: 57%;
+    top: 38%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /*======================================= HIDDEN CONTENT STYlES ===================*/
+  /* line 121, src/sass/components/_r-tablet-977.scss */
+  h3 {
+    font-size: 28px;
+    color: #fff; }
+  /* line 126, src/sass/components/_r-tablet-977.scss */
+  h4 {
+    font-size: 24px;
+    color: #fff; }
+  /* line 131, src/sass/components/_r-tablet-977.scss */
+  h5 {
+    font-size: 21px;
+    color: #fff; }
+  /* line 136, src/sass/components/_r-tablet-977.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.6);
+    padding: 3% 3% 3% 3%;
+    border-radius: 3%;
+    opacity: 0;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    overflow: hidden; }
+  /* line 147, src/sass/components/_r-tablet-977.scss */
+  .hiddenContent h1 {
+    font-size: 21px;
+    color: #2185C4;
+    margin-bottom: 2%; }
+  /* line 153, src/sass/components/_r-tablet-977.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 2%; }
+  /* line 160, src/sass/components/_r-tablet-977.scss */
+  .moreIcon {
+    width: 15%;
+    margin: 13% auto 2% auto; }
+  /* line 165, src/sass/components/_r-tablet-977.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 170, src/sass/components/_r-tablet-977.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 175, src/sass/components/_r-tablet-977.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 18px;
+    line-height: 24px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 183, src/sass/components/_r-tablet-977.scss */
+  #aboutSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -170vh; }
+  /* line 190, src/sass/components/_r-tablet-977.scss */
+  #aboutContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 201, src/sass/components/_r-tablet-977.scss */
+  #crisisSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -600vh; }
+  /* line 208, src/sass/components/_r-tablet-977.scss */
+  #crisisContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 1;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 220, src/sass/components/_r-tablet-977.scss */
+  #productSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -980vh;
+    z-index: 3; }
+  /* line 228, src/sass/components/_r-tablet-977.scss */
+  #mountainPeak {
+    position: fixed;
+    width: 150%;
+    z-index: 2;
+    left: -25%;
+    top: 240vh; }
+  /* line 236, src/sass/components/_r-tablet-977.scss */
+  #mountainLeft {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 0%;
+    top: 250vh;
+    opacity: .9; }
+  /* line 245, src/sass/components/_r-tablet-977.scss */
+  #mountainRight {
+    position: fixed;
+    width: 40%;
+    z-index: 1;
+    left: 60%;
+    top: 240vh;
+    opacity: .8; }
+  /* line 254, src/sass/components/_r-tablet-977.scss */
+  #productContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 1;
+    transform: translate(-10%, -50%);
+    -o-transform: translate(-10%, -50%);
+    -webkit-transform: translate(-10%, -50%);
+    -moz-transform: translate(-10%, -50%); }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 265, src/sass/components/_r-tablet-977.scss */
+  #causeSection {
+    width: 100%;
+    height: 200vh;
+    position: relative;
+    top: -1370vh;
+    z-index: 3; }
+  /* line 274, src/sass/components/_r-tablet-977.scss */
+  #causeContent {
+    width: 35%;
+    height: 42vh;
+    z-index: 3;
+    transform: translate(-90%, -50%);
+    -o-transform: translate(-90%, -50%);
+    -webkit-transform: translate(-90%, -50%);
+    -moz-transform: translate(-90%, -50%); }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 286, src/sass/components/_r-tablet-977.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    top: -1700vh; }
+  /* line 294, src/sass/components/_r-tablet-977.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 4%;
+    opacity: 1;
+    transition: width 1s;
+    -o-transition: width 1s;
+    -moz-transition: width 1s;
+    -webkit-transition: width 1s;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 310, src/sass/components/_r-tablet-977.scss */
+  #snowingStats {
+    pointer-events: none;
+    width: 35%;
+    height: 50vh;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 321, src/sass/components/_r-tablet-977.scss */
+  .statsIcon {
+    float: left;
+    width: 15%;
+    margin: 10% 18% 2% 17%; }
+  /* line 327, src/sass/components/_r-tablet-977.scss */
+  .statsText {
+    float: left;
+    width: 45%;
+    margin: 0% 0% 0% 5%; } }
+
+/*<-- CLOSE TABLET RESPONSIVE*/
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+  /* line 3, src/sass/components/_r-mobile-767.scss */
+  .hideForMobile {
+    display: none; }
+  /* line 7, src/sass/components/_r-mobile-767.scss */
+  #mainScrollArea {
+    overflow: hidden;
+    height: 100vh; }
+  /* line 12, src/sass/components/_r-mobile-767.scss */
+  #scrollDownArrow {
+    display: none; }
+  /* line 16, src/sass/components/_r-mobile-767.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    pointer-events: none;
+    width: 300%;
+    top: 0%;
+    z-index: -1; }
+  /* line 24, src/sass/components/_r-mobile-767.scss */
+  #extendBrowser {
+    color: #3E454C;
+    font-size: 18px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 37, src/sass/components/_r-mobile-767.scss */
+  #minimizeBrowser {
+    display: none; }
+  /* line 41, src/sass/components/_r-mobile-767.scss */
+  #fma {
+    display: none; }
+  /* line 45, src/sass/components/_r-mobile-767.scss */
+  #aboutSection {
+    display: none; }
+  /* line 49, src/sass/components/_r-mobile-767.scss */
+  #crisisSection {
+    display: none; }
+  /* line 53, src/sass/components/_r-mobile-767.scss */
+  #productSection {
+    display: none; }
+  /* line 57, src/sass/components/_r-mobile-767.scss */
+  #causeSection {
+    display: none; }
+  /* line 61, src/sass/components/_r-mobile-767.scss */
+  #footerSection {
+    display: none; } }
+
+/*<-- CLOSE MOBILE RESPONSIVE*/
+
+/*# sourceMappingURL=../../sass */

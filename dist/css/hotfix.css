@@ -1,0 +1,10 @@
+/*  
+Hotfix.css
+This theme uses gulp to compile sass and the source code is maintained in a repo. 
+Fixes should be made by pulling the repo, updating the sass files and re-compiling.  
+The updates should then be committed to the repo and deployed/re-played on production.
+
+IF AND ONLY IF that is not possible, hotfixes may be made in this file.
+And you must plan on coming back to move your changes into the correct sass components and committing them to the repo.
+*/
+
