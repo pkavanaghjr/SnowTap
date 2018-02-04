@@ -19,16 +19,13 @@
 	line-height:50px;	
 	margin-bottom:3%;
 	margin-left:3%;
-	color:#2185C4;	
-	transition:color .5s;	
-	-moz-transition:color .5s;	
-	-o-transition:color .5s;	
-	-webkit-transition:color .5s;	
+	color:$blue;	
+	@include transition(color, 0.5s);
 }
 
 #logoSpan{
-	font-family: "josefinRegular", helvetica;
-	color:#fff;
+	font-family:$josefin-reg;
+	color:$white;
 	margin-left:2%;
 }
 
@@ -40,47 +37,32 @@
 #navList h2{
 	font-size:22px;
 	line-height:50px;
-	color:#2185C4;
-	transition:color .5s;	
-	-moz-transition:color .5s;	
-	-o-transition:color .5s;	
-	-webkit-transition:color .5s;		
+	color:$blue;
+	@include transition(color, 0.5s);	
 }
 
 #navList nav:hover{
-	color:#fff;
-	transition:color .5s;	
-	-moz-transition:color .5s;	
-	-o-transition:color .5s;	
-	-webkit-transition:color .5s;	
+	color:$white;
+	@include transition(color, 0.5s);
 }
 
 #logo h2:hover{
-	color:#fff;
-	transition:color .5s;	
-	-moz-transition:color .5s;	
-	-o-transition:color .5s;	
-	-webkit-transition:color .5s;	
+	color:$white;
+	@include transition(color, 0.5s);
 }
 
 #navList h1{
 	font-size:18px;
 	line-height:30px;
-	color:#2185C4;
-	transition:color .5s;	
-	-moz-transition:color .5s;	
-	-o-transition:color .5s;	
-	-webkit-transition:color .5s;	
+	color:$blue;
+	@include transition(color, 0.5s);
 }
 
 #navList h1:hover{
-	color:#fff;
-	transition:color .5s;	
-	-moz-transition:color .5s;	
-	-o-transition:color .5s;	
-	-webkit-transition:color .5s;	
+	color:$white;
+	@include transition(color, 0.5s);
 }
 
 .activeNav{
-	color:#fff;
+	color:$white;
 }

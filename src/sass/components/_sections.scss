@@ -1,82 +1,7 @@
-/*================================================ SECTIONS ===================*/
-.snowflakeOne{
-	z-index: 4;
-	position: absolute;
-	width:20%;
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;	
-	cursor: pointer;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
- }
-
-.snowflakeOne:hover{
- 	width:21%;
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;
- }
-
-.snowflakeTwo{
-	z-index: 2;
-	cursor: pointer;	
-	width:15%;	
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;	
-	position: absolute;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
- }
-
- .snowflakeTwo:hover{
- 	width:16%;
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;
- }
-
-.snowflakeThree{
-	z-index: 2;
-	cursor: pointer;
-	width:10%;
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;	
-	position: absolute;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
- }
-
- .snowflakeThree:hover{
- 	width:10.5%;
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;
- }
-
 /*================================================ ABOUT SECTION ===================*/
 #aboutCloudOne{
 	z-index: 2;
-	position: absolute;
 	width:20%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
 	opacity:1;
 	top:30%;
 	left:-20%;
@@ -84,88 +9,57 @@
 
 #aboutCloudTwo{
 	z-index: 1;
-	position: absolute;
 	width:8%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
  }
 
 #aboutCloudThree{
 	z-index: 1;
-	position: absolute;
 	width:12%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
 }
 
 #aboutCloudFour{
 	z-index: 4;
-	position: absolute;
 	width:40%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
 }
 
 #aboutCloudFive{
 	z-index: 2;
-	position: absolute;
 	width:35%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
  }
 
 #aboutCloudSix{
 	z-index: 4;
-	position: absolute;
 	width:55%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
  }
 
 /*================================================ CRISIS SECTION ===================*/
 #crisisCloudOne{
 	z-index: 3;
-	position: absolute;
 	width:30%;
 }
 
 #crisisCloudTwo{
 	z-index: 1;
-	position: absolute;
 	width:20%;
 }
 
 #crisisCloudThree{
 	z-index: 1;
-	position: absolute;
 	width:20%;
 }
 
 #crisisCloudFour{
 	z-index: 4;
-	position: absolute;
 	width:60%;
 }
 
 #crisisCloudFive{
 	z-index: 2;
-	position: absolute;
 	width:40%;
 }
 
 #crisisCloudSix{
 	z-index: 2;
-	position: absolute;
 	width:60%;
 }
 
@@ -173,37 +67,31 @@
 /*================================================ PRODUCT SECTION ===================*/
 #productCloudOne{
 	z-index: 3;
-	position: absolute;
 	width:30%;
 }
 
 #productCloudTwo{
 	z-index: 1;
-	position: absolute;
 	width:25%;
 }
 
 #productCloudThree{
 	z-index: 1;
-	position: absolute;
 	width:20%;
 }
 
 #productCloudFour{
 	z-index: 4;
-	position: absolute;
 	width:60%;
 }
 
 #productCloudFive{
 	z-index: 2;
-	position: absolute;
 	width:55%;
 }
 
 #productCloudSix{
 	z-index: 2;
-	position: absolute;
 	width:40%;
 }
 
@@ -211,38 +99,32 @@
 /*================================================ CAUSE SECTION ===================*/
 #causeCloudOne{
 	z-index: 3;
-	position: absolute;
 	width:40%;
 }
 
 #causeCloudTwo{
 	z-index: 1;
-	position: absolute;
 	width:25%;
 }
 
 #causeCloudThree{
 	z-index: 1;
-	position: absolute;
 	width:20%;
 }
 
 #causeCloudFour{
 	z-index: 4;
-	position: absolute;
 	width:60%;
 	opacity:1;
 }
 
 #causeCloudFive{
 	z-index: 2;
-	position: absolute;
 	width:50%;
 }
 
 #causeCloudSix{
 	z-index: 2;
-	position: absolute;
 	width:30%;
 }
 

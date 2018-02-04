@@ -1,0 +1,7 @@
+.cloud{
+	position: absolute;
+	pointer-events:none;
+	@include transform( translate(-50%,-50%) );
+
+	
+}/* CLOSE: .cloud */

@@ -1,5 +1,5 @@
 /* XL-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 2300px) and (max-width: 2599px){
+@media only screen and (min-width: $xtra-width) and (max-width: $beyond-width-max){
 .hideForDesk{
 	display: none;
 }
@@ -25,10 +25,7 @@
 	width:25px;
 	left: 50%;
 	top: 95%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -46,10 +43,7 @@
 	width:8.5%;
 	left: 50%;
 	top: -15%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -59,10 +53,7 @@
 	width:20%;
 	left: 50%;
 	top: 62%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -72,10 +63,7 @@
 	width:90%;
 	left: 0%;
 	top: 95%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -85,10 +73,7 @@
 	width:35%;
 	left: 85%;
 	top: 67%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -98,10 +83,7 @@
 	width:12%;
 	left: 40%;
 	top: 45%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -111,10 +93,7 @@
 	width:7%;
 	left: 57%;
 	top: 38%;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
 	opacity: 0;
  }
 
@@ -122,17 +101,17 @@
 /*======================================= HIDDEN CONTENT STYlES ===================*/
  h3{
  	font-size:28px;
- 	color:#fff;
+ 	color:$white;
  }
 
  h4{
  	font-size:24px;
- 	color:#fff;
+ 	color:$white;
  }
 
  h5{
  	font-size:21px;
- 	color:#fff;
+ 	color:$white;
  }
 
 .hiddenContent{
@@ -148,12 +127,12 @@
 
  .hiddenContent h1{
  	font-size: 28px;
- 	color:#2185C4;
+ 	color:$blue;
 	margin-bottom: 2%;
 }
 
  .hiddenContent p{
- 	color:#3E454C;
+ 	color:$off-black;
  	font-size: 21px;
  	line-height: 26px;
  	margin-bottom: 2%;
@@ -175,8 +154,8 @@
 }
 
 .moreList p{
-	font-family:josefinSemibold, Helvetica, Arial, sans-serif;
- 	color:#3E454C;
+	font-family:$josefin-semi;
+ 	color:$off-black;
  	font-size: 23px;
  	line-height: 28px;
 }
@@ -298,25 +277,16 @@
 	cursor: pointer;
 	width:3%;
 	opacity: 1;
- 	transition:width 1s;
- 	-o-transition:width 1s;
- 	-moz-transition:width 1s;
- 	-webkit-transition:width 1s;
+ 	@include transition(width, 1s);
 	position: absolute;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
  }
 
  #snowingStats{
  	width:35%;
  	height: 30vh;
  	z-index:3;
-	transform:translate(-50%,-50%);
-	-o-transform:translate(-50%,-50%);
-	-webkit-transform:translate(-50%,-50%);
-	-moz-transform:translate(-50%,-50%);
+	@include transform( translate(-50%,-50%) );
  }
 
 .statsIcon{
@@ -341,23 +311,23 @@
 #copyright p{
 	font-size:16px;
 	line-height:16px;	
-	color:#fff;
+	color:$white;
 }
 
 #designby{
 	position:absolute;
 	left:3%;
-	color:#fff;
+	color:$white;
 }
 
 #copyrightText{
 	position:absolute;
 	right:3%;
-	color:#fff;
+	color:$white;
 }
 
 span{
-	color:#fff;
+	color:$white;
 	text-decoration:none;
 }
 

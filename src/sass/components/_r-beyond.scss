@@ -1,5 +1,5 @@
 /* BEYOND STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 2600px){
+@media only screen and (min-width: $beyond-width){
 	.hideForMobile{
 		display:none;
 	}
@@ -26,16 +26,13 @@
 	}
 
 	#minimizeBrowser{
-		color:#3E454C;
+		color:$off-black;
 		font-size: 24px;
 		position: absolute;
 		text-align: center;
 		top:50%;
 		left:50%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);	
+		@include transform( translate(-50%,-50%) );
 	}
 
 	#fma{

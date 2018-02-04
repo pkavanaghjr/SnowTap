@@ -2,11 +2,10 @@
 	Table of Contents
 
 	** GENERAL
-		* LAYOUT
-		* BUTTON
-		* SHOW / HIDE
-		* SLICK
+	
+	** TYPE
 
+	** HIDDEN CONTENT
 
 ==============================================================================*/
 
@@ -48,18 +47,56 @@ background-color:rgba(62,69,76,1)
 }
 
  .avoidPointer{
-	pointer-events:none;	
+	pointer-events:none;
+}
+
+
+/*************************************************************
+	** TYPE
+*************************************************************/
+h1{
+	font-family:$arborcrest;
+}
+
+h2{
+	font-family:$josefin-bold;
+}
+
+h3{
+	font-family:$josefin-bold;
+}
+
+h4{
+	font-family:$josefin-semi;
+}
+
+h5{
+	font-family:$josefin-semi;
+}
+
+h6{
+	font-family:$josefin-reg;
+}
+
+p{
+	font-family:$josefin-reg;
+}
+
+a{
+	text-decoration:none;
 }
 
 
 
-/*================================================ HIDDEN CONTENT ===================*/
+/*************************************************************
+	** HIDDEN CONTENT
+*************************************************************/
  .whiteTitle{
-	color:#fff;
+	color:$white;
  }
 
  .closeButton {
-  	color:#3E454C;	
+  	color:$off-black;	
 	position:absolute; 
 	top:3%;
 	right:3%;
@@ -67,29 +104,23 @@ background-color:rgba(62,69,76,1)
 }
 
  .closeButton h2{
- 	font-family: 'arborcrestHeavy';
+ 	font-family: $arborcrest;
  	font-size: 18px;
-	color:#3E454C;
+	color:$off-black;
 	cursor:pointer;	
- 	opacity: 0;		
-	transition:color .5s;
-	-o-transition:color .5s;
-	-moz-transition:color .5s;
-	-webkit-transition:color .5s;
+ 	opacity: 0;
+	@include transition(color, 0.5s);
 }
 
 .closeButton h2:hover{
-	color:#fff;
-	transition:color .5s;
-	-o-transition:color .5s;
-	-moz-transition:color .5s;
-	-webkit-transition:color .5s;
+	color:$white;
+	@include transition(color, 0.5s);
 }
 
 .moreButton{
 	width:47%;
 	height:4vh;
-	background-color:#2185C4;
+	background-color:$blue;
 	position: absolute;
 	bottom:5%;
 	right:5%;
@@ -97,22 +128,16 @@ background-color:rgba(62,69,76,1)
 	opacity: 0;
 	cursor:pointer;
 	z-index: 50;
-	transition:background-color 1s;
-	-o-transition:background-color 1s;
-	-moz-transition:background-color 1s;
-	-webkit-transition:background-color 1s;
+	@include transition(background-color, 1s);
 }
 
 .moreButton:hover{
-	background-color:#3E454C;
-	transition:background-color 1s;
-	-o-transition:background-color 1s;
-	-moz-transition:background-color 1s;
-	-webkit-transition:background-color 1s;
+	background-color:$off-black;
+	@include transition(background-color, 1s);
 }
 
 .moreButton h6{
-	color:#fff;
+	color:$white;
 	line-height: 4vh;
 	text-align: center;
 }
@@ -120,27 +145,21 @@ background-color:rgba(62,69,76,1)
 .buyButton{
 	width:47%;
 	height:4vh;
-	background-color:#2185C4;
+	background-color:$blue;
 	border-radius: 3px;
 	float:right;
 	opacity: 0;
 	z-index: 50;
-	transition:background-color 1s;
-	-o-transition:background-color 1s;
-	-moz-transition:background-color 1s;
-	-webkit-transition:background-color 1s;
+	@include transition(background-color, 1s);
 }
 
 /*.buyButton:hover{
-	background-color:#3E454C;
-	transition:background-color 1s;
-	-o-transition:background-color 1s;
-	-moz-transition:background-color 1s;
-	-webkit-transition:background-color 1s;
+	background-color:$off-black;
+	@include transition(background-color, 1s);
 }
 */
 .buyButton h6{
-	color:#fff;
+	color:$white;
 	line-height: 4vh;
 	text-align: center;
 }
@@ -148,30 +167,24 @@ background-color:rgba(62,69,76,1)
 .doneButton{
 	width:100%;
 	height:4vh;
-	background-color:#3E454C;
+	background-color:$off-black;
 	border-radius: 3px;
 	opacity: 0;
 	float:left;
 	cursor:pointer;
 	z-index: 50;
 	margin-top:5%;
-	transition:background-color 1s;
-	-o-transition:background-color 1s;
-	-moz-transition:background-color 1s;
-	-webkit-transition:background-color 1s;	
+	@include transition(background-color, 1s);	
 }
 
 .doneButton:hover{
-	background-color:#2185C4;
-	transition:background-color 1s;
-	-o-transition:background-color 1s;
-	-moz-transition:background-color 1s;
-	-webkit-transition:background-color 1s;
+	background-color:$blue;
+	@include transition(background-color, 1s);
 }
 
 .doneButton h3{
 	font-size:14px;
-	color:#fff;
+	color:$white;
 	line-height: 4vh;
 	text-align: center;
 }
@@ -199,6 +212,6 @@ background-color:rgba(62,69,76,1)
 }
 
 .boldMore{
-	font-family:josefinBold, Helvetica, Arial, sans-serif;
+	font-family:$josefin-bold;
 	font-size:18px;
 }

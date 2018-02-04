@@ -1,5 +1,5 @@
 /* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 768px) and (max-width: 977px){
+@media only screen and (min-width: $tablet-width) and (max-width: $desktop-width-max){
 	.hideForMobile{
 		display:none;
 	}
@@ -23,10 +23,7 @@
 		width:25px;
 		left: 50%;
 		top: 95%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -44,10 +41,7 @@
 		width:12%;
 		left: 50%;
 		top: -15%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -57,10 +51,7 @@
 		width:30%;
 		left: 50%;
 		top: 64%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -70,10 +61,7 @@
 		width:90%;
 		left: 0%;
 		top: 95%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -83,10 +71,7 @@
 		width:35%;
 		left: 85%;
 		top: 67%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -96,10 +81,7 @@
 		width:12%;
 		left: 40%;
 		top: 45%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -109,10 +91,7 @@
 		width:7%;
 		left: 57%;
 		top: 38%;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 		opacity: 0;
 	 }
 
@@ -120,17 +99,17 @@
 	/*======================================= HIDDEN CONTENT STYlES ===================*/
 	 h3{
 	 	font-size:28px;
-	 	color:#fff;
+	 	color:$white;
 	 }
 
 	 h4{
 	 	font-size:24px;
-	 	color:#fff;
+	 	color:$white;
 	 }
 
 	 h5{
 	 	font-size:21px;
-	 	color:#fff;
+	 	color:$white;
 	 }
 
 	.hiddenContent{
@@ -146,12 +125,12 @@
 
 	 .hiddenContent h1{
 	 	font-size: 21px;
-	 	color:#2185C4;
+	 	color:$blue;
 		margin-bottom: 2%;
 	}
 
 	 .hiddenContent p{
-	 	color:#3E454C;
+	 	color:$off-black;
 	 	font-size: 14px;
 	 	line-height: 18px;
 	 	margin-bottom: 2%;
@@ -173,8 +152,8 @@
 	}
 
 	.moreList p{
-		font-family:josefinSemibold, Helvetica, Arial, sans-serif;
-	 	color:#3E454C;
+		font-family:$josefin-semi;
+	 	color:$off-black;
 	 	font-size: 18px;
 	 	line-height: 24px;
 	}
@@ -191,10 +170,7 @@
 	 	width:35%;
 	 	height: 42vh;
 	 	z-index:1;
-		transform:translate(-10%,-50%);
-		-o-transform:translate(-10%,-50%);
-		-webkit-transform:translate(-10%,-50%);
-		-moz-transform:translate(-10%,-50%);
+		@include transform( translate(-10%,-50%) );
 	 }
 
 	/*========================================== CRISIS SECTION ===================*/
@@ -209,10 +185,7 @@
 	 	width:35%;
 	 	height: 42vh;
 	 	z-index:1;
-		transform:translate(-90%,-50%);
-		-o-transform:translate(-90%,-50%);
-		-webkit-transform:translate(-90%,-50%);
-		-moz-transform:translate(-90%,-50%);
+		@include transform( translate(-90%,-50%) );
 	 }
 
 
@@ -255,10 +228,7 @@
 	 	width:35%;
 	 	height: 42vh;
 	 	z-index:1;
-		transform:translate(-10%,-50%);
-		-o-transform:translate(-10%,-50%);
-		-webkit-transform:translate(-10%,-50%);
-		-moz-transform:translate(-10%,-50%);
+		@include transform( translate(-10%,-50%) );
 	 }
 
 	/*============================================ CAUSE SECTION ===================*/
@@ -275,10 +245,7 @@
 	 	width:35%;
 	 	height: 42vh;
 	 	z-index:3;
-		transform:translate(-90%,-50%);
-		-o-transform:translate(-90%,-50%);
-		-webkit-transform:translate(-90%,-50%);
-		-moz-transform:translate(-90%,-50%);
+		@include transform( translate(-90%,-50%) );
 	 }
 
 
@@ -296,15 +263,9 @@
 		cursor: pointer;
 		width:4%;
 		opacity: 1;
-	 	transition:width 1s;
-	 	-o-transition:width 1s;
-	 	-moz-transition:width 1s;
-	 	-webkit-transition:width 1s;
+	 	@include transition(width, 1s);
 		position: absolute;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 	 }
 
 	 #snowingStats{
@@ -312,10 +273,7 @@
 	 	width:35%;
 	 	height: 50vh;
 	 	z-index:3;
-		transform:translate(-50%,-50%);
-		-o-transform:translate(-50%,-50%);
-		-webkit-transform:translate(-50%,-50%);
-		-moz-transform:translate(-50%,-50%);
+		@include transform( translate(-50%,-50%) );
 	 }
 
 	 .statsIcon{

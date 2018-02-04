@@ -1,36 +1,6 @@
 /*///////////////////////////////////////////////////////////
 						MIXINS
 ///////////////////////////////////////////////////////////*/
-@mixin default-font {
-	font-family: $font-regular;
-	color: $gray3;
-	font-size: 16px;
-	line-height:1.4;
-	font-weight: normal;
-}
-
-@mixin h1($color) {
-	font-family: Arial;
-	color: $color;
-	font-size: 36px;
-	font-weight: $bold;
-}
-
-@mixin h2($color) {
-	font-family: Arial;
-	color: $color;
-	font-size: 24px;
-	font-weight: $semibold;
-}
-
-@mixin h3($color) {
-	font-family: Arial;
-	color: $color;
-	font-size: 20px;
-	font-weight: $semibold;
-}
-
-
 // $start-width: ;
 // $end-width: ;
 
@@ -49,34 +19,6 @@
 }
 
 
-/* USE PX VALUES TO CREATE EM VALUES.  |  ex: font-size:em(12px); */
-@function em($target, $context: $baseFontSize) {
-	@if $target == 0 {
-		@return 0;
-	}
-	@return $target / $context + 0em;
-}
-
-
-/* BREAKPOINT MIXIN  |  ex: @include media-query ($max, $tablet-width) { ..styles.. } */
-$min: min-width;
-$max: max-width;
-@mixin media-query ($constraint, $viewport1, $viewport2:null) {
-	@if $constraint == $min {
-		@media screen and ($min: $viewport1) {
-			@content;
-		}
-	} @else if $constraint == $max {
-		@media screen and ($max: $viewport1) {
-			@content;
-		}
-	} @else {
-		@media screen and ($min: $viewport1) and ($max: $viewport2) {
-			@content;
-		}
-	}
-}
-
 
 // mixins to handle prefixing:
 @mixin prefix($property, $value) {
@@ -94,12 +36,12 @@ $max: max-width;
   border-radius: $rad;
 }
 
-@mixin transition($time) {
-	-webkit-transition: all $time ease;
-	-moz-transition: all $time ease;
-	-ms-transition: all $time ease;
-	-o-transition: all $time ease;
-	transition: all $time ease;
+@mixin transition($prop, $time) {
+	-webkit-transition: $prop $time ease;
+	-moz-transition: $prop $time ease;
+	-ms-transition: $prop $time ease;
+	-o-transition: $prop $time ease;
+	transition: $prop $time ease;
 }
 
 @mixin transform($prop) {
