@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="viewport" content="width=device-width" / >
-        <title>SnowTap</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width" / >
+    <title>SnowTap</title>
 
-<link href="dist/css/vendor.min.css" rel="stylesheet" type="text/css" />
-<link href="dist/css/styles_snow.css" rel="stylesheet" type="text/css" />
-<!-- <link href="dist/css/styles_snow.min.css" rel="stylesheet" type="text/css" /> -->
-<link href="dist/css/hotfix.css" rel="stylesheet" type="text/css" />
+    <link href="dist/css/vendor.min.css" rel="stylesheet" type="text/css" />
+    <link href="dist/css/styles_snow.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="dist/css/styles_snow.min.css" rel="stylesheet" type="text/css" /> -->
+    <link href="dist/css/hotfix.css" rel="stylesheet" type="text/css" />
 
-<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-<link rel="icon" href="images/favicon.png" type="image/x-icon">     
-    
-    </head>
-    <body>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">     
+        
+</head>
+<body>
 
+    <h1 id="extendBrowser">Please make your browser window larger</h1>
 
-        <h1 id="extendBrowser">Please make your browser window larger</h1>
-
-        <h1 id="minimizeBrowser">Please make your browser window smaller</h1>
-            
-        <section id="mainScrollArea">
+    <h1 id="minimizeBrowser">Please make your browser window smaller</h1>
+        
+    <div id="mainScrollArea">
 
 <!-- /////////////////// NAVIGATION ///////////////// -->
-        <section id="navSection">
-        <section id="navigation">
-            <div class="container">
-            
-                <div id="navList">
-                    <div id="logo"><a href="#fma"><h2>SNOW<span id="logoSpan">TAP</span></h2></a></div>
-                    <nav><a id="navAbout" href="#aboutSection"><h1>ABOUT</h1></a></nav>
-                    <nav><a id="navCrisis" href="#crisisSection"><h1>CRISIS</h1></a></nav>
-                    <nav><a id="navProduct" href="#productSection"><h1>PRODUCTS</h1></a></nav>
-                    <nav><a id="navCause" href="#causeSection"><h1>CAUSE</h1></a></nav>
-                    <nav><a id="navContact" href="#footerSection"><h1>CONTACT</h1></a></nav>
+        <div id="navSection">
+            <div id="navigation">
+                <div class="container">
+                
+                    <div id="navList">
+                        <div id="logo"><a href="#fma"><h2>SNOW<span id="logoSpan">TAP</span></h2></a></div>
+                        <nav><a id="navAbout" href="#aboutSection"><h1>ABOUT</h1></a></nav>
+                        <nav><a id="navCrisis" href="#crisisSection"><h1>CRISIS</h1></a></nav>
+                        <nav><a id="navProduct" href="#productSection"><h1>PRODUCTS</h1></a></nav>
+                        <nav><a id="navCause" href="#causeSection"><h1>CAUSE</h1></a></nav>
+                        <nav><a id="navContact" href="#footerSection"><h1>CONTACT</h1></a></nav>
+                    </div>
+                
                 </div>
-            
-            </div>
-        </section>     
-        </section>
+            </div>     
+        </div>
         <div class="clear"></div>       
 
 
         <!-- ///// SNOW / BACKGROUND ///// -->
             <canvas id="snowCanvas"></canvas>
             
-            <div id="backgroundCloudsOne"><img src="images/backgroundCloudsBlue.jpg" width="100%" height="100%" alt="could 1"/></div>
+            <div id="backgroundCloudsOne">
+                <img src="images/backgroundCloudsBlue.jpg" width="100%" height="100%" alt="could 1"/>
+            </div>
 
 
-<!-- /////////////////// FMA ///////////////// -->
+    <!-- /////////////////// FMA ///////////////// -->
     		<section id="fma">
+
                 <div id="loadColor"></div>
                 <div class="logo" id="logoDrop"><img src="images/logoDrop.png" width="100%" height="100%" alt="Snowtap Logo"/></div>
                 <div class="logo" id="logoText"><img src="images/logoTextWhite.png" width="100%" height="100%" alt="Snowtap Text"/></div>
+
                 <div id="fmaCloudOne" class="cloud cloud--fma"><img src="images/cloud1b.png" width="100%" height="100%" alt="could 1"/></div>
                 <div id="fmaCloudTwo" class="cloud cloud--fma"><img src="images/cloud2b.png" width="100%" height="100%" alt="could 2"/></div>
                 <div id="fmaCloudThree" class="cloud cloud--fma"><img src="images/cloud3b.png" width="100%" height="100%" alt="could 3"/></div>
                 <div id="fmaCloudFour" class="cloud cloud--fma"><img src="images/cloud4b.png" width="100%" height="100%" alt="could 4"/></div>
+                
                 <a id="scrollDownArrow" href="#aboutSection"><img src="images/scrollDownArrow.png" width="100%" height="100%" alt="Scroll Arrow"/></a>
 
     		</section>
 
 
-<!-- /// ABOUT //////////////////////////////////////////// -->
+    <!-- /// ABOUT //////////////////////////////////////////// -->
             <section id="aboutSection">
 
                 <div id="aboutCloudOne" class="cloud cloud--about"><img src="images/cloud5b.png" width="100%" height="100%" alt="about could 1"/></div>
@@ -86,8 +90,8 @@
 
                     <h1>ABOUT <span class="whiteTitle">SNOWTAP</span></h1>
 
-<!--                     <div class="clear"></div>
- -->
+                    <!-- <div class="clear"></div> -->
+
                     <p>Our goal is to utilize natural resources to create a clean water option for consumption and survival. With the world’s access to clean water becoming an issue, We are looking for new ways to supply the population with clean, drinkable water on different scales. Providing opportunities on a large scale for individual homes and companies and on an individual level, by creating a backpack attachment for on the go purposes.</p>
 
                     <div class="moreContent moreIcon"><img src="images/iconFlakeMain.png" width="100%" height="100%" alt="Snowtap logo"/></div>
@@ -104,7 +108,7 @@
             </section>
 
 
-<!-- /// CRISIS /////////////////////////////////////////// -->
+    <!-- /// CRISIS /////////////////////////////////////////// -->
             <section id="crisisSection">
 
                 <div id="crisisCloudOne" class="cloud cloud--crisis"><img src="images/cloud9b.png" width="100%" height="100%" alt="crisis could 1"/></div>
@@ -150,7 +154,7 @@
 
             </section>
 
-<!-- /// PRODUCT ////////////////////////////////////////// -->
+    <!-- /// PRODUCT ////////////////////////////////////////// -->
             <section id="productSection">
 
                 <div id="productCloudOne" class="cloud cloud--product"><img src="images/cloud2b.png" width="100%" height="100%" alt="product could 1"/></div>
@@ -235,7 +239,7 @@
             </section>
 
 
-<!-- /// CAUSE //////////////////////////////////////// -->
+    <!-- /// CAUSE //////////////////////////////////////// -->
             <section id="causeSection">
 
                 <div id="causeCloudOne" class="cloud cloud--cause"><img src="images/cloud12b.png" width="100%" height="100%" alt="could 11"/></div>
@@ -272,8 +276,8 @@
 
 
 
-<!-- /// FOOTER ////////////////////////////////////////// -->
-            <section id="footerSection">
+    <!-- /// FOOTER ////////////////////////////////////////// -->
+            <footer id="footerSection">
 
                 <div class="hiddenContent avoidPointer" id="snowingStats">
 
@@ -296,14 +300,14 @@
 
 
                 <!-- <a href="mailto:pkavanaghjr@gmail.com" class="social" id="socialMail"><img src="images/socialMail.png" width="100%" height="100%" alt="Email"/></a> -->
-<!--                 <a href="https://twitter.com/?lang=en" class="social" id="socialTweet"><img src="images/socialTwitter.png" width="100%" height="100%" alt="Email"/></a>
-                <a href="https://instagram.com/" class="social" id="socialInsta"><img src="images/socialInsta.png" width="100%" height="100%" alt="Email"/></a>
-                <a href="https://www.youtube.com/" class="social" id="socialYou"><img src="images/socialYoutube.png" width="100%" height="100%" alt="Email"/></a>
- -->
+                <!-- <a href="https://twitter.com/?lang=en" class="social" id="socialTweet"><img src="images/socialTwitter.png" width="100%" height="100%" alt="Email"/></a> -->
+                <!-- <a href="https://instagram.com/" class="social" id="socialInsta"><img src="images/socialInsta.png" width="100%" height="100%" alt="Email"/></a> -->
+                <!-- <a href="https://www.youtube.com/" class="social" id="socialYou"><img src="images/socialYoutube.png" width="100%" height="100%" alt="Email"/></a> -->
+   
 
                 <section id="copyright">
                         <p id="designby">Design / Development: <a href="http://patkavanaghjr.com/"><span>Pat Kavanagh</span></a></p>
-                        <!-- <script>
+                        <script>
                             var today = new Date();
                             var dd = today.getDate();
                             var mm = today.getMonth()+1; //January is 0!
@@ -316,17 +320,17 @@
                             } 
                             today = mm + '/' + dd + '/' + yyyy;
                         </script>
-                        <p id="copyrightText">&copy; SnowTap <span id="copyright-year"><script>document.write(yyyy);</script></span></p> -->
+                        <p id="copyrightText">&copy; SnowTap <span id="copyright-year"><script>document.write(yyyy);</script></span></p>
                         <div class="clear"></div> 
                 </section>        
 
 
-            </section>
+            </footer>
 
 
 
 
-        </section> <!--END MAIN SCROLL AREA-->
+    </div> <!--END MAIN SCROLL AREA-->
 
     <script type="text/javascript" src="dist/js/jquery-2.1.3.min.js"></script>
     <script type="text/javascript" src="dist/js/vendor.min.js"></script>
@@ -334,5 +338,5 @@
     <!-- <script type="text/javascript" src="/dist/js/custom.min.js"></script> -->
     <script type="text/javascript" src="dist/js/hotfix.js"></script>
 
-    </body>
+</body>
 </html>

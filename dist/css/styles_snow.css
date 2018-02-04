@@ -516,49 +516,501 @@ background-color:rgba(62,69,76,1)
 .avoidPointer {
   pointer-events: none; }
 
+@media only screen and (min-width: 978px) {
+  /* line 53, src/sass/components/global.scss */
+  .hideForDesk {
+    display: none; } }
+
+@media only screen and (max-width: 977px) {
+  /* line 59, src/sass/components/global.scss */
+  .hideForMobile {
+    display: none; } }
+
+/* line 65, src/sass/components/global.scss */
+#extendBrowser {
+  display: none; }
+
+/* line 69, src/sass/components/global.scss */
+#minimizeBrowser {
+  display: none; }
+
+/* line 73, src/sass/components/global.scss */
+#mainScrollArea {
+  overflow: hidden;
+  height: 900vh;
+  /*background-image: url("../images/backgroundCloudsBlue.jpg");
+	width:100%;	*/ }
+  @media only screen and (max-width: 2299px) {
+    /* line 73, src/sass/components/global.scss */
+    #mainScrollArea {
+      height: 1400vh; } }
+  @media only screen and (max-width: 1499px) {
+    /* line 73, src/sass/components/global.scss */
+    #mainScrollArea {
+      height: 2100vh; } }
+  @media only screen and (max-width: 977px) {
+    /* line 73, src/sass/components/global.scss */
+    #mainScrollArea {
+      height: 2000vh; } }
+
+/* line 89, src/sass/components/global.scss */
+#scrollDownArrow {
+  z-index: 10;
+  position: absolute;
+  width: 25px;
+  left: 50%;
+  top: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 99, src/sass/components/global.scss */
+#backgroundCloudsOne {
+  position: fixed;
+  pointer-events: none;
+  width: 170%;
+  top: 0%;
+  z-index: -1; }
+  @media only screen and (max-width: 2299px) {
+    /* line 99, src/sass/components/global.scss */
+    #backgroundCloudsOne {
+      width: 150%; } }
+  @media only screen and (max-width: 1499px) {
+    /* line 99, src/sass/components/global.scss */
+    #backgroundCloudsOne {
+      width: 130%; } }
+  @media only screen and (max-width: 977px) {
+    /* line 99, src/sass/components/global.scss */
+    #backgroundCloudsOne {
+      width: 200%; } }
+
+/* line 116, src/sass/components/global.scss */
+#logoDrop {
+  z-index: 2;
+  position: absolute;
+  width: 8.5%;
+  left: 50%;
+  top: -15%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+  @media only screen and (max-width: 977px) {
+    /* line 116, src/sass/components/global.scss */
+    #logoDrop {
+      width: 12%;
+      left: 50%;
+      top: -15%; } }
+
+/* line 131, src/sass/components/global.scss */
+#logoText {
+  z-index: 2;
+  position: absolute;
+  width: 20%;
+  left: 50%;
+  top: 62%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+  @media only screen and (max-width: 977px) {
+    /* line 131, src/sass/components/global.scss */
+    #logoText {
+      width: 30%;
+      top: 64%; } }
+
+/* line 145, src/sass/components/global.scss */
+#fmaCloudOne {
+  z-index: 3;
+  position: absolute;
+  width: 90%;
+  left: 0%;
+  top: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 155, src/sass/components/global.scss */
+#fmaCloudTwo {
+  z-index: 3;
+  position: absolute;
+  width: 35%;
+  left: 85%;
+  top: 67%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 165, src/sass/components/global.scss */
+#fmaCloudThree {
+  z-index: 1;
+  position: absolute;
+  width: 12%;
+  left: 40%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 175, src/sass/components/global.scss */
+#fmaCloudFour {
+  z-index: 1;
+  position: absolute;
+  width: 7%;
+  left: 57%;
+  top: 38%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/*======================================= HIDDEN CONTENT STYlES ===================*/
+/* line 187, src/sass/components/global.scss */
+h3 {
+  font-size: 28px;
+  color: #FFFFFF; }
+
+/* line 192, src/sass/components/global.scss */
+h4 {
+  font-size: 24px;
+  color: #FFFFFF; }
+
+/* line 197, src/sass/components/global.scss */
+h5 {
+  font-size: 21px;
+  color: #FFFFFF; }
+
+/* line 202, src/sass/components/global.scss */
+.hiddenContent {
+  background-color: rgba(250, 250, 250, 0.6);
+  padding: 3% 3% 3% 3%;
+  border-radius: 3%;
+  opacity: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  overflow: hidden; }
+
+/* line 213, src/sass/components/global.scss */
+.hiddenContent h1 {
+  font-size: 28px;
+  color: #2185C4;
+  margin-bottom: 2%; }
+  @media only screen and (max-width: 1499px) {
+    /* line 213, src/sass/components/global.scss */
+    .hiddenContent h1 {
+      font-size: 24px; } }
+  @media only screen and (max-width: 977px) {
+    /* line 213, src/sass/components/global.scss */
+    .hiddenContent h1 {
+      font-size: 21px; } }
+
+/* line 225, src/sass/components/global.scss */
+.hiddenContent p {
+  color: #3E454C;
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 2%; }
+  @media only screen and (max-width: 1499px) {
+    /* line 225, src/sass/components/global.scss */
+    .hiddenContent p {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media only screen and (max-width: 977px) {
+    /* line 225, src/sass/components/global.scss */
+    .hiddenContent p {
+      font-size: 14px;
+      line-height: 18px; } }
+
+/* line 240, src/sass/components/global.scss */
+.moreIcon {
+  width: 15%;
+  margin: 13% auto 2% auto; }
+
+/* line 245, src/sass/components/global.scss */
+.productIcon {
+  width: 30%;
+  margin: 13% auto 2% auto; }
+
+/* line 250, src/sass/components/global.scss */
+#productMock {
+  width: 80%;
+  margin: 13% auto 2% auto; }
+
+/* line 255, src/sass/components/global.scss */
+.moreList p {
+  font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
+  color: #3E454C;
+  font-size: 23px;
+  line-height: 28px; }
+  @media only screen and (max-width: 1499px) {
+    /* line 255, src/sass/components/global.scss */
+    .moreList p {
+      font-size: 18px;
+      line-height: 24px; } }
+
+/*======================================== ABOUT SECTION ===================*/
+/* line 267, src/sass/components/global.scss */
+#aboutSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -100vh; }
+  @media only screen and (max-width: 1499px) {
+    /* line 267, src/sass/components/global.scss */
+    #aboutSection {
+      top: -170vh; } }
+
+/* line 277, src/sass/components/global.scss */
+#aboutContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 1;
+  -webkit-transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 277, src/sass/components/global.scss */
+    #aboutContent {
+      height: 42vh; } }
+
+/*========================================== CRISIS SECTION ===================*/
+/* line 288, src/sass/components/global.scss */
+#crisisSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -430vh; }
+  @media only screen and (max-width: 1499px) {
+    /* line 288, src/sass/components/global.scss */
+    #crisisSection {
+      top: -600vh; } }
+
+/* line 298, src/sass/components/global.scss */
+#crisisContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 1;
+  -webkit-transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 298, src/sass/components/global.scss */
+    #crisisContent {
+      height: 42vh; } }
+
+/*============================================ PRODUCT SECTION ===================*/
+/* line 310, src/sass/components/global.scss */
+#productSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -720vh;
+  z-index: 3; }
+  @media only screen and (max-width: 1499px) {
+    /* line 310, src/sass/components/global.scss */
+    #productSection {
+      top: -980vh; } }
+
+/* line 321, src/sass/components/global.scss */
+.mountain {
+  position: fixed; }
+
+/* line 325, src/sass/components/global.scss */
+#mountainPeak {
+  width: 120%;
+  z-index: 2;
+  left: -10%;
+  top: 240vh; }
+  @media only screen and (max-width: 977px) {
+    /* line 325, src/sass/components/global.scss */
+    #mountainPeak {
+      width: 150%;
+      left: -25%; } }
+
+/* line 336, src/sass/components/global.scss */
+#mountainLeft {
+  width: 40%;
+  z-index: 1;
+  left: 0%;
+  top: 250vh;
+  opacity: 0.9; }
+
+/* line 344, src/sass/components/global.scss */
+#mountainRight {
+  width: 40%;
+  z-index: 1;
+  left: 60%;
+  top: 240vh;
+  opacity: 0.8; }
+
+/* line 352, src/sass/components/global.scss */
+#productContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 1;
+  -webkit-transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 352, src/sass/components/global.scss */
+    #productContent {
+      height: 42vh; } }
+
+/*============================================ CAUSE SECTION ===================*/
+/* line 363, src/sass/components/global.scss */
+#causeSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -1030vh;
+  z-index: 3; }
+  @media only screen and (max-width: 1499px) {
+    /* line 363, src/sass/components/global.scss */
+    #causeSection {
+      top: -1370vh; } }
+
+/* line 375, src/sass/components/global.scss */
+#causeContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 3;
+  -webkit-transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 375, src/sass/components/global.scss */
+    #causeContent {
+      height: 42vh; } }
+
+/*=========================================== FOOTER SECTION ===================*/
+/* line 387, src/sass/components/global.scss */
+#footerSection {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  position: relative;
+  top: -1350vh; }
+  @media only screen and (max-width: 1499px) {
+    /* line 387, src/sass/components/global.scss */
+    #footerSection {
+      top: -1700vh; } }
+
+/* line 398, src/sass/components/global.scss */
+#snowingStats {
+  width: 35%;
+  height: 30vh;
+  z-index: 3;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 2299px) {
+    /* line 398, src/sass/components/global.scss */
+    #snowingStats {
+      height: 42vh;
+      overflow: scroll; } }
+  @media only screen and (max-width: 1499px) {
+    /* line 398, src/sass/components/global.scss */
+    #snowingStats {
+      height: 50vh; } }
+
+/* line 413, src/sass/components/global.scss */
+.statsIcon {
+  float: left;
+  width: 15%;
+  margin: 10% 18% 2% 17%; }
+
+/* line 419, src/sass/components/global.scss */
+.statsText {
+  float: left;
+  width: 45%;
+  margin: 0% 0% 0% 5%; }
+
+/* line 425, src/sass/components/global.scss */
+#footerSection .social {
+  z-index: 4;
+  cursor: pointer;
+  width: 3%;
+  opacity: 1;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 977px) {
+    /* line 425, src/sass/components/global.scss */
+    #footerSection .social {
+      width: 4%; } }
+
+/*============== COPYRIGHT =========**/
+/* line 439, src/sass/components/global.scss */
+#copyright {
+  position: absolute;
+  width: 100%;
+  z-index: 10; }
+
+/* line 445, src/sass/components/global.scss */
+#copyright p {
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF; }
+
+/* line 451, src/sass/components/global.scss */
+#designby {
+  position: absolute;
+  left: 3%;
+  color: #FFFFFF; }
+
+/* line 457, src/sass/components/global.scss */
+#copyrightText {
+  position: absolute;
+  right: 3%;
+  color: #FFFFFF; }
+
+/* line 463, src/sass/components/global.scss */
+span {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+/* line 468, src/sass/components/global.scss */
+span:hover {
+  text-decoration: underline; }
+
 /*************************************************************
 	** TYPE
 *************************************************************/
-/* line 57, src/sass/components/global.scss */
+/* line 480, src/sass/components/global.scss */
 h1 {
   font-family: "arborcrestHeavy", Helvetica, Arial, sans-serif; }
 
-/* line 61, src/sass/components/global.scss */
+/* line 484, src/sass/components/global.scss */
 h2 {
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
 
-/* line 65, src/sass/components/global.scss */
+/* line 488, src/sass/components/global.scss */
 h3 {
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
 
-/* line 69, src/sass/components/global.scss */
+/* line 492, src/sass/components/global.scss */
 h4 {
   font-family: "josefinSemibold", Helvetica, Arial, sans-serif; }
 
-/* line 73, src/sass/components/global.scss */
+/* line 496, src/sass/components/global.scss */
 h5 {
   font-family: "josefinSemibold", Helvetica, Arial, sans-serif; }
 
-/* line 77, src/sass/components/global.scss */
+/* line 500, src/sass/components/global.scss */
 h6 {
   font-family: "josefinRegular", Helvetica, Arial, sans-serif; }
 
-/* line 81, src/sass/components/global.scss */
+/* line 504, src/sass/components/global.scss */
 p {
   font-family: "josefinRegular", Helvetica, Arial, sans-serif; }
 
-/* line 85, src/sass/components/global.scss */
+/* line 508, src/sass/components/global.scss */
 a {
   text-decoration: none; }
 
 /*************************************************************
 	** HIDDEN CONTENT
 *************************************************************/
-/* line 94, src/sass/components/global.scss */
+/* line 517, src/sass/components/global.scss */
 .whiteTitle {
   color: #FFFFFF; }
 
-/* line 98, src/sass/components/global.scss */
+/* line 521, src/sass/components/global.scss */
 .closeButton {
   color: #3E454C;
   position: absolute;
@@ -566,7 +1018,7 @@ a {
   right: 3%;
   z-index: 2; }
 
-/* line 106, src/sass/components/global.scss */
+/* line 529, src/sass/components/global.scss */
 .closeButton h2 {
   font-family: "arborcrestHeavy", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -576,13 +1028,13 @@ a {
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease; }
 
-/* line 115, src/sass/components/global.scss */
+/* line 538, src/sass/components/global.scss */
 .closeButton h2:hover {
   color: #FFFFFF;
   -webkit-transition: color 0.5s ease;
   transition: color 0.5s ease; }
 
-/* line 120, src/sass/components/global.scss */
+/* line 543, src/sass/components/global.scss */
 .moreButton {
   width: 47%;
   height: 4vh;
@@ -597,19 +1049,19 @@ a {
   -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease; }
 
-/* line 134, src/sass/components/global.scss */
+/* line 557, src/sass/components/global.scss */
 .moreButton:hover {
   background-color: #3E454C;
   -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease; }
 
-/* line 139, src/sass/components/global.scss */
+/* line 562, src/sass/components/global.scss */
 .moreButton h6 {
   color: #FFFFFF;
   line-height: 4vh;
   text-align: center; }
 
-/* line 145, src/sass/components/global.scss */
+/* line 568, src/sass/components/global.scss */
 .buyButton {
   width: 47%;
   height: 4vh;
@@ -626,13 +1078,13 @@ a {
 	@include transition(background-color, 1s);
 }
 */
-/* line 161, src/sass/components/global.scss */
+/* line 584, src/sass/components/global.scss */
 .buyButton h6 {
   color: #FFFFFF;
   line-height: 4vh;
   text-align: center; }
 
-/* line 167, src/sass/components/global.scss */
+/* line 590, src/sass/components/global.scss */
 .doneButton {
   width: 100%;
   height: 4vh;
@@ -646,32 +1098,32 @@ a {
   -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease; }
 
-/* line 180, src/sass/components/global.scss */
+/* line 603, src/sass/components/global.scss */
 .doneButton:hover {
   background-color: #2185C4;
   -webkit-transition: background-color 1s ease;
   transition: background-color 1s ease; }
 
-/* line 185, src/sass/components/global.scss */
+/* line 608, src/sass/components/global.scss */
 .doneButton h3 {
   font-size: 14px;
   color: #FFFFFF;
   line-height: 4vh;
   text-align: center; }
 
-/* line 192, src/sass/components/global.scss */
+/* line 615, src/sass/components/global.scss */
 .moreContent {
   opacity: 0; }
 
-/* line 196, src/sass/components/global.scss */
+/* line 619, src/sass/components/global.scss */
 .moreList {
   margin: 5% 0% 5% 0%; }
 
-/* line 200, src/sass/components/global.scss */
+/* line 623, src/sass/components/global.scss */
 .moreList li {
   margin-bottom: 3%; }
 
-/* line 204, src/sass/components/global.scss */
+/* line 627, src/sass/components/global.scss */
 .bullet {
   width: 8px;
   height: 8px;
@@ -681,7 +1133,7 @@ a {
   margin-right: 1%;
   line-height: 2px; }
 
-/* line 214, src/sass/components/global.scss */
+/* line 637, src/sass/components/global.scss */
 .boldMore {
   font-family: "josefinBold", Helvetica, Arial, sans-serif;
   font-size: 18px; }
@@ -978,1179 +1430,78 @@ a {
   color: #2185C4;
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
 
-/* XL-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 2300px) and (max-width: 2599px) {
-  /* line 3, src/sass/components/_r-xtra-26.scss */
-  .hideForDesk {
-    display: none; }
-  /* line 7, src/sass/components/_r-xtra-26.scss */
-  #extendBrowser {
-    display: none; }
-  /* line 11, src/sass/components/_r-xtra-26.scss */
-  #minimizeBrowser {
-    display: none; }
-  /* line 15, src/sass/components/_r-xtra-26.scss */
-  #mainScrollArea {
-    overflow: hidden;
-    height: 900vh;
-    /*background-image: url("../images/backgroundCloudsBlue.jpg");
-	width:100%;	
-*/ }
-  /* line 22, src/sass/components/_r-xtra-26.scss */
-  #scrollDownArrow {
-    z-index: 10;
-    position: absolute;
-    width: 25px;
-    left: 50%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 32, src/sass/components/_r-xtra-26.scss */
-  #backgroundCloudsOne {
-    position: fixed;
-    pointer-events: none;
-    width: 170%;
-    top: 0%;
-    z-index: -1; }
-  /* line 40, src/sass/components/_r-xtra-26.scss */
-  #logoDrop {
-    z-index: 2;
-    position: absolute;
-    width: 8.5%;
-    left: 50%;
-    top: -15%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 50, src/sass/components/_r-xtra-26.scss */
-  #logoText {
-    z-index: 2;
-    position: absolute;
-    width: 20%;
-    left: 50%;
-    top: 62%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 60, src/sass/components/_r-xtra-26.scss */
-  #fmaCloudOne {
-    z-index: 3;
-    position: absolute;
-    width: 90%;
-    left: 0%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 70, src/sass/components/_r-xtra-26.scss */
-  #fmaCloudTwo {
-    z-index: 3;
-    position: absolute;
-    width: 35%;
-    left: 85%;
-    top: 67%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 80, src/sass/components/_r-xtra-26.scss */
-  #fmaCloudThree {
-    z-index: 1;
-    position: absolute;
-    width: 12%;
-    left: 40%;
-    top: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 90, src/sass/components/_r-xtra-26.scss */
-  #fmaCloudFour {
-    z-index: 1;
-    position: absolute;
-    width: 7%;
-    left: 57%;
-    top: 38%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /*======================================= HIDDEN CONTENT STYlES ===================*/
-  /* line 102, src/sass/components/_r-xtra-26.scss */
-  h3 {
-    font-size: 28px;
-    color: #FFFFFF; }
-  /* line 107, src/sass/components/_r-xtra-26.scss */
-  h4 {
-    font-size: 24px;
-    color: #FFFFFF; }
-  /* line 112, src/sass/components/_r-xtra-26.scss */
-  h5 {
-    font-size: 21px;
-    color: #FFFFFF; }
-  /* line 117, src/sass/components/_r-xtra-26.scss */
-  .hiddenContent {
-    background-color: rgba(250, 250, 250, 0.6);
-    padding: 3% 3% 3% 3%;
-    border-radius: 3%;
-    opacity: 0;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    overflow: hidden; }
-  /* line 128, src/sass/components/_r-xtra-26.scss */
-  .hiddenContent h1 {
-    font-size: 28px;
-    color: #2185C4;
-    margin-bottom: 2%; }
-  /* line 134, src/sass/components/_r-xtra-26.scss */
-  .hiddenContent p {
-    color: #3E454C;
-    font-size: 21px;
-    line-height: 26px;
-    margin-bottom: 2%; }
-  /* line 141, src/sass/components/_r-xtra-26.scss */
-  .moreIcon {
-    width: 15%;
-    margin: 13% auto 2% auto; }
-  /* line 146, src/sass/components/_r-xtra-26.scss */
-  .productIcon {
-    width: 30%;
-    margin: 13% auto 2% auto; }
-  /* line 151, src/sass/components/_r-xtra-26.scss */
-  #productMock {
-    width: 80%;
-    margin: 13% auto 2% auto; }
-  /* line 156, src/sass/components/_r-xtra-26.scss */
-  .moreList p {
-    font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
-    color: #3E454C;
-    font-size: 23px;
-    line-height: 28px; }
-  /*======================================== ABOUT SECTION ===================*/
-  /* line 164, src/sass/components/_r-xtra-26.scss */
-  #aboutSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -100vh; }
-  /* line 171, src/sass/components/_r-xtra-26.scss */
-  #aboutContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 1;
-    transform: translate(-10%, -50%);
-    -o-transform: translate(-10%, -50%);
-    -webkit-transform: translate(-10%, -50%);
-    -moz-transform: translate(-10%, -50%); }
-  /*========================================== CRISIS SECTION ===================*/
-  /* line 182, src/sass/components/_r-xtra-26.scss */
-  #crisisSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -430vh; }
-  /* line 189, src/sass/components/_r-xtra-26.scss */
-  #crisisContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 1;
-    transform: translate(-90%, -50%);
-    -o-transform: translate(-90%, -50%);
-    -webkit-transform: translate(-90%, -50%);
-    -moz-transform: translate(-90%, -50%); }
-  /*============================================ PRODUCT SECTION ===================*/
-  /* line 201, src/sass/components/_r-xtra-26.scss */
-  #productSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -720vh;
-    z-index: 3; }
-  /* line 209, src/sass/components/_r-xtra-26.scss */
-  #mountainPeak {
-    position: fixed;
-    width: 120%;
-    z-index: 2;
-    left: -10%;
-    top: 240vh; }
-  /* line 217, src/sass/components/_r-xtra-26.scss */
-  #mountainLeft {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 0%;
-    top: 250vh;
-    opacity: .9; }
-  /* line 226, src/sass/components/_r-xtra-26.scss */
-  #mountainRight {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 60%;
-    top: 240vh;
-    opacity: .8; }
-  /* line 235, src/sass/components/_r-xtra-26.scss */
-  #productContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 1;
-    transform: translate(-10%, -50%);
-    -o-transform: translate(-10%, -50%);
-    -webkit-transform: translate(-10%, -50%);
-    -moz-transform: translate(-10%, -50%); }
-  /*============================================ CAUSE SECTION ===================*/
-  /* line 246, src/sass/components/_r-xtra-26.scss */
-  #causeSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -1030vh;
-    z-index: 3; }
-  /* line 255, src/sass/components/_r-xtra-26.scss */
-  #causeContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 3;
-    transform: translate(-90%, -50%);
-    -o-transform: translate(-90%, -50%);
-    -webkit-transform: translate(-90%, -50%);
-    -moz-transform: translate(-90%, -50%); }
-  /*=========================================== FOOTER SECTION ===================*/
-  /* line 267, src/sass/components/_r-xtra-26.scss */
-  #footerSection {
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    position: relative;
-    top: -1350vh; }
-  /* line 275, src/sass/components/_r-xtra-26.scss */
-  #footerSection .social {
-    z-index: 4;
-    cursor: pointer;
-    width: 3%;
-    opacity: 1;
-    -webkit-transition: width 1s ease;
-    transition: width 1s ease;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /* line 285, src/sass/components/_r-xtra-26.scss */
-  #snowingStats {
-    width: 35%;
-    height: 30vh;
-    z-index: 3;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /* line 292, src/sass/components/_r-xtra-26.scss */
-  .statsIcon {
-    float: left;
-    width: 15%;
-    margin: 10% 18% 2% 17%; }
-  /* line 298, src/sass/components/_r-xtra-26.scss */
-  .statsText {
-    float: left;
-    width: 45%;
-    margin: 0% 0% 0% 5%; }
-  /*============== COPYRIGHT =========**/
-  /* line 305, src/sass/components/_r-xtra-26.scss */
-  #copyright {
-    position: absolute;
-    width: 100%;
-    z-index: 10; }
-  /* line 311, src/sass/components/_r-xtra-26.scss */
-  #copyright p {
-    font-size: 16px;
-    line-height: 16px;
-    color: #FFFFFF; }
-  /* line 317, src/sass/components/_r-xtra-26.scss */
-  #designby {
-    position: absolute;
-    left: 3%;
-    color: #FFFFFF; }
-  /* line 323, src/sass/components/_r-xtra-26.scss */
-  #copyrightText {
-    position: absolute;
-    right: 3%;
-    color: #FFFFFF; }
-  /* line 329, src/sass/components/_r-xtra-26.scss */
-  span {
-    color: #FFFFFF;
-    text-decoration: none; }
-  /* line 334, src/sass/components/_r-xtra-26.scss */
-  span:hover {
-    text-decoration: underline; } }
-
-/*======== CLOSE XL-DESKTOP RESPONSIVE =========*/
-/* LARGE-DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 1500px) and (max-width: 2299px) {
-  /* line 3, src/sass/components/_r-large-23.scss */
-  .hideForDesk {
-    display: none; }
-  /* line 7, src/sass/components/_r-large-23.scss */
-  #extendBrowser {
-    display: none; }
-  /* line 11, src/sass/components/_r-large-23.scss */
-  #minimizeBrowser {
-    display: none; }
-  /* line 15, src/sass/components/_r-large-23.scss */
-  #mainScrollArea {
-    overflow: hidden;
-    height: 1400vh;
-    /*background-image: url("../images/backgroundCloudsBlue.jpg");
-	width:100%;	
-*/ }
-  /* line 22, src/sass/components/_r-large-23.scss */
-  #scrollDownArrow {
-    z-index: 10;
-    position: absolute;
-    width: 25px;
-    left: 50%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 32, src/sass/components/_r-large-23.scss */
-  #backgroundCloudsOne {
-    position: fixed;
-    pointer-events: none;
-    width: 150%;
-    top: 0%;
-    z-index: -1; }
-  /* line 40, src/sass/components/_r-large-23.scss */
-  #logoDrop {
-    z-index: 2;
-    position: absolute;
-    width: 8.5%;
-    left: 50%;
-    top: -15%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 50, src/sass/components/_r-large-23.scss */
-  #logoText {
-    z-index: 2;
-    position: absolute;
-    width: 20%;
-    left: 50%;
-    top: 60%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 60, src/sass/components/_r-large-23.scss */
-  #fmaCloudOne {
-    z-index: 3;
-    position: absolute;
-    width: 90%;
-    left: 0%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 70, src/sass/components/_r-large-23.scss */
-  #fmaCloudTwo {
-    z-index: 3;
-    position: absolute;
-    width: 35%;
-    left: 85%;
-    top: 67%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 80, src/sass/components/_r-large-23.scss */
-  #fmaCloudThree {
-    z-index: 1;
-    position: absolute;
-    width: 12%;
-    left: 40%;
-    top: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 90, src/sass/components/_r-large-23.scss */
-  #fmaCloudFour {
-    z-index: 1;
-    position: absolute;
-    width: 7%;
-    left: 57%;
-    top: 38%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /*======================================= HIDDEN CONTENT STYlES ===================*/
-  /* line 102, src/sass/components/_r-large-23.scss */
-  h3 {
-    font-size: 28px;
-    color: #FFFFFF; }
-  /* line 107, src/sass/components/_r-large-23.scss */
-  h4 {
-    font-size: 24px;
-    color: #FFFFFF; }
-  /* line 112, src/sass/components/_r-large-23.scss */
-  h5 {
-    font-size: 21px;
-    color: #FFFFFF; }
-  /* line 117, src/sass/components/_r-large-23.scss */
-  .hiddenContent {
-    background-color: rgba(250, 250, 250, 0.6);
-    padding: 3% 3% 3% 3%;
-    border-radius: 3%;
-    opacity: 0;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    overflow: hidden; }
-  /* line 128, src/sass/components/_r-large-23.scss */
-  .hiddenContent h1 {
-    font-size: 28px;
-    color: #2185C4;
-    margin-bottom: 2%; }
-  /* line 134, src/sass/components/_r-large-23.scss */
-  .hiddenContent p {
-    color: #3E454C;
-    font-size: 21px;
-    line-height: 26px;
-    margin-bottom: 2%; }
-  /* line 141, src/sass/components/_r-large-23.scss */
-  .moreIcon {
-    width: 15%;
-    margin: 13% auto 2% auto; }
-  /* line 146, src/sass/components/_r-large-23.scss */
-  .productIcon {
-    width: 30%;
-    margin: 13% auto 2% auto; }
-  /* line 151, src/sass/components/_r-large-23.scss */
-  #productMock {
-    width: 80%;
-    margin: 13% auto 2% auto; }
-  /* line 156, src/sass/components/_r-large-23.scss */
-  .moreList p {
-    font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
-    color: #3E454C;
-    font-size: 23px;
-    line-height: 28px; }
-  /*======================================== ABOUT SECTION ===================*/
-  /* line 164, src/sass/components/_r-large-23.scss */
-  #aboutSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -100vh; }
-  /* line 171, src/sass/components/_r-large-23.scss */
-  #aboutContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 1;
-    -webkit-transform: translate(-10%, -50%);
-    transform: translate(-10%, -50%); }
-  /*========================================== CRISIS SECTION ===================*/
-  /* line 179, src/sass/components/_r-large-23.scss */
-  #crisisSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -430vh; }
-  /* line 186, src/sass/components/_r-large-23.scss */
-  #crisisContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 1;
-    -webkit-transform: translate(-90%, -50%);
-    transform: translate(-90%, -50%); }
-  /*============================================ PRODUCT SECTION ===================*/
-  /* line 195, src/sass/components/_r-large-23.scss */
-  #productSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -720vh;
-    z-index: 3; }
-  /* line 203, src/sass/components/_r-large-23.scss */
-  #mountainPeak {
-    position: fixed;
-    width: 120%;
-    z-index: 2;
-    left: -10%;
-    top: 240vh; }
-  /* line 211, src/sass/components/_r-large-23.scss */
-  #mountainLeft {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 0%;
-    top: 250vh;
-    opacity: .9; }
-  /* line 220, src/sass/components/_r-large-23.scss */
-  #mountainRight {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 60%;
-    top: 240vh;
-    opacity: .8; }
-  /* line 229, src/sass/components/_r-large-23.scss */
-  #productContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 1;
-    -webkit-transform: translate(-10%, -50%);
-    transform: translate(-10%, -50%); }
-  /*============================================ CAUSE SECTION ===================*/
-  /* line 237, src/sass/components/_r-large-23.scss */
-  #causeSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -1030vh;
-    z-index: 3; }
-  /* line 246, src/sass/components/_r-large-23.scss */
-  #causeContent {
-    width: 35%;
-    height: 30vh;
-    z-index: 3;
-    -webkit-transform: translate(-90%, -50%);
-    transform: translate(-90%, -50%); }
-  /*=========================================== FOOTER SECTION ===================*/
-  /* line 255, src/sass/components/_r-large-23.scss */
-  #footerSection {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    top: -1350vh;
-    z-index: 10; }
-  /* line 263, src/sass/components/_r-large-23.scss */
-  #snowingStats {
-    width: 35%;
-    height: 42vh;
-    z-index: 3;
-    overflow: scroll;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /* line 271, src/sass/components/_r-large-23.scss */
-  .statsIcon {
-    float: left;
-    width: 15%;
-    margin: 10% 18% 2% 17%; }
-  /* line 277, src/sass/components/_r-large-23.scss */
-  .statsText {
-    float: left;
-    width: 45%;
-    margin: 0% 0% 0% 5%; }
-  /* line 283, src/sass/components/_r-large-23.scss */
-  #footerSection .social {
-    z-index: 4;
-    cursor: pointer;
-    width: 3%;
-    opacity: 1;
-    -webkit-transition: width 1s ease;
-    transition: width 1s ease;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /*============== COPYRIGHT =========**/
-  /* line 294, src/sass/components/_r-large-23.scss */
-  #copyright {
-    position: absolute;
-    width: 100%;
-    z-index: 10; }
-  /* line 300, src/sass/components/_r-large-23.scss */
-  #copyright p {
-    font-size: 16px;
-    line-height: 16px;
-    color: #FFFFFF; }
-  /* line 306, src/sass/components/_r-large-23.scss */
-  #designby {
-    position: absolute;
-    left: 3%;
-    color: #FFFFFF; }
-  /* line 312, src/sass/components/_r-large-23.scss */
-  #copyrightText {
-    position: absolute;
-    right: 3%;
-    color: #FFFFFF; }
-  /* line 318, src/sass/components/_r-large-23.scss */
-  span {
-    color: #FFFFFF;
-    text-decoration: none; }
-  /* line 323, src/sass/components/_r-large-23.scss */
-  span:hover {
-    text-decoration: underline; } }
-
-/*======== CLOSE LARGE-DESKTOP RESPONSIVE =========*/
-/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 978px) and (max-width: 1499px) {
-  /* line 3, src/sass/components/_r-desktop-15.scss */
-  .hideForDesk {
-    display: none; }
-  /* line 7, src/sass/components/_r-desktop-15.scss */
-  #extendBrowser {
-    display: none; }
-  /* line 11, src/sass/components/_r-desktop-15.scss */
-  #minimizeBrowser {
-    display: none; }
-  /* line 15, src/sass/components/_r-desktop-15.scss */
-  #mainScrollArea {
-    overflow: hidden;
-    height: 2100vh; }
-  /* line 20, src/sass/components/_r-desktop-15.scss */
-  #scrollDownArrow {
-    z-index: 10;
-    position: absolute;
-    width: 25px;
-    left: 50%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 30, src/sass/components/_r-desktop-15.scss */
-  #backgroundCloudsOne {
-    position: fixed;
-    pointer-events: none;
-    width: 130%;
-    top: 0%;
-    z-index: -1; }
-  /* line 38, src/sass/components/_r-desktop-15.scss */
-  #logoDrop {
-    z-index: 2;
-    position: absolute;
-    width: 8.5%;
-    left: 50%;
-    top: -15%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 48, src/sass/components/_r-desktop-15.scss */
-  #logoText {
-    z-index: 2;
-    position: absolute;
-    width: 20%;
-    left: 50%;
-    top: 62%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 58, src/sass/components/_r-desktop-15.scss */
-  #fmaCloudOne {
-    z-index: 3;
-    position: absolute;
-    width: 90%;
-    left: 0%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 68, src/sass/components/_r-desktop-15.scss */
-  #fmaCloudTwo {
-    z-index: 3;
-    position: absolute;
-    width: 35%;
-    left: 85%;
-    top: 67%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 78, src/sass/components/_r-desktop-15.scss */
-  #fmaCloudThree {
-    z-index: 1;
-    position: absolute;
-    width: 12%;
-    left: 40%;
-    top: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 88, src/sass/components/_r-desktop-15.scss */
-  #fmaCloudFour {
-    z-index: 1;
-    position: absolute;
-    width: 7%;
-    left: 57%;
-    top: 38%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /*======================================= HIDDEN CONTENT STYlES ===================*/
-  /* line 100, src/sass/components/_r-desktop-15.scss */
-  h3 {
-    font-size: 28px;
-    color: #FFFFFF; }
-  /* line 105, src/sass/components/_r-desktop-15.scss */
-  h4 {
-    font-size: 24px;
-    color: #FFFFFF; }
-  /* line 110, src/sass/components/_r-desktop-15.scss */
-  h5 {
-    font-size: 21px;
-    color: #FFFFFF; }
-  /* line 115, src/sass/components/_r-desktop-15.scss */
-  .hiddenContent {
-    background-color: rgba(250, 250, 250, 0.6);
-    padding: 3% 3% 3% 3%;
-    border-radius: 3%;
-    opacity: 0;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    overflow: hidden; }
-  /* line 126, src/sass/components/_r-desktop-15.scss */
-  .hiddenContent h1 {
-    font-size: 24px;
-    color: #2185C4;
-    margin-bottom: 2%; }
-  /* line 132, src/sass/components/_r-desktop-15.scss */
-  .hiddenContent p {
-    color: #3E454C;
-    font-size: 16px;
-    line-height: 21px;
-    margin-bottom: 2%; }
-  /* line 139, src/sass/components/_r-desktop-15.scss */
-  .moreIcon {
-    width: 15%;
-    margin: 13% auto 2% auto; }
-  /* line 144, src/sass/components/_r-desktop-15.scss */
-  .productIcon {
-    width: 30%;
-    margin: 13% auto 2% auto; }
-  /* line 149, src/sass/components/_r-desktop-15.scss */
-  #productMock {
-    width: 80%;
-    margin: 13% auto 2% auto; }
-  /* line 154, src/sass/components/_r-desktop-15.scss */
-  .moreList p {
-    font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
-    color: #3E454C;
-    font-size: 18px;
-    line-height: 24px; }
-  /*======================================== ABOUT SECTION ===================*/
-  /* line 162, src/sass/components/_r-desktop-15.scss */
-  #aboutSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -170vh; }
-  /* line 169, src/sass/components/_r-desktop-15.scss */
-  #aboutContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 1;
-    -webkit-transform: translate(-10%, -50%);
-    transform: translate(-10%, -50%); }
-  /*========================================== CRISIS SECTION ===================*/
-  /* line 177, src/sass/components/_r-desktop-15.scss */
-  #crisisSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -600vh; }
-  /* line 184, src/sass/components/_r-desktop-15.scss */
-  #crisisContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 1;
-    -webkit-transform: translate(-90%, -50%);
-    transform: translate(-90%, -50%); }
-  /*============================================ PRODUCT SECTION ===================*/
-  /* line 193, src/sass/components/_r-desktop-15.scss */
-  #productSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -980vh;
-    z-index: 3; }
-  /* line 201, src/sass/components/_r-desktop-15.scss */
-  #mountainPeak {
-    position: fixed;
-    width: 120%;
-    z-index: 2;
-    left: -10%;
-    top: 240vh; }
-  /* line 209, src/sass/components/_r-desktop-15.scss */
-  #mountainLeft {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 0%;
-    top: 250vh;
-    opacity: .9; }
-  /* line 218, src/sass/components/_r-desktop-15.scss */
-  #mountainRight {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 60%;
-    top: 240vh;
-    opacity: .8; }
-  /* line 227, src/sass/components/_r-desktop-15.scss */
-  #productContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 1;
-    -webkit-transform: translate(-10%, -50%);
-    transform: translate(-10%, -50%); }
-  /*============================================ CAUSE SECTION ===================*/
-  /* line 235, src/sass/components/_r-desktop-15.scss */
-  #causeSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -1370vh;
-    z-index: 3; }
-  /* line 244, src/sass/components/_r-desktop-15.scss */
-  #causeContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 3;
-    -webkit-transform: translate(-90%, -50%);
-    transform: translate(-90%, -50%); }
-  /*=========================================== FOOTER SECTION ===================*/
-  /* line 253, src/sass/components/_r-desktop-15.scss */
-  #footerSection {
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    top: -1700vh;
-    z-index: 10; }
-  /* line 261, src/sass/components/_r-desktop-15.scss */
-  #snowingStats {
-    pointer-events: none;
-    width: 35%;
-    height: 50vh;
-    z-index: 3;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /* line 269, src/sass/components/_r-desktop-15.scss */
-  .statsIcon {
-    float: left;
-    width: 15%;
-    margin: 10% 18% 2% 17%; }
-  /* line 275, src/sass/components/_r-desktop-15.scss */
-  .statsText {
-    float: left;
-    width: 45%;
-    margin: 0% 2.5% 0% 2.5%; }
-  /* line 281, src/sass/components/_r-desktop-15.scss */
-  #footerSection .social {
-    z-index: 4;
-    cursor: pointer;
-    width: 3%;
-    opacity: 1;
-    -webkit-transition: width 1s ease;
-    transition: width 1s ease;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /*============== COPYRIGHT =========**/
-  /* line 292, src/sass/components/_r-desktop-15.scss */
-  #copyright {
-    position: absolute;
-    width: 100%;
-    z-index: 10; }
-  /* line 298, src/sass/components/_r-desktop-15.scss */
-  #copyright p {
-    font-size: 16px;
-    line-height: 16px;
-    color: #FFFFFF; }
-  /* line 304, src/sass/components/_r-desktop-15.scss */
-  #designby {
-    position: absolute;
-    left: 3%;
-    color: #FFFFFF; }
-  /* line 310, src/sass/components/_r-desktop-15.scss */
-  #copyrightText {
-    position: absolute;
-    right: 3%;
-    color: #FFFFFF; }
-  /* line 316, src/sass/components/_r-desktop-15.scss */
-  span {
-    color: #FFFFFF;
-    text-decoration: none; }
-  /* line 321, src/sass/components/_r-desktop-15.scss */
-  span:hover {
-    text-decoration: underline; } }
-
-/*======== CLOSE DESKTOP RESPONSIVE =========*/
-/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (min-width: 768px) and (max-width: 977px) {
-  /* line 3, src/sass/components/_r-tablet-977.scss */
+/* BEYOND STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 2600px) {
+  /* line 3, src/sass/components/_r-beyond.scss */
   .hideForMobile {
     display: none; }
-  /* line 7, src/sass/components/_r-tablet-977.scss */
-  #extendBrowser {
-    display: none; }
-  /* line 11, src/sass/components/_r-tablet-977.scss */
-  #minimizeBrowser {
-    display: none; }
-  /* line 15, src/sass/components/_r-tablet-977.scss */
-  #mainScrollArea {
-    overflow: hidden;
-    height: 2000vh; }
-  /* line 20, src/sass/components/_r-tablet-977.scss */
-  #scrollDownArrow {
-    z-index: 10;
-    position: absolute;
-    width: 25px;
-    left: 50%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 30, src/sass/components/_r-tablet-977.scss */
-  #backgroundCloudsOne {
-    position: fixed;
-    pointer-events: none;
-    width: 200%;
-    top: 0%;
-    z-index: -1; }
-  /* line 38, src/sass/components/_r-tablet-977.scss */
-  #logoDrop {
-    z-index: 2;
-    position: absolute;
-    width: 12%;
-    left: 50%;
-    top: -15%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 48, src/sass/components/_r-tablet-977.scss */
-  #logoText {
-    z-index: 2;
-    position: absolute;
-    width: 30%;
-    left: 50%;
-    top: 64%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 58, src/sass/components/_r-tablet-977.scss */
-  #fmaCloudOne {
-    z-index: 3;
-    position: absolute;
-    width: 90%;
-    left: 0%;
-    top: 95%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 68, src/sass/components/_r-tablet-977.scss */
-  #fmaCloudTwo {
-    z-index: 3;
-    position: absolute;
-    width: 35%;
-    left: 85%;
-    top: 67%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 78, src/sass/components/_r-tablet-977.scss */
-  #fmaCloudThree {
-    z-index: 1;
-    position: absolute;
-    width: 12%;
-    left: 40%;
-    top: 45%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /* line 88, src/sass/components/_r-tablet-977.scss */
-  #fmaCloudFour {
-    z-index: 1;
-    position: absolute;
-    width: 7%;
-    left: 57%;
-    top: 38%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    opacity: 0; }
-  /*======================================= HIDDEN CONTENT STYlES ===================*/
-  /* line 100, src/sass/components/_r-tablet-977.scss */
-  h3 {
-    font-size: 28px;
-    color: #FFFFFF; }
-  /* line 105, src/sass/components/_r-tablet-977.scss */
-  h4 {
-    font-size: 24px;
-    color: #FFFFFF; }
-  /* line 110, src/sass/components/_r-tablet-977.scss */
-  h5 {
-    font-size: 21px;
-    color: #FFFFFF; }
-  /* line 115, src/sass/components/_r-tablet-977.scss */
-  .hiddenContent {
-    background-color: rgba(250, 250, 250, 0.6);
-    padding: 3% 3% 3% 3%;
-    border-radius: 3%;
-    opacity: 0;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    overflow: hidden; }
-  /* line 126, src/sass/components/_r-tablet-977.scss */
-  .hiddenContent h1 {
-    font-size: 21px;
-    color: #2185C4;
-    margin-bottom: 2%; }
-  /* line 132, src/sass/components/_r-tablet-977.scss */
-  .hiddenContent p {
-    color: #3E454C;
-    font-size: 14px;
-    line-height: 18px;
-    margin-bottom: 2%; }
-  /* line 139, src/sass/components/_r-tablet-977.scss */
-  .moreIcon {
-    width: 15%;
-    margin: 13% auto 2% auto; }
-  /* line 144, src/sass/components/_r-tablet-977.scss */
-  .productIcon {
-    width: 30%;
-    margin: 13% auto 2% auto; }
-  /* line 149, src/sass/components/_r-tablet-977.scss */
-  #productMock {
-    width: 80%;
-    margin: 13% auto 2% auto; }
-  /* line 154, src/sass/components/_r-tablet-977.scss */
-  .moreList p {
-    font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
-    color: #3E454C;
-    font-size: 18px;
-    line-height: 24px; }
-  /*======================================== ABOUT SECTION ===================*/
-  /* line 162, src/sass/components/_r-tablet-977.scss */
-  #aboutSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -170vh; }
-  /* line 169, src/sass/components/_r-tablet-977.scss */
-  #aboutContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 1;
-    -webkit-transform: translate(-10%, -50%);
-    transform: translate(-10%, -50%); }
-  /*========================================== CRISIS SECTION ===================*/
-  /* line 177, src/sass/components/_r-tablet-977.scss */
-  #crisisSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -600vh; }
-  /* line 184, src/sass/components/_r-tablet-977.scss */
-  #crisisContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 1;
-    -webkit-transform: translate(-90%, -50%);
-    transform: translate(-90%, -50%); }
-  /*============================================ PRODUCT SECTION ===================*/
-  /* line 193, src/sass/components/_r-tablet-977.scss */
-  #productSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -980vh;
-    z-index: 3; }
-  /* line 201, src/sass/components/_r-tablet-977.scss */
-  #mountainPeak {
-    position: fixed;
-    width: 150%;
-    z-index: 2;
-    left: -25%;
-    top: 240vh; }
-  /* line 209, src/sass/components/_r-tablet-977.scss */
-  #mountainLeft {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 0%;
-    top: 250vh;
-    opacity: .9; }
-  /* line 218, src/sass/components/_r-tablet-977.scss */
-  #mountainRight {
-    position: fixed;
-    width: 40%;
-    z-index: 1;
-    left: 60%;
-    top: 240vh;
-    opacity: .8; }
-  /* line 227, src/sass/components/_r-tablet-977.scss */
-  #productContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 1;
-    -webkit-transform: translate(-10%, -50%);
-    transform: translate(-10%, -50%); }
-  /*============================================ CAUSE SECTION ===================*/
-  /* line 235, src/sass/components/_r-tablet-977.scss */
-  #causeSection {
-    width: 100%;
-    height: 200vh;
-    position: relative;
-    top: -1370vh;
-    z-index: 3; }
-  /* line 244, src/sass/components/_r-tablet-977.scss */
-  #causeContent {
-    width: 35%;
-    height: 42vh;
-    z-index: 3;
-    -webkit-transform: translate(-90%, -50%);
-    transform: translate(-90%, -50%); }
-  /*=========================================== FOOTER SECTION ===================*/
-  /* line 253, src/sass/components/_r-tablet-977.scss */
-  #footerSection {
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    position: relative;
-    top: -1700vh; }
-  /* line 261, src/sass/components/_r-tablet-977.scss */
-  #footerSection .social {
-    z-index: 4;
-    cursor: pointer;
-    width: 4%;
-    opacity: 1;
-    -webkit-transition: width 1s ease;
-    transition: width 1s ease;
-    position: absolute;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /* line 271, src/sass/components/_r-tablet-977.scss */
-  #snowingStats {
-    pointer-events: none;
-    width: 35%;
-    height: 50vh;
-    z-index: 3;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%); }
-  /* line 279, src/sass/components/_r-tablet-977.scss */
-  .statsIcon {
-    float: left;
-    width: 15%;
-    margin: 10% 18% 2% 17%; }
-  /* line 285, src/sass/components/_r-tablet-977.scss */
-  .statsText {
-    float: left;
-    width: 45%;
-    margin: 0% 0% 0% 5%; } }
-
-/*<-- CLOSE TABLET RESPONSIVE*/
-/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
-@media only screen and (max-width: 767px) {
-  /* line 3, src/sass/components/_r-mobile-767.scss */
-  .hideForMobile {
-    display: none; }
-  /* line 7, src/sass/components/_r-mobile-767.scss */
+  /* line 7, src/sass/components/_r-beyond.scss */
   #mainScrollArea {
     overflow: hidden;
     height: 100vh; }
-  /* line 12, src/sass/components/_r-mobile-767.scss */
+  /* line 12, src/sass/components/_r-beyond.scss */
   #scrollDownArrow {
     display: none; }
-  /* line 16, src/sass/components/_r-mobile-767.scss */
+  /* line 16, src/sass/components/_r-beyond.scss */
   #backgroundCloudsOne {
     position: fixed;
     pointer-events: none;
     width: 300%;
     top: 0%;
     z-index: -1; }
-  /* line 24, src/sass/components/_r-mobile-767.scss */
+  /* line 24, src/sass/components/_r-beyond.scss */
+  #extendBrowser {
+    display: none; }
+  /* line 28, src/sass/components/_r-beyond.scss */
+  #minimizeBrowser {
+    color: #3E454C;
+    font-size: 24px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); }
+  /* line 38, src/sass/components/_r-beyond.scss */
+  #fma {
+    display: none; }
+  /* line 42, src/sass/components/_r-beyond.scss */
+  #aboutSection {
+    display: none; }
+  /* line 46, src/sass/components/_r-beyond.scss */
+  #crisisSection {
+    display: none; }
+  /* line 50, src/sass/components/_r-beyond.scss */
+  #productSection {
+    display: none; }
+  /* line 54, src/sass/components/_r-beyond.scss */
+  #causeSection {
+    display: none; }
+  /* line 58, src/sass/components/_r-beyond.scss */
+  #footerSection {
+    display: none; } }
+
+/*<-- CLOSE BEYOND 2600 */
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+  /* line 68, src/sass/components/_r-beyond.scss */
+  .hideForMobile {
+    display: none; }
+  /* line 72, src/sass/components/_r-beyond.scss */
+  #mainScrollArea {
+    overflow: hidden;
+    height: 100vh; }
+  /* line 77, src/sass/components/_r-beyond.scss */
+  #scrollDownArrow {
+    display: none; }
+  /* line 81, src/sass/components/_r-beyond.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    pointer-events: none;
+    width: 300%;
+    top: 0%;
+    z-index: -1; }
+  /* line 89, src/sass/components/_r-beyond.scss */
   #extendBrowser {
     color: #3E454C;
     font-size: 18px;
@@ -2160,28 +1511,28 @@ a {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%); }
-  /* line 34, src/sass/components/_r-mobile-767.scss */
+  /* line 99, src/sass/components/_r-beyond.scss */
   #minimizeBrowser {
     display: none; }
-  /* line 38, src/sass/components/_r-mobile-767.scss */
+  /* line 103, src/sass/components/_r-beyond.scss */
   #fma {
     display: none; }
-  /* line 42, src/sass/components/_r-mobile-767.scss */
+  /* line 107, src/sass/components/_r-beyond.scss */
   #aboutSection {
     display: none; }
-  /* line 46, src/sass/components/_r-mobile-767.scss */
+  /* line 111, src/sass/components/_r-beyond.scss */
   #crisisSection {
     display: none; }
-  /* line 50, src/sass/components/_r-mobile-767.scss */
+  /* line 115, src/sass/components/_r-beyond.scss */
   #productSection {
     display: none; }
-  /* line 54, src/sass/components/_r-mobile-767.scss */
+  /* line 119, src/sass/components/_r-beyond.scss */
   #causeSection {
     display: none; }
-  /* line 58, src/sass/components/_r-mobile-767.scss */
+  /* line 123, src/sass/components/_r-beyond.scss */
   #footerSection {
     display: none; } }
 
-/*<-- CLOSE MOBILE RESPONSIVE*/
+/*<-- CLOSE BEYOND MOBILE */
 
 /*# sourceMappingURL=../../sass */

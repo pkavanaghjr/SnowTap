@@ -46,9 +46,432 @@ background-color:rgba(62,69,76,1)
 	clear:both;
 }
 
- .avoidPointer{
+.avoidPointer{
 	pointer-events:none;
 }
+
+.hideForDesk{
+	@media only screen and (min-width: $desktop-width){
+		display: none;
+	}
+}
+
+.hideForMobile{
+	@media only screen and (max-width: $desktop-width-max){
+		display:none;
+	}
+}
+
+#extendBrowser{
+	display: none;
+}
+
+#minimizeBrowser{
+	display: none;
+}
+
+#mainScrollArea{
+	overflow: hidden;
+	height:900vh;
+	/*background-image: url("../images/backgroundCloudsBlue.jpg");
+	width:100%;	*/
+	@media only screen and (max-width: $xtra-width-max){
+		height:1400vh;
+	}
+	@media only screen and (max-width: $large-width-max){
+		height:2100vh;
+	}
+	@media only screen and (max-width: $desktop-width-max){
+		height:2000vh;
+	}
+}
+
+#scrollDownArrow{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 50%;
+	top: 95%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#backgroundCloudsOne{
+	position: fixed;
+	pointer-events:none;	
+	width:170%;
+	top:0%;
+	z-index: -1;	
+	@media only screen and (max-width: $xtra-width-max){
+		width:150%;
+	}
+	@media only screen and (max-width: $large-width-max){
+		width:130%;
+	}
+	@media only screen and (max-width: $desktop-width-max){
+		width:200%;
+	}
+}
+
+#logoDrop{
+	z-index: 2;
+	position: absolute;
+	width:8.5%;
+	left: 50%;
+	top: -15%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+	@media only screen and (max-width: $desktop-width-max){
+		width:12%;
+		left: 50%;
+		top: -15%;
+	}
+ }
+
+#logoText{
+	z-index: 2;
+	position: absolute;
+	width:20%;
+	left: 50%;
+	top: 62%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+	@media only screen and (max-width: $desktop-width-max){
+		width:30%;
+		top: 64%;
+	}
+ }
+
+#fmaCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:90%;
+	left: 0%;
+	top: 95%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#fmaCloudTwo{
+	z-index: 3;
+	position: absolute;
+	width:35%;
+	left: 85%;
+	top: 67%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#fmaCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:12%;
+	left: 40%;
+	top: 45%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#fmaCloudFour{
+	z-index: 1;
+	position: absolute;
+	width:7%;
+	left: 57%;
+	top: 38%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+
+/*======================================= HIDDEN CONTENT STYlES ===================*/
+ h3{
+ 	font-size:28px;
+ 	color:$white;
+ }
+
+ h4{
+ 	font-size:24px;
+ 	color:$white;
+ }
+
+ h5{
+ 	font-size:21px;
+ 	color:$white;
+ }
+
+.hiddenContent{
+ 	background-color:rgba(250,250,250,.6);
+ 	padding:3% 3% 3% 3%;
+ 	border-radius: 3%;
+ 	opacity: 0;
+ 	position:fixed;
+ 	left:50%;
+ 	top:50%;
+	overflow: hidden;	
+}
+
+ .hiddenContent h1{
+ 	font-size: 28px;
+ 	color:$blue;
+	margin-bottom: 2%;
+	@media only screen and (max-width: $large-width-max){
+		font-size: 24px;
+	}
+	@media only screen and (max-width: $desktop-width-max){
+		font-size:21px;
+	}
+}
+
+ .hiddenContent p{
+ 	color:$off-black;
+ 	font-size: 21px;
+ 	line-height: 26px;
+ 	margin-bottom: 2%;
+ 	@media only screen and (max-width: $large-width-max){
+		font-size: 16px;
+ 		line-height: 21px;
+	}
+	@media only screen and (max-width: $desktop-width-max){
+		font-size: 14px;
+	 	line-height: 18px;
+	}
+}
+
+.moreIcon{
+	width:15%;
+	margin:13% auto 2% auto;
+}
+
+.productIcon{
+	width:30%;
+	margin:13% auto 2% auto;	
+}
+
+#productMock{
+	width:80%;
+	margin:13% auto 2% auto;
+}
+
+.moreList p{
+	font-family:$josefin-semi;
+ 	color:$off-black;
+ 	font-size: 23px;
+ 	line-height: 28px;
+ 	@media only screen and (max-width: $large-width-max){
+		font-size: 18px;
+ 		line-height: 24px;
+	}
+}
+
+/*======================================== ABOUT SECTION ===================*/
+#aboutSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-100vh;
+	@media only screen and (max-width: $large-width-max){
+		top:-170vh;
+	}
+}
+
+ #aboutContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	@include transform( translate(-10%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;	
+	}
+ }
+
+/*========================================== CRISIS SECTION ===================*/
+#crisisSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-430vh;
+	@media only screen and (max-width: $large-width-max){
+		top:-600vh;
+	}
+}
+
+ #crisisContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	@include transform( translate(-90%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;	
+	}
+ }
+
+
+/*============================================ PRODUCT SECTION ===================*/
+#productSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-720vh;
+	z-index: 3;
+	@media only screen and (max-width: $large-width-max){
+		top:-980vh;
+	}
+}
+
+.mountain{
+	position: fixed;
+}
+
+#mountainPeak{
+	width:120%;
+	z-index: 2;
+	left:-10%;
+	top:240vh;
+	@media only screen and (max-width: $desktop-width-max){
+		width:150%;
+		left:-25%;
+	}
+}
+
+#mountainLeft{
+	width:40%;
+	z-index: 1;
+	left:0%;
+	top:250vh;
+	opacity:0.9;
+}
+
+#mountainRight{
+	width:40%;
+	z-index: 1;
+	left:60%;
+	top:240vh;
+	opacity:0.8;
+}
+
+ #productContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	@include transform( translate(-10%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;	
+	}
+ }
+
+/*============================================ CAUSE SECTION ===================*/
+#causeSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-1030vh;
+	z-index: 3;
+	@media only screen and (max-width: $large-width-max){
+		top:-1370vh;
+	}
+}
+
+
+ #causeContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	@include transform( translate(-90%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;
+	}
+ }
+
+
+/*=========================================== FOOTER SECTION ===================*/
+#footerSection{
+	width:100%;
+	height: 100vh;	
+	z-index: 10;
+	position: relative;
+	top:-1350vh;
+	@media only screen and (max-width: $large-width-max){
+		top:-1700vh;
+	}
+}
+
+#snowingStats{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	@include transform( translate(-50%,-50%) );
+	@media only screen and (max-width: $xtra-width-max){
+		height: 42vh;	
+		overflow: scroll;
+	}
+	@media only screen and (max-width: $large-width-max){
+		height:50vh;
+	}
+ }
+ 
+
+.statsIcon{
+ 	float:left;
+	width:15%;
+	margin:10% 18% 2% 17%;
+}
+
+.statsText{
+	float:left;
+	width:45%;
+	margin:0% 0% 0% 5%;	
+}
+
+#footerSection .social{
+	z-index: 4;
+	cursor: pointer;
+	width:3%;
+	opacity: 1;
+ 	@include transition(width, 1s);
+	position: absolute;
+	@include transform( translate(-50%,-50%) );
+	@media only screen and (max-width: $desktop-width-max){
+		width:4%;
+	}
+ }
+
+/*============== COPYRIGHT =========**/
+#copyright{
+	position: absolute;
+	width:100%;
+	z-index: 10;
+}
+
+#copyright p{
+	font-size:16px;
+	line-height:16px;	
+	color:$white;
+}
+
+#designby{
+	position:absolute;
+	left:3%;
+	color:$white;
+}
+
+#copyrightText{
+	position:absolute;
+	right:3%;
+	color:$white;
+}
+
+span{
+	color:$white;
+	text-decoration:none;
+}
+
+span:hover{
+	text-decoration:underline;
+}
+
+
+
+
 
 
 /*************************************************************

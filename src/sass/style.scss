@@ -10,7 +10,6 @@ Text Domain: snowtap
 @import 'components/fonts';
 @import 'components/mixins';
 @import 'components/formalize';
-// @import 'components/grid';
 
 
 /* ELEMENTS */
@@ -23,9 +22,5 @@ Text Domain: snowtap
 @import 'components/_sections';
 @import 'components/_footer';
 
-@import 'components/_r-xtra-26';
-@import 'components/_r-large-23';
-@import 'components/_r-desktop-15';
-@import 'components/_r-tablet-977';
-@import 'components/_r-mobile-767';
+@import 'components/_r-beyond';
 
