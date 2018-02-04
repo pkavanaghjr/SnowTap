@@ -61,6 +61,17 @@ table {
 /*///////////////////////////////////////////////////////////
 						VARIABLES
 ///////////////////////////////////////////////////////////*/
+/* COLORS */
+/* RGB VALUES
+DARK BLUE
+background-color:rgba(33,133,196,1);
+
+LIGHT BLUE
+background-color:rgba(133,203,240,1)
+
+TAP BLACK
+background-color:rgba(62,69,76,1)
+*/
 /* FONTS */
 /* WIDTHS */
 /* CONTENT CONTAINER MAX WIDTH */
@@ -489,17 +500,7 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
-/* RGB VALUES
-DARK BLUE
-background-color:rgba(33,133,196,1);
-
-LIGHT BLUE
-background-color:rgba(133,203,240,1)
-
-TAP BLACK
-background-color:rgba(62,69,76,1)
-*/
-/* line 36, src/sass/components/global.scss */
+/* line 25, src/sass/components/global.scss */
 #snowCanvas {
   width: 100%;
   height: 100%;
@@ -508,63 +509,52 @@ background-color:rgba(62,69,76,1)
   opacity: 0;
   pointer-events: none; }
 
-/* line 45, src/sass/components/global.scss */
+/* line 34, src/sass/components/global.scss */
 .clear {
   clear: both; }
 
-/* line 49, src/sass/components/global.scss */
+/* line 38, src/sass/components/global.scss */
 .avoidPointer {
   pointer-events: none; }
 
 @media only screen and (min-width: 978px) {
-  /* line 53, src/sass/components/global.scss */
+  /* line 42, src/sass/components/global.scss */
   .hideForDesk {
     display: none; } }
 
 @media only screen and (max-width: 977px) {
-  /* line 59, src/sass/components/global.scss */
+  /* line 48, src/sass/components/global.scss */
   .hideForMobile {
     display: none; } }
 
-/* line 65, src/sass/components/global.scss */
+/* line 54, src/sass/components/global.scss */
 #extendBrowser {
   display: none; }
 
-/* line 69, src/sass/components/global.scss */
+/* line 58, src/sass/components/global.scss */
 #minimizeBrowser {
   display: none; }
 
-/* line 73, src/sass/components/global.scss */
+/* line 62, src/sass/components/global.scss */
 #mainScrollArea {
   overflow: hidden;
   height: 900vh;
   /*background-image: url("../images/backgroundCloudsBlue.jpg");
 	width:100%;	*/ }
   @media only screen and (max-width: 2299px) {
-    /* line 73, src/sass/components/global.scss */
+    /* line 62, src/sass/components/global.scss */
     #mainScrollArea {
       height: 1400vh; } }
   @media only screen and (max-width: 1499px) {
-    /* line 73, src/sass/components/global.scss */
+    /* line 62, src/sass/components/global.scss */
     #mainScrollArea {
       height: 2100vh; } }
   @media only screen and (max-width: 977px) {
-    /* line 73, src/sass/components/global.scss */
+    /* line 62, src/sass/components/global.scss */
     #mainScrollArea {
       height: 2000vh; } }
 
-/* line 89, src/sass/components/global.scss */
-#scrollDownArrow {
-  z-index: 10;
-  position: absolute;
-  width: 25px;
-  left: 50%;
-  top: 95%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-
-/* line 99, src/sass/components/global.scss */
+/* line 80, src/sass/components/global.scss */
 #backgroundCloudsOne {
   position: fixed;
   pointer-events: none;
@@ -572,571 +562,58 @@ background-color:rgba(62,69,76,1)
   top: 0%;
   z-index: -1; }
   @media only screen and (max-width: 2299px) {
-    /* line 99, src/sass/components/global.scss */
+    /* line 80, src/sass/components/global.scss */
     #backgroundCloudsOne {
       width: 150%; } }
   @media only screen and (max-width: 1499px) {
-    /* line 99, src/sass/components/global.scss */
+    /* line 80, src/sass/components/global.scss */
     #backgroundCloudsOne {
       width: 130%; } }
   @media only screen and (max-width: 977px) {
-    /* line 99, src/sass/components/global.scss */
+    /* line 80, src/sass/components/global.scss */
     #backgroundCloudsOne {
       width: 200%; } }
-
-/* line 116, src/sass/components/global.scss */
-#logoDrop {
-  z-index: 2;
-  position: absolute;
-  width: 8.5%;
-  left: 50%;
-  top: -15%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-  @media only screen and (max-width: 977px) {
-    /* line 116, src/sass/components/global.scss */
-    #logoDrop {
-      width: 12%;
-      left: 50%;
-      top: -15%; } }
-
-/* line 131, src/sass/components/global.scss */
-#logoText {
-  z-index: 2;
-  position: absolute;
-  width: 20%;
-  left: 50%;
-  top: 62%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-  @media only screen and (max-width: 977px) {
-    /* line 131, src/sass/components/global.scss */
-    #logoText {
-      width: 30%;
-      top: 64%; } }
-
-/* line 145, src/sass/components/global.scss */
-#fmaCloudOne {
-  z-index: 3;
-  position: absolute;
-  width: 90%;
-  left: 0%;
-  top: 95%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-
-/* line 155, src/sass/components/global.scss */
-#fmaCloudTwo {
-  z-index: 3;
-  position: absolute;
-  width: 35%;
-  left: 85%;
-  top: 67%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-
-/* line 165, src/sass/components/global.scss */
-#fmaCloudThree {
-  z-index: 1;
-  position: absolute;
-  width: 12%;
-  left: 40%;
-  top: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-
-/* line 175, src/sass/components/global.scss */
-#fmaCloudFour {
-  z-index: 1;
-  position: absolute;
-  width: 7%;
-  left: 57%;
-  top: 38%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  opacity: 0; }
-
-/*======================================= HIDDEN CONTENT STYlES ===================*/
-/* line 187, src/sass/components/global.scss */
-h3 {
-  font-size: 28px;
-  color: #FFFFFF; }
-
-/* line 192, src/sass/components/global.scss */
-h4 {
-  font-size: 24px;
-  color: #FFFFFF; }
-
-/* line 197, src/sass/components/global.scss */
-h5 {
-  font-size: 21px;
-  color: #FFFFFF; }
-
-/* line 202, src/sass/components/global.scss */
-.hiddenContent {
-  background-color: rgba(250, 250, 250, 0.6);
-  padding: 3% 3% 3% 3%;
-  border-radius: 3%;
-  opacity: 0;
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  overflow: hidden; }
-
-/* line 213, src/sass/components/global.scss */
-.hiddenContent h1 {
-  font-size: 28px;
-  color: #2185C4;
-  margin-bottom: 2%; }
-  @media only screen and (max-width: 1499px) {
-    /* line 213, src/sass/components/global.scss */
-    .hiddenContent h1 {
-      font-size: 24px; } }
-  @media only screen and (max-width: 977px) {
-    /* line 213, src/sass/components/global.scss */
-    .hiddenContent h1 {
-      font-size: 21px; } }
-
-/* line 225, src/sass/components/global.scss */
-.hiddenContent p {
-  color: #3E454C;
-  font-size: 21px;
-  line-height: 26px;
-  margin-bottom: 2%; }
-  @media only screen and (max-width: 1499px) {
-    /* line 225, src/sass/components/global.scss */
-    .hiddenContent p {
-      font-size: 16px;
-      line-height: 21px; } }
-  @media only screen and (max-width: 977px) {
-    /* line 225, src/sass/components/global.scss */
-    .hiddenContent p {
-      font-size: 14px;
-      line-height: 18px; } }
-
-/* line 240, src/sass/components/global.scss */
-.moreIcon {
-  width: 15%;
-  margin: 13% auto 2% auto; }
-
-/* line 245, src/sass/components/global.scss */
-.productIcon {
-  width: 30%;
-  margin: 13% auto 2% auto; }
-
-/* line 250, src/sass/components/global.scss */
-#productMock {
-  width: 80%;
-  margin: 13% auto 2% auto; }
-
-/* line 255, src/sass/components/global.scss */
-.moreList p {
-  font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
-  color: #3E454C;
-  font-size: 23px;
-  line-height: 28px; }
-  @media only screen and (max-width: 1499px) {
-    /* line 255, src/sass/components/global.scss */
-    .moreList p {
-      font-size: 18px;
-      line-height: 24px; } }
-
-/*======================================== ABOUT SECTION ===================*/
-/* line 267, src/sass/components/global.scss */
-#aboutSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
-  top: -100vh; }
-  @media only screen and (max-width: 1499px) {
-    /* line 267, src/sass/components/global.scss */
-    #aboutSection {
-      top: -170vh; } }
-
-/* line 277, src/sass/components/global.scss */
-#aboutContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 1;
-  -webkit-transform: translate(-10%, -50%);
-  transform: translate(-10%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 277, src/sass/components/global.scss */
-    #aboutContent {
-      height: 42vh; } }
-
-/*========================================== CRISIS SECTION ===================*/
-/* line 288, src/sass/components/global.scss */
-#crisisSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
-  top: -430vh; }
-  @media only screen and (max-width: 1499px) {
-    /* line 288, src/sass/components/global.scss */
-    #crisisSection {
-      top: -600vh; } }
-
-/* line 298, src/sass/components/global.scss */
-#crisisContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 1;
-  -webkit-transform: translate(-90%, -50%);
-  transform: translate(-90%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 298, src/sass/components/global.scss */
-    #crisisContent {
-      height: 42vh; } }
-
-/*============================================ PRODUCT SECTION ===================*/
-/* line 310, src/sass/components/global.scss */
-#productSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
-  top: -720vh;
-  z-index: 3; }
-  @media only screen and (max-width: 1499px) {
-    /* line 310, src/sass/components/global.scss */
-    #productSection {
-      top: -980vh; } }
-
-/* line 321, src/sass/components/global.scss */
-.mountain {
-  position: fixed; }
-
-/* line 325, src/sass/components/global.scss */
-#mountainPeak {
-  width: 120%;
-  z-index: 2;
-  left: -10%;
-  top: 240vh; }
-  @media only screen and (max-width: 977px) {
-    /* line 325, src/sass/components/global.scss */
-    #mountainPeak {
-      width: 150%;
-      left: -25%; } }
-
-/* line 336, src/sass/components/global.scss */
-#mountainLeft {
-  width: 40%;
-  z-index: 1;
-  left: 0%;
-  top: 250vh;
-  opacity: 0.9; }
-
-/* line 344, src/sass/components/global.scss */
-#mountainRight {
-  width: 40%;
-  z-index: 1;
-  left: 60%;
-  top: 240vh;
-  opacity: 0.8; }
-
-/* line 352, src/sass/components/global.scss */
-#productContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 1;
-  -webkit-transform: translate(-10%, -50%);
-  transform: translate(-10%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 352, src/sass/components/global.scss */
-    #productContent {
-      height: 42vh; } }
-
-/*============================================ CAUSE SECTION ===================*/
-/* line 363, src/sass/components/global.scss */
-#causeSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
-  top: -1030vh;
-  z-index: 3; }
-  @media only screen and (max-width: 1499px) {
-    /* line 363, src/sass/components/global.scss */
-    #causeSection {
-      top: -1370vh; } }
-
-/* line 375, src/sass/components/global.scss */
-#causeContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 3;
-  -webkit-transform: translate(-90%, -50%);
-  transform: translate(-90%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 375, src/sass/components/global.scss */
-    #causeContent {
-      height: 42vh; } }
-
-/*=========================================== FOOTER SECTION ===================*/
-/* line 387, src/sass/components/global.scss */
-#footerSection {
-  width: 100%;
-  height: 100vh;
-  z-index: 10;
-  position: relative;
-  top: -1350vh; }
-  @media only screen and (max-width: 1499px) {
-    /* line 387, src/sass/components/global.scss */
-    #footerSection {
-      top: -1700vh; } }
-
-/* line 398, src/sass/components/global.scss */
-#snowingStats {
-  width: 35%;
-  height: 30vh;
-  z-index: 3;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-  @media only screen and (max-width: 2299px) {
-    /* line 398, src/sass/components/global.scss */
-    #snowingStats {
-      height: 42vh;
-      overflow: scroll; } }
-  @media only screen and (max-width: 1499px) {
-    /* line 398, src/sass/components/global.scss */
-    #snowingStats {
-      height: 50vh; } }
-
-/* line 413, src/sass/components/global.scss */
-.statsIcon {
-  float: left;
-  width: 15%;
-  margin: 10% 18% 2% 17%; }
-
-/* line 419, src/sass/components/global.scss */
-.statsText {
-  float: left;
-  width: 45%;
-  margin: 0% 0% 0% 5%; }
-
-/* line 425, src/sass/components/global.scss */
-#footerSection .social {
-  z-index: 4;
-  cursor: pointer;
-  width: 3%;
-  opacity: 1;
-  -webkit-transition: width 1s ease;
-  transition: width 1s ease;
-  position: absolute;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
-  @media only screen and (max-width: 977px) {
-    /* line 425, src/sass/components/global.scss */
-    #footerSection .social {
-      width: 4%; } }
-
-/*============== COPYRIGHT =========**/
-/* line 439, src/sass/components/global.scss */
-#copyright {
-  position: absolute;
-  width: 100%;
-  z-index: 10; }
-
-/* line 445, src/sass/components/global.scss */
-#copyright p {
-  font-size: 16px;
-  line-height: 16px;
-  color: #FFFFFF; }
-
-/* line 451, src/sass/components/global.scss */
-#designby {
-  position: absolute;
-  left: 3%;
-  color: #FFFFFF; }
-
-/* line 457, src/sass/components/global.scss */
-#copyrightText {
-  position: absolute;
-  right: 3%;
-  color: #FFFFFF; }
-
-/* line 463, src/sass/components/global.scss */
-span {
-  color: #FFFFFF;
-  text-decoration: none; }
-
-/* line 468, src/sass/components/global.scss */
-span:hover {
-  text-decoration: underline; }
 
 /*************************************************************
 	** TYPE
 *************************************************************/
-/* line 480, src/sass/components/global.scss */
+/* line 104, src/sass/components/global.scss */
 h1 {
   font-family: "arborcrestHeavy", Helvetica, Arial, sans-serif; }
 
-/* line 484, src/sass/components/global.scss */
+/* line 108, src/sass/components/global.scss */
 h2 {
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
 
-/* line 488, src/sass/components/global.scss */
+/* line 112, src/sass/components/global.scss */
 h3 {
-  font-family: "josefinBold", Helvetica, Arial, sans-serif; }
+  font-family: "josefinBold", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  color: #FFFFFF; }
 
-/* line 492, src/sass/components/global.scss */
+/* line 118, src/sass/components/global.scss */
 h4 {
-  font-family: "josefinSemibold", Helvetica, Arial, sans-serif; }
+  font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  color: #FFFFFF; }
 
-/* line 496, src/sass/components/global.scss */
+/* line 124, src/sass/components/global.scss */
 h5 {
-  font-family: "josefinSemibold", Helvetica, Arial, sans-serif; }
+  font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
+  font-size: 21px;
+  color: #FFFFFF; }
 
-/* line 500, src/sass/components/global.scss */
+/* line 130, src/sass/components/global.scss */
 h6 {
   font-family: "josefinRegular", Helvetica, Arial, sans-serif; }
 
-/* line 504, src/sass/components/global.scss */
+/* line 134, src/sass/components/global.scss */
 p {
   font-family: "josefinRegular", Helvetica, Arial, sans-serif; }
 
-/* line 508, src/sass/components/global.scss */
+/* line 138, src/sass/components/global.scss */
 a {
   text-decoration: none; }
-
-/*************************************************************
-	** HIDDEN CONTENT
-*************************************************************/
-/* line 517, src/sass/components/global.scss */
-.whiteTitle {
-  color: #FFFFFF; }
-
-/* line 521, src/sass/components/global.scss */
-.closeButton {
-  color: #3E454C;
-  position: absolute;
-  top: 3%;
-  right: 3%;
-  z-index: 2; }
-
-/* line 529, src/sass/components/global.scss */
-.closeButton h2 {
-  font-family: "arborcrestHeavy", Helvetica, Arial, sans-serif;
-  font-size: 18px;
-  color: #3E454C;
-  cursor: pointer;
-  opacity: 0;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease; }
-
-/* line 538, src/sass/components/global.scss */
-.closeButton h2:hover {
-  color: #FFFFFF;
-  -webkit-transition: color 0.5s ease;
-  transition: color 0.5s ease; }
-
-/* line 543, src/sass/components/global.scss */
-.moreButton {
-  width: 47%;
-  height: 4vh;
-  background-color: #2185C4;
-  position: absolute;
-  bottom: 5%;
-  right: 5%;
-  border-radius: 3px;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 50;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease; }
-
-/* line 557, src/sass/components/global.scss */
-.moreButton:hover {
-  background-color: #3E454C;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease; }
-
-/* line 562, src/sass/components/global.scss */
-.moreButton h6 {
-  color: #FFFFFF;
-  line-height: 4vh;
-  text-align: center; }
-
-/* line 568, src/sass/components/global.scss */
-.buyButton {
-  width: 47%;
-  height: 4vh;
-  background-color: #2185C4;
-  border-radius: 3px;
-  float: right;
-  opacity: 0;
-  z-index: 50;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease; }
-
-/*.buyButton:hover{
-	background-color:$off-black;
-	@include transition(background-color, 1s);
-}
-*/
-/* line 584, src/sass/components/global.scss */
-.buyButton h6 {
-  color: #FFFFFF;
-  line-height: 4vh;
-  text-align: center; }
-
-/* line 590, src/sass/components/global.scss */
-.doneButton {
-  width: 100%;
-  height: 4vh;
-  background-color: #3E454C;
-  border-radius: 3px;
-  opacity: 0;
-  float: left;
-  cursor: pointer;
-  z-index: 50;
-  margin-top: 5%;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease; }
-
-/* line 603, src/sass/components/global.scss */
-.doneButton:hover {
-  background-color: #2185C4;
-  -webkit-transition: background-color 1s ease;
-  transition: background-color 1s ease; }
-
-/* line 608, src/sass/components/global.scss */
-.doneButton h3 {
-  font-size: 14px;
-  color: #FFFFFF;
-  line-height: 4vh;
-  text-align: center; }
-
-/* line 615, src/sass/components/global.scss */
-.moreContent {
-  opacity: 0; }
-
-/* line 619, src/sass/components/global.scss */
-.moreList {
-  margin: 5% 0% 5% 0%; }
-
-/* line 623, src/sass/components/global.scss */
-.moreList li {
-  margin-bottom: 3%; }
-
-/* line 627, src/sass/components/global.scss */
-.bullet {
-  width: 8px;
-  height: 8px;
-  background: url(../images/bulletPoint.png) center no-repeat;
-  z-index: 2;
-  display: inline-block;
-  margin-right: 1%;
-  line-height: 2px; }
-
-/* line 637, src/sass/components/global.scss */
-.boldMore {
-  font-family: "josefinBold", Helvetica, Arial, sans-serif;
-  font-size: 18px; }
 
 /*================================================ NAVIGATION ===================*/
 /* line 2, src/sass/components/_nav.scss */
@@ -1231,6 +708,94 @@ a {
   background-color: #3E454C;
   z-index: 100px; }
 
+/* line 19, src/sass/components/_fma.scss */
+#scrollDownArrow {
+  z-index: 10;
+  position: absolute;
+  width: 25px;
+  left: 50%;
+  top: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 29, src/sass/components/_fma.scss */
+#logoDrop {
+  z-index: 2;
+  position: absolute;
+  width: 8.5%;
+  left: 50%;
+  top: -15%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+  @media only screen and (max-width: 977px) {
+    /* line 29, src/sass/components/_fma.scss */
+    #logoDrop {
+      width: 12%;
+      left: 50%;
+      top: -15%; } }
+
+/* line 44, src/sass/components/_fma.scss */
+#logoText {
+  z-index: 2;
+  position: absolute;
+  width: 20%;
+  left: 50%;
+  top: 62%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+  @media only screen and (max-width: 977px) {
+    /* line 44, src/sass/components/_fma.scss */
+    #logoText {
+      width: 30%;
+      top: 64%; } }
+
+/* line 58, src/sass/components/_fma.scss */
+#fmaCloudOne {
+  z-index: 3;
+  position: absolute;
+  width: 90%;
+  left: 0%;
+  top: 95%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 68, src/sass/components/_fma.scss */
+#fmaCloudTwo {
+  z-index: 3;
+  position: absolute;
+  width: 35%;
+  left: 85%;
+  top: 67%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 78, src/sass/components/_fma.scss */
+#fmaCloudThree {
+  z-index: 1;
+  position: absolute;
+  width: 12%;
+  left: 40%;
+  top: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
+/* line 88, src/sass/components/_fma.scss */
+#fmaCloudFour {
+  z-index: 1;
+  position: absolute;
+  width: 7%;
+  left: 57%;
+  top: 38%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0; }
+
 /* line 1, src/sass/components/_snowflake.scss */
 .snowflake {
   -webkit-transition: width 1s ease;
@@ -1281,11 +846,74 @@ a {
 /* CLOSE: .cloud */
 /* line 1, src/sass/components/_mountain.scss */
 .mountain {
-  pointer-events: none; }
+  pointer-events: none;
+  position: fixed; }
 
-/* close: .mountain */
+/* line 6, src/sass/components/_mountain.scss */
+#mountainPeak {
+  width: 120%;
+  z-index: 2;
+  left: -10%;
+  top: 240vh; }
+  @media only screen and (max-width: 977px) {
+    /* line 6, src/sass/components/_mountain.scss */
+    #mountainPeak {
+      width: 150%;
+      left: -25%; } }
+
+/* line 17, src/sass/components/_mountain.scss */
+#mountainLeft {
+  width: 40%;
+  z-index: 1;
+  left: 0%;
+  top: 250vh;
+  opacity: 0.9; }
+
+/* line 25, src/sass/components/_mountain.scss */
+#mountainRight {
+  width: 40%;
+  z-index: 1;
+  left: 60%;
+  top: 240vh;
+  opacity: 0.8; }
+
+/* line 33, src/sass/components/_mountain.scss */
+#productContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 1;
+  -webkit-transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 33, src/sass/components/_mountain.scss */
+    #productContent {
+      height: 42vh; } }
+
 /*================================================ ABOUT SECTION ===================*/
 /* line 2, src/sass/components/_sections.scss */
+#aboutSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -100vh; }
+  @media only screen and (max-width: 1499px) {
+    /* line 2, src/sass/components/_sections.scss */
+    #aboutSection {
+      top: -170vh; } }
+
+/* line 12, src/sass/components/_sections.scss */
+#aboutContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 1;
+  -webkit-transform: translate(-10%, -50%);
+  transform: translate(-10%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 12, src/sass/components/_sections.scss */
+    #aboutContent {
+      height: 42vh; } }
+
+/* line 22, src/sass/components/_sections.scss */
 #aboutCloudOne {
   z-index: 2;
   width: 20%;
@@ -1293,142 +921,496 @@ a {
   top: 30%;
   left: -20%; }
 
-/* line 10, src/sass/components/_sections.scss */
+/* line 30, src/sass/components/_sections.scss */
 #aboutCloudTwo {
   z-index: 1;
   width: 8%; }
 
-/* line 15, src/sass/components/_sections.scss */
+/* line 35, src/sass/components/_sections.scss */
 #aboutCloudThree {
   z-index: 1;
   width: 12%; }
 
-/* line 20, src/sass/components/_sections.scss */
+/* line 40, src/sass/components/_sections.scss */
 #aboutCloudFour {
   z-index: 4;
   width: 40%; }
 
-/* line 25, src/sass/components/_sections.scss */
+/* line 45, src/sass/components/_sections.scss */
 #aboutCloudFive {
   z-index: 2;
   width: 35%; }
 
-/* line 30, src/sass/components/_sections.scss */
+/* line 50, src/sass/components/_sections.scss */
 #aboutCloudSix {
   z-index: 4;
   width: 55%; }
 
 /*================================================ CRISIS SECTION ===================*/
-/* line 36, src/sass/components/_sections.scss */
+/* line 56, src/sass/components/_sections.scss */
+#crisisSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -430vh; }
+  @media only screen and (max-width: 1499px) {
+    /* line 56, src/sass/components/_sections.scss */
+    #crisisSection {
+      top: -600vh; } }
+
+/* line 66, src/sass/components/_sections.scss */
+#crisisContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 1;
+  -webkit-transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 66, src/sass/components/_sections.scss */
+    #crisisContent {
+      height: 42vh; } }
+
+/* line 76, src/sass/components/_sections.scss */
 #crisisCloudOne {
   z-index: 3;
   width: 30%; }
 
-/* line 41, src/sass/components/_sections.scss */
+/* line 81, src/sass/components/_sections.scss */
 #crisisCloudTwo {
   z-index: 1;
   width: 20%; }
 
-/* line 46, src/sass/components/_sections.scss */
+/* line 86, src/sass/components/_sections.scss */
 #crisisCloudThree {
   z-index: 1;
   width: 20%; }
 
-/* line 51, src/sass/components/_sections.scss */
+/* line 91, src/sass/components/_sections.scss */
 #crisisCloudFour {
   z-index: 4;
   width: 60%; }
 
-/* line 56, src/sass/components/_sections.scss */
+/* line 96, src/sass/components/_sections.scss */
 #crisisCloudFive {
   z-index: 2;
   width: 40%; }
 
-/* line 61, src/sass/components/_sections.scss */
+/* line 101, src/sass/components/_sections.scss */
 #crisisCloudSix {
   z-index: 2;
   width: 60%; }
 
 /*================================================ PRODUCT SECTION ===================*/
-/* line 68, src/sass/components/_sections.scss */
+/* line 108, src/sass/components/_sections.scss */
+#productSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -720vh;
+  z-index: 3; }
+  @media only screen and (max-width: 1499px) {
+    /* line 108, src/sass/components/_sections.scss */
+    #productSection {
+      top: -980vh; } }
+
+/* line 119, src/sass/components/_sections.scss */
 #productCloudOne {
   z-index: 3;
   width: 30%; }
 
-/* line 73, src/sass/components/_sections.scss */
+/* line 124, src/sass/components/_sections.scss */
 #productCloudTwo {
   z-index: 1;
   width: 25%; }
 
-/* line 78, src/sass/components/_sections.scss */
+/* line 129, src/sass/components/_sections.scss */
 #productCloudThree {
   z-index: 1;
   width: 20%; }
 
-/* line 83, src/sass/components/_sections.scss */
+/* line 134, src/sass/components/_sections.scss */
 #productCloudFour {
   z-index: 4;
   width: 60%; }
 
-/* line 88, src/sass/components/_sections.scss */
+/* line 139, src/sass/components/_sections.scss */
 #productCloudFive {
   z-index: 2;
   width: 55%; }
 
-/* line 93, src/sass/components/_sections.scss */
+/* line 144, src/sass/components/_sections.scss */
 #productCloudSix {
   z-index: 2;
   width: 40%; }
 
 /*================================================ CAUSE SECTION ===================*/
-/* line 100, src/sass/components/_sections.scss */
+/* line 151, src/sass/components/_sections.scss */
+#causeSection {
+  width: 100%;
+  height: 200vh;
+  position: relative;
+  top: -1030vh;
+  z-index: 3; }
+  @media only screen and (max-width: 1499px) {
+    /* line 151, src/sass/components/_sections.scss */
+    #causeSection {
+      top: -1370vh; } }
+
+/* line 163, src/sass/components/_sections.scss */
+#causeContent {
+  width: 35%;
+  height: 30vh;
+  z-index: 3;
+  -webkit-transform: translate(-90%, -50%);
+  transform: translate(-90%, -50%); }
+  @media only screen and (max-width: 1499px) {
+    /* line 163, src/sass/components/_sections.scss */
+    #causeContent {
+      height: 42vh; } }
+
+/* line 174, src/sass/components/_sections.scss */
 #causeCloudOne {
   z-index: 3;
   width: 40%; }
 
-/* line 105, src/sass/components/_sections.scss */
+/* line 179, src/sass/components/_sections.scss */
 #causeCloudTwo {
   z-index: 1;
   width: 25%; }
 
-/* line 110, src/sass/components/_sections.scss */
+/* line 184, src/sass/components/_sections.scss */
 #causeCloudThree {
   z-index: 1;
   width: 20%; }
 
-/* line 115, src/sass/components/_sections.scss */
+/* line 189, src/sass/components/_sections.scss */
 #causeCloudFour {
   z-index: 4;
   width: 60%;
   opacity: 1; }
 
-/* line 121, src/sass/components/_sections.scss */
+/* line 195, src/sass/components/_sections.scss */
 #causeCloudFive {
   z-index: 2;
   width: 50%; }
 
-/* line 126, src/sass/components/_sections.scss */
+/* line 200, src/sass/components/_sections.scss */
 #causeCloudSix {
   z-index: 2;
   width: 30%; }
 
-/* line 132, src/sass/components/_sections.scss */
+/* line 206, src/sass/components/_sections.scss */
 #causeFlakeThree {
   cursor: default; }
 
-/* line 136, src/sass/components/_sections.scss */
+/* line 210, src/sass/components/_sections.scss */
 #causeFlakeThree:hover {
   width: 10%; }
 
+/*************************************************************
+	** HIDDEN CONTENT
+*************************************************************/
+/* line 5, src/sass/components/_hidden-content.scss */
+.hiddenContent {
+  background-color: rgba(250, 250, 250, 0.6);
+  padding: 3% 3% 3% 3%;
+  border-radius: 3%;
+  opacity: 0;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  overflow: hidden; }
+
+/* line 16, src/sass/components/_hidden-content.scss */
+.hiddenContent h1 {
+  font-size: 28px;
+  color: #2185C4;
+  margin-bottom: 2%; }
+  @media only screen and (max-width: 1499px) {
+    /* line 16, src/sass/components/_hidden-content.scss */
+    .hiddenContent h1 {
+      font-size: 24px; } }
+  @media only screen and (max-width: 977px) {
+    /* line 16, src/sass/components/_hidden-content.scss */
+    .hiddenContent h1 {
+      font-size: 21px; } }
+
+/* line 28, src/sass/components/_hidden-content.scss */
+.hiddenContent p {
+  color: #3E454C;
+  font-size: 21px;
+  line-height: 26px;
+  margin-bottom: 2%; }
+  @media only screen and (max-width: 1499px) {
+    /* line 28, src/sass/components/_hidden-content.scss */
+    .hiddenContent p {
+      font-size: 16px;
+      line-height: 21px; } }
+  @media only screen and (max-width: 977px) {
+    /* line 28, src/sass/components/_hidden-content.scss */
+    .hiddenContent p {
+      font-size: 14px;
+      line-height: 18px; } }
+
+/* line 43, src/sass/components/_hidden-content.scss */
+.moreIcon {
+  width: 15%;
+  margin: 13% auto 2% auto; }
+
+/* line 48, src/sass/components/_hidden-content.scss */
+.productIcon {
+  width: 30%;
+  margin: 13% auto 2% auto; }
+
+/* line 53, src/sass/components/_hidden-content.scss */
+#productMock {
+  width: 80%;
+  margin: 13% auto 2% auto; }
+
+/* line 58, src/sass/components/_hidden-content.scss */
+.moreList p {
+  font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
+  color: #3E454C;
+  font-size: 23px;
+  line-height: 28px; }
+  @media only screen and (max-width: 1499px) {
+    /* line 58, src/sass/components/_hidden-content.scss */
+    .moreList p {
+      font-size: 18px;
+      line-height: 24px; } }
+
+/* line 70, src/sass/components/_hidden-content.scss */
+.whiteTitle {
+  color: #FFFFFF; }
+
+/* line 74, src/sass/components/_hidden-content.scss */
+.closeButton {
+  color: #3E454C;
+  position: absolute;
+  top: 3%;
+  right: 3%;
+  z-index: 2; }
+
+/* line 82, src/sass/components/_hidden-content.scss */
+.closeButton h2 {
+  font-family: "arborcrestHeavy", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  color: #3E454C;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+
+/* line 91, src/sass/components/_hidden-content.scss */
+.closeButton h2:hover {
+  color: #FFFFFF;
+  -webkit-transition: color 0.5s ease;
+  transition: color 0.5s ease; }
+
+/* line 96, src/sass/components/_hidden-content.scss */
+.moreButton {
+  width: 47%;
+  height: 4vh;
+  background-color: #2185C4;
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  border-radius: 3px;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 50;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease; }
+
+/* line 110, src/sass/components/_hidden-content.scss */
+.moreButton:hover {
+  background-color: #3E454C;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease; }
+
+/* line 115, src/sass/components/_hidden-content.scss */
+.moreButton h6 {
+  color: #FFFFFF;
+  line-height: 4vh;
+  text-align: center; }
+
+/* line 121, src/sass/components/_hidden-content.scss */
+.buyButton {
+  width: 47%;
+  height: 4vh;
+  background-color: #2185C4;
+  border-radius: 3px;
+  float: right;
+  opacity: 0;
+  z-index: 50;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease; }
+
+/*.buyButton:hover{
+	background-color:$off-black;
+	@include transition(background-color, 1s);
+}
+*/
+/* line 137, src/sass/components/_hidden-content.scss */
+.buyButton h6 {
+  color: #FFFFFF;
+  line-height: 4vh;
+  text-align: center; }
+
+/* line 143, src/sass/components/_hidden-content.scss */
+.doneButton {
+  width: 100%;
+  height: 4vh;
+  background-color: #3E454C;
+  border-radius: 3px;
+  opacity: 0;
+  float: left;
+  cursor: pointer;
+  z-index: 50;
+  margin-top: 5%;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease; }
+
+/* line 156, src/sass/components/_hidden-content.scss */
+.doneButton:hover {
+  background-color: #2185C4;
+  -webkit-transition: background-color 1s ease;
+  transition: background-color 1s ease; }
+
+/* line 161, src/sass/components/_hidden-content.scss */
+.doneButton h3 {
+  font-size: 14px;
+  color: #FFFFFF;
+  line-height: 4vh;
+  text-align: center; }
+
+/* line 168, src/sass/components/_hidden-content.scss */
+.moreContent {
+  opacity: 0; }
+
+/* line 172, src/sass/components/_hidden-content.scss */
+.moreList {
+  margin: 5% 0% 5% 0%; }
+
+/* line 176, src/sass/components/_hidden-content.scss */
+.moreList li {
+  margin-bottom: 3%; }
+
+/* line 180, src/sass/components/_hidden-content.scss */
+.bullet {
+  width: 8px;
+  height: 8px;
+  background: url(../images/bulletPoint.png) center no-repeat;
+  z-index: 2;
+  display: inline-block;
+  margin-right: 1%;
+  line-height: 2px; }
+
+/* line 190, src/sass/components/_hidden-content.scss */
+.boldMore {
+  font-family: "josefinBold", Helvetica, Arial, sans-serif;
+  font-size: 18px; }
+
 /*================================================ FOOTER SECTION ===================*/
 /* line 2, src/sass/components/_footer.scss */
+#footerSection {
+  width: 100%;
+  height: 100vh;
+  z-index: 10;
+  position: relative;
+  top: -1350vh; }
+  @media only screen and (max-width: 1499px) {
+    /* line 2, src/sass/components/_footer.scss */
+    #footerSection {
+      top: -1700vh; } }
+
+/* line 13, src/sass/components/_footer.scss */
+#footerSection .social {
+  z-index: 4;
+  cursor: pointer;
+  width: 3%;
+  opacity: 1;
+  -webkit-transition: width 1s ease;
+  transition: width 1s ease;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 977px) {
+    /* line 13, src/sass/components/_footer.scss */
+    #footerSection .social {
+      width: 4%; } }
+
+/* line 26, src/sass/components/_footer.scss */
+#snowingStats {
+  width: 35%;
+  height: 30vh;
+  z-index: 3;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
+  @media only screen and (max-width: 2299px) {
+    /* line 26, src/sass/components/_footer.scss */
+    #snowingStats {
+      height: 42vh;
+      overflow: scroll; } }
+  @media only screen and (max-width: 1499px) {
+    /* line 26, src/sass/components/_footer.scss */
+    #snowingStats {
+      height: 50vh; } }
+
+/* line 41, src/sass/components/_footer.scss */
+.statsIcon {
+  float: left;
+  width: 15%;
+  margin: 10% 18% 2% 17%; }
+
+/* line 47, src/sass/components/_footer.scss */
+.statsText {
+  float: left;
+  width: 45%;
+  margin: 0% 0% 0% 5%; }
+
+/* line 54, src/sass/components/_footer.scss */
 #timeHolder {
   color: #2185C4; }
 
-/* line 6, src/sass/components/_footer.scss */
+/* line 58, src/sass/components/_footer.scss */
 .snowStatsHolder, #waterStatsHolder {
   color: #2185C4;
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
+
+/*============== COPYRIGHT =========**/
+/* line 65, src/sass/components/_footer.scss */
+#copyright {
+  position: absolute;
+  width: 100%;
+  z-index: 10; }
+
+/* line 71, src/sass/components/_footer.scss */
+#copyright p {
+  font-size: 16px;
+  line-height: 16px;
+  color: #FFFFFF; }
+
+/* line 77, src/sass/components/_footer.scss */
+#designby {
+  position: absolute;
+  left: 3%;
+  color: #FFFFFF; }
+
+/* line 83, src/sass/components/_footer.scss */
+#copyrightText {
+  position: absolute;
+  right: 3%;
+  color: #FFFFFF; }
+
+/* line 89, src/sass/components/_footer.scss */
+span {
+  color: #FFFFFF;
+  text-decoration: none; }
+
+/* line 94, src/sass/components/_footer.scss */
+span:hover {
+  text-decoration: underline; }
 
 /* BEYOND STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
 @media only screen and (min-width: 2600px) {

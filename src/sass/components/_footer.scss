@@ -1,4 +1,56 @@
 /*================================================ FOOTER SECTION ===================*/
+#footerSection{
+	width:100%;
+	height: 100vh;	
+	z-index: 10;
+	position: relative;
+	top:-1350vh;
+	@media only screen and (max-width: $large-width-max){
+		top:-1700vh;
+	}
+}
+
+#footerSection .social{
+	z-index: 4;
+	cursor: pointer;
+	width:3%;
+	opacity: 1;
+ 	@include transition(width, 1s);
+	position: absolute;
+	@include transform( translate(-50%,-50%) );
+	@media only screen and (max-width: $desktop-width-max){
+		width:4%;
+	}
+}
+
+#snowingStats{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	@include transform( translate(-50%,-50%) );
+	@media only screen and (max-width: $xtra-width-max){
+		height: 42vh;	
+		overflow: scroll;
+	}
+	@media only screen and (max-width: $large-width-max){
+		height:50vh;
+	}
+}
+ 
+
+.statsIcon{
+ 	float:left;
+	width:15%;
+	margin:10% 18% 2% 17%;
+}
+
+.statsText{
+	float:left;
+	width:45%;
+	margin:0% 0% 0% 5%;	
+}
+
+
 #timeHolder{
 	color:$blue;
 }
@@ -7,3 +59,39 @@
 	color:$blue;
 	font-family:$josefin-bold;
 }
+
+
+/*============== COPYRIGHT =========**/
+#copyright{
+	position: absolute;
+	width:100%;
+	z-index: 10;
+}
+
+#copyright p{
+	font-size:16px;
+	line-height:16px;	
+	color:$white;
+}
+
+#designby{
+	position:absolute;
+	left:3%;
+	color:$white;
+}
+
+#copyrightText{
+	position:absolute;
+	right:3%;
+	color:$white;
+}
+
+span{
+	color:$white;
+	text-decoration:none;
+}
+
+span:hover{
+	text-decoration:underline;
+}
+

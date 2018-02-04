@@ -1,5 +1,41 @@
 .mountain{
 	pointer-events:none;
+	position: fixed;
+}
 
+#mountainPeak{
+	width:120%;
+	z-index: 2;
+	left:-10%;
+	top:240vh;
+	@media only screen and (max-width: $desktop-width-max){
+		width:150%;
+		left:-25%;
+	}
+}
 
-}/* close: .mountain */
+#mountainLeft{
+	width:40%;
+	z-index: 1;
+	left:0%;
+	top:250vh;
+	opacity:0.9;
+}
+
+#mountainRight{
+	width:40%;
+	z-index: 1;
+	left:60%;
+	top:240vh;
+	opacity:0.8;
+}
+
+ #productContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	@include transform( translate(-10%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;	
+	}
+ }

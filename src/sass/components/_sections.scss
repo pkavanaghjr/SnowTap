@@ -1,4 +1,24 @@
 /*================================================ ABOUT SECTION ===================*/
+#aboutSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-100vh;
+	@media only screen and (max-width: $large-width-max){
+		top:-170vh;
+	}
+}
+
+#aboutContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	@include transform( translate(-10%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;	
+	}
+}
+
 #aboutCloudOne{
 	z-index: 2;
 	width:20%;
@@ -33,6 +53,26 @@
  }
 
 /*================================================ CRISIS SECTION ===================*/
+#crisisSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-430vh;
+	@media only screen and (max-width: $large-width-max){
+		top:-600vh;
+	}
+}
+
+#crisisContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:1;
+	@include transform( translate(-90%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;	
+	}
+}
+
 #crisisCloudOne{
 	z-index: 3;
 	width:30%;
@@ -65,6 +105,17 @@
 
 
 /*================================================ PRODUCT SECTION ===================*/
+#productSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-720vh;
+	z-index: 3;
+	@media only screen and (max-width: $large-width-max){
+		top:-980vh;
+	}
+}
+
 #productCloudOne{
 	z-index: 3;
 	width:30%;
@@ -97,6 +148,29 @@
 
 
 /*================================================ CAUSE SECTION ===================*/
+#causeSection{
+	width:100%;
+	height: 200vh;	
+	position: relative;
+	top:-1030vh;
+	z-index: 3;
+	@media only screen and (max-width: $large-width-max){
+		top:-1370vh;
+	}
+}
+
+
+#causeContent{
+ 	width:35%;
+ 	height: 30vh;
+ 	z-index:3;
+	@include transform( translate(-90%,-50%) );
+	@media only screen and (max-width: $large-width-max){
+		height:42vh;
+	}
+}
+
+
 #causeCloudOne{
 	z-index: 3;
 	width:40%;

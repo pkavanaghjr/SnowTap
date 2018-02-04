@@ -15,3 +15,82 @@
 	background-color: $off-black;
 	z-index: 100px;
 }
+
+#scrollDownArrow{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 50%;
+	top: 95%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#logoDrop{
+	z-index: 2;
+	position: absolute;
+	width:8.5%;
+	left: 50%;
+	top: -15%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+	@media only screen and (max-width: $desktop-width-max){
+		width:12%;
+		left: 50%;
+		top: -15%;
+	}
+ }
+
+#logoText{
+	z-index: 2;
+	position: absolute;
+	width:20%;
+	left: 50%;
+	top: 62%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+	@media only screen and (max-width: $desktop-width-max){
+		width:30%;
+		top: 64%;
+	}
+ }
+
+#fmaCloudOne{
+	z-index: 3;
+	position: absolute;
+	width:90%;
+	left: 0%;
+	top: 95%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#fmaCloudTwo{
+	z-index: 3;
+	position: absolute;
+	width:35%;
+	left: 85%;
+	top: 67%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#fmaCloudThree{
+	z-index: 1;
+	position: absolute;
+	width:12%;
+	left: 40%;
+	top: 45%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
+
+#fmaCloudFour{
+	z-index: 1;
+	position: absolute;
+	width:7%;
+	left: 57%;
+	top: 38%;
+	@include transform( translate(-50%,-50%) );
+	opacity: 0;
+ }
