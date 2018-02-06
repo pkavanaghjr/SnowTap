@@ -803,9 +803,7 @@ a {
   z-index: 4;
   position: absolute;
   width: 20%;
-  cursor: pointer;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%); }
+  cursor: pointer; }
   /* line 9, src/sass/components/_snowflake.scss */
   .snowflake:hover {
     -webkit-transition: width 1s ease;

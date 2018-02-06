@@ -146,7 +146,7 @@ window.onload = function(){
 
 
 //========================= SNOWFLAKE HOVERS ================
-	$("#aboutFlakeOne, #crisisFlakeOne, #productFlakeOne, #causeFlakeOne").mouseover(function(){
+	$(".snowflakeOne").mouseover(function(){
 		console.log("about 1 hover");
 		$("h3").stop(true).animate({color:"#2185C4"},500);
 	}).mouseout(function(){
@@ -154,20 +154,12 @@ window.onload = function(){
 		$("h3").stop(true).animate({color:"#fff"},500);
 	});
 
-	$("#aboutFlakeTwo, #crisisFlakeTwo, #productFlakeTwo, #causeFlakeTwo").mouseover(function(){
+	$(".snowflakeTwo, .snowflakeThree").mouseover(function(){
 		console.log("about 2 hover");
-		$("h4").stop(true).animate({color:"#85CBF0"},500);
+		$(this).children().stop(true).animate({color:"#85CBF0"},500);
 	}).mouseout(function(){
 		console.log("about 2 off hover");
-		$("h4").stop(true).animate({color:"#fff"},500);
-	});
-
-	$("#aboutFlakeThree, #crisisFlakeThree, #productFlakeThree, #causeFlakeThree").mouseover(function(){
-		console.log("about 3 hover");
-		$("h5").stop(true).animate({color:"#85CBF0"},500);
-	}).mouseout(function(){
-		console.log("about 3 off hover");
-		$("h5").stop(true).animate({color:"#fff"},500);
+		$(this).children().stop(true).animate({color:"#fff"},500);
 	});
 
 

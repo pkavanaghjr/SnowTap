@@ -54,7 +54,7 @@ $(document).ready(function() {
 	function snowTimer(){
 		snowTimer = setInterval(function(){
 			snowCounter++;
-			console.log("counter: "+snowCounter);
+			// console.log("counter: "+snowCounter);
 		}, 2000);	
 	};
 
@@ -94,6 +94,24 @@ $(document).ready(function() {
 	    });
 		console.log("Nav Arrow: "+sceneScroll);	
 	});
+
+	// GLOBAL NAV EH
+	// $('#navList a').on("click",function(event){
+	// 	event.preventDefault();
+	// 	var name = $(this).attr('data-name'),
+	// 		target = $(this).attr('href'),
+	// 		content = '#'+name.toLowerCase()+'Content',
+	// 		scene = 'scene'+name;
+	//     // var sceneScroll = scene.scrollOffset() + scene.duration() / 3.3;
+	//     var sceneScroll = $(target).scrollTop() + $(target).outerHeight() / 3.3;
+	// 	hideButtons();
+	//     $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
+	//     	$(content).stop(true).animate({opacity:1},500,function(){
+	//     		showButtons();
+	// 			$(this).css("pointer-events","all");
+	//     	});
+	//     });
+	// });
 
 	$('#navAbout').on("click",function(event){
 		event.preventDefault();
@@ -167,7 +185,7 @@ $(document).ready(function() {
 	});
 
 	//========================= EXPAND CONTENT ================
-	$("#aboutContent .moreButton, #crisisContent .moreButton, #productContent .moreButton, #causeContent .moreButton").on("click", function(){
+	$(".scroll-section .moreButton").on("click", function(){
 		console.log("more button open");
 		$("body").css("overflow","hidden");			
 		$("#aboutContent, #crisisContent, #productContent, #causeContent").stop(true).animate({height:"80vh"},1000,"easeInExpo",function(){
@@ -177,87 +195,24 @@ $(document).ready(function() {
 		});
 	});
 
-	//========================= ABOUT SECTION HANDLERS ================
-	$("#aboutFlakeOne").on("click",function(){
-		console.log("about click: " + hiddenActive);
+	//========================= SECTION HANDLERS ================
+	$(".snowflake").on("click",function(){
+		console.log("click: " + hiddenActive);
+		var target = $(this).attr('data-target');
 		if(hiddenActive == false){
-			$("#aboutContent").stop(true).animate({opacity:1},500,function(){
+			$(target).stop(true).animate({opacity:1},500,function(){
 				showButtons();
 				$(this).css("pointer-events","all");
-			});		
+			});
 		}else if(hiddenActive == true){
-			$("#aboutContent").stop(true).animate({opacity:0},500,function(){
+			$(target).stop(true).animate({opacity:0},500,function(){
 				hideButtons();
 				$(this).css("pointer-events","none");
-			});			
+			});
 		}
 	});
 
-
-	//========================= CRISIS SECTION HANDLERS ================
-	$("#crisisFlakeOne").on("click",function(){
-		console.log("crisis click: "+ hiddenActive);
-		if(hiddenActive == false){
-			$("#crisisContent").stop(true).animate({opacity:1},500,function(){
-				showButtons();
-				$(this).css("pointer-events","all");
-			});		
-		}else if(hiddenActive == true){
-			$("#crisisContent").stop(true).animate({opacity:0},500,function(){
-				hideButtons();
-				$(this).css("pointer-events","none");
-			});			
-		}
-	});
-
-
-	//========================= PRODUCTS SECTION HANDLERS ================
-	$("#productFlakeOne").on("click",function(){
-		console.log("product click: "+ hiddenActive);
-		if(hiddenActive == false){
-			$("#productContent").stop(true).animate({opacity:1},500,function(){
-				showButtons();
-				$(this).css("pointer-events","all");
-			});		
-		}else if(hiddenActive == true){
-			$("#productContent").stop(true).animate({opacity:0},500,function(){
-				hideButtons();
-				$(this).css("pointer-events","none");
-			});			
-		}
-	});
-
-	//========================= CAUSE SECTION HANDLERS ================
-	$("#causeFlakeOne").on("click",function(){
-		console.log("cause click: "+ hiddenActive);
-		if(hiddenActive == false){
-			$("#causeContent").stop(true).animate({opacity:1},500,function(){
-				showButtons();
-				$(this).css("pointer-events","all");
-			});		
-		}else if(hiddenActive == true){
-			$("#causeContent").stop(true).animate({opacity:0},500,function(){
-				hideButtons();
-				$(this).css("pointer-events","none");
-			});			
-		}
-	});
-
-
-//========================= NAV FLAKES  ================
-	//========================= ABOUT FLAKES  ================
-	$("#aboutFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneCrisis.scrollOffset() + sceneCrisis.duration() / 2.3;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#crisisContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Crisis: "+sceneScroll);	
-	});
-
-	$("#aboutFlakeThree").on("click",function(){
+	$(".snowflakeTwo").on("click",function(){
 	    var sceneScroll = sceneProduct.scrollOffset() + sceneProduct.duration() / 2.6;
 	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
 	    	$("#productContent").stop(true).animate({opacity:1},500,function(){
@@ -268,55 +223,14 @@ $(document).ready(function() {
 		console.log("Nav Product: "+sceneScroll);	
 	});
 
-
-	//========================= CRISIS FLAKES  ================
-	$("#crisisFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneProduct.scrollOffset() + sceneProduct.duration() / 2.6;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#productContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Product: "+sceneScroll);	
-	});
-
-	$("#crisisFlakeThree").on("click",function(){
-	    var sceneScroll = sceneCause.scrollOffset() + sceneCause.duration() / 2.2;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#causeContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Cause: "+sceneScroll);	
-	});
-
-
-	//========================= PRODUCT FLAKES  ================
-	$("#productFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneCause.scrollOffset() + sceneCause.duration() / 2.2;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#causeContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Cause: "+sceneScroll);	
-	});
-
-	$("#productFlakeThree").on("click",function(){
+	$(".footer-anchor").on("click",function(){
 	    var sceneScroll = sceneFooter.scrollOffset() + 1000;
 	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo');	    
 		console.log("Nav Contact: "+sceneScroll);	
 	});
 
-	//========================= CAUSE FLAKES  ================
-	$("#causeFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneFooter.scrollOffset() + 1000;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo');	    
-		console.log("Nav Contact: "+sceneScroll);	
-	});
+
+
 
 //========================= SHOW / HIDE HIDDEN CONTENT  ================
 	function showButtons(){
@@ -607,12 +521,12 @@ $(document).ready(function() {
 
 
 // ========================= SCROLL MAGIC INDICATORS ================
-	// sceneFma.addIndicators({zindex: 100, colorStart:"#fff000", suffix: "FMA"});	
-	// sceneAbout.addIndicators({zindex: 100, colorStart:"#000fff", suffix: "ABOUT"});	
-	// sceneCrisis.addIndicators({zindex: 100, colorStart:"#00fff0", suffix: "CRISIS"});	
-	// sceneProduct.addIndicators({zindex: 100, colorStart:"#0fff00", suffix: "PRODUCT"});	
-	// sceneCause.addIndicators({zindex: 100, colorStart:"#0ff0f0", suffix: "CAUSE"});	
-	// sceneFooter.addIndicators({zindex: 100, colorStart:"#0f0f00", suffix: "FOOTER"});	
+	sceneFma.addIndicators({zindex: 100, colorStart:"#fff000", suffix: "FMA"});	
+	sceneAbout.addIndicators({zindex: 100, colorStart:"#000fff", suffix: "ABOUT"});	
+	sceneCrisis.addIndicators({zindex: 100, colorStart:"#00fff0", suffix: "CRISIS"});	
+	sceneProduct.addIndicators({zindex: 100, colorStart:"#0fff00", suffix: "PRODUCT"});	
+	sceneCause.addIndicators({zindex: 100, colorStart:"#0ff0f0", suffix: "CAUSE"});	
+	sceneFooter.addIndicators({zindex: 100, colorStart:"#0f0f00", suffix: "FOOTER"});	
 	
 
 

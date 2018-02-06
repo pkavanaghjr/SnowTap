@@ -4,7 +4,7 @@
 	position: absolute;
 	width:20%;
 	cursor: pointer;
-	@include transform( translate(-50%,-50%) );
+	// @include transform( translate(-50%,-50%) );
 
 	&:hover{
 		@include transition(width, 1s);

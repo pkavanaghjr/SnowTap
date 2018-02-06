@@ -29,11 +29,11 @@
                 
                     <div id="navList">
                         <div id="logo"><a href="#fma"><h2>SNOW<span id="logoSpan">TAP</span></h2></a></div>
-                        <nav><a id="navAbout" href="#aboutSection"><h1>ABOUT</h1></a></nav>
-                        <nav><a id="navCrisis" href="#crisisSection"><h1>CRISIS</h1></a></nav>
-                        <nav><a id="navProduct" href="#productSection"><h1>PRODUCTS</h1></a></nav>
-                        <nav><a id="navCause" href="#causeSection"><h1>CAUSE</h1></a></nav>
-                        <nav><a id="navContact" href="#footerSection"><h1>CONTACT</h1></a></nav>
+                        <nav><a id="navAbout" href="#aboutSection" data-name="About"><h1>ABOUT</h1></a></nav>
+                        <nav><a id="navCrisis" href="#crisisSection" data-name="Crisis"><h1>CRISIS</h1></a></nav>
+                        <nav><a id="navProduct" href="#productSection" data-name="Products"><h1>PRODUCTS</h1></a></nav>
+                        <nav><a id="navCause" href="#causeSection" data-name="Cause"><h1>CAUSE</h1></a></nav>
+                        <nav><a id="navContact" href="#footerSection" data-name="Contact"><h1>CONTACT</h1></a></nav>
                     </div>
                 
                 </div>
@@ -51,7 +51,7 @@
 
 
     <!-- /////////////////// FMA ///////////////// -->
-    		<section id="fma">
+    		<section id="fma" class="scroll-section">
 
                 <div id="loadColor"></div>
                 <div class="logo" id="logoDrop"><img src="images/logoDrop.png" width="100%" height="100%" alt="Snowtap Logo"/></div>
@@ -68,7 +68,7 @@
 
 
     <!-- /// ABOUT //////////////////////////////////////////// -->
-            <section id="aboutSection">
+            <section id="aboutSection" class="scroll-section">
 
                 <div id="aboutCloudOne" class="cloud cloud--about"><img src="images/cloud5b.png" width="100%" height="100%" alt="about could 1"/></div>
                 <div id="aboutCloudTwo" class="cloud cloud--about"><img src="images/cloud3b.png" width="100%" height="100%" alt="about could 2"/></div>
@@ -77,9 +77,9 @@
                 <div id="aboutCloudFive" class="cloud cloud--about"><img src="images/cloud8b.png" width="100%" height="100%" alt="about could 5"/></div>
                 <div id="aboutCloudSix" class="cloud cloud--about"><img src="images/cloud2b.png" width="100%" height="100%" alt="about could 6"/></div>
 
-                <div id="aboutFlakeOne" class="snowflake snowflake--about snowflakeOne"><h3>ABOUT</h3><img src="images/snowflake1.png" width="100%" height="100%" alt="about snowflake 1"/></div>
-                <div id="aboutFlakeTwo" class="snowflake snowflake--about snowflakeTwo"><h4>CRISIS</h4><img src="images/snowflake2.png" width="100%" height="100%" alt="about snowflake 2"/></div>
-                <div id="aboutFlakeThree" class="snowflake snowflake--about snowflakeThree"><h5>PRODUCTS</h5><img src="images/snowflake3.png" width="100%" height="100%" alt="about snowflake 3"/></div>
+                <div id="aboutFlakeOne" class="snowflake snowflake--about snowflakeOne" data-target="#aboutContent"><h3>ABOUT</h3><img src="images/snowflake1.png" width="100%" height="100%" alt="about snowflake 1"/></div>
+                <div id="aboutFlakeTwo" class="snowflake snowflake-secondary snowflake--about snowflakeTwo" data-target="#crisisContent"><h4>CRISIS</h4><img src="images/snowflake2.png" width="100%" height="100%" alt="about snowflake 2"/></div>
+                <div id="aboutFlakeThree" class="snowflake snowflake-secondary snowflake--about snowflakeThree" data-target="#productContent"><h5>PRODUCTS</h5><img src="images/snowflake3.png" width="100%" height="100%" alt="about snowflake 3"/></div>
 
 
 
@@ -109,7 +109,7 @@
 
 
     <!-- /// CRISIS /////////////////////////////////////////// -->
-            <section id="crisisSection">
+            <section id="crisisSection" class="scroll-section">
 
                 <div id="crisisCloudOne" class="cloud cloud--crisis"><img src="images/cloud9b.png" width="100%" height="100%" alt="crisis could 1"/></div>
                 <div id="crisisCloudTwo" class="cloud cloud--crisis"><img src="images/cloud10b.png" width="100%" height="100%" alt="crisis could 2"/></div>
@@ -118,9 +118,9 @@
                 <div id="crisisCloudFive" class="cloud cloud--crisis"><img src="images/cloud13b.png" width="100%" height="100%" alt="crisis could 5"/></div>
                 <div id="crisisCloudSix" class="cloud cloud--crisis"><img src="images/cloud14b.png" width="100%" height="100%" alt="crisis could 6"/></div>
 
-                <div id="crisisFlakeOne" class="snowflake snowflake--crisis snowflakeOne"><h3>CRISIS</h3><img src="images/snowflake2.png" width="100%" height="100%" alt="crisis snowflake 1"/></div>
-                <div id="crisisFlakeTwo" class="snowflake snowflake--crisis snowflakeTwo"><h4>PRODUCTS</h4><img src="images/snowflake3.png" width="100%" height="100%" alt="crisis snowflake 2"/></div>
-                <div id="crisisFlakeThree" class="snowflake snowflake--crisis snowflakeThree"><h5>CAUSE</h5><img src="images/snowflake5.png" width="100%" height="100%" alt="crisis snowflake 3"/></div>
+                <div id="crisisFlakeOne" class="snowflake snowflake--crisis snowflakeOne" data-target="#crisisContent"><h3>CRISIS</h3><img src="images/snowflake2.png" width="100%" height="100%" alt="crisis snowflake 1"/></div>
+                <div id="crisisFlakeTwo" class="snowflake snowflake-secondary snowflake--crisis snowflakeTwo" data-target="#causeContent"><h4>PRODUCTS</h4><img src="images/snowflake3.png" width="100%" height="100%" alt="crisis snowflake 2"/></div>
+                <div id="crisisFlakeThree" class="snowflake snowflake-secondary snowflake--crisis snowflakeThree footer-anchor" data-target="#footerContent"><h5>CAUSE</h5><img src="images/snowflake5.png" width="100%" height="100%" alt="crisis snowflake 3"/></div>
 
 
                 <div class="hiddenContent avoidPointer" id="crisisContent">
@@ -155,7 +155,7 @@
             </section>
 
     <!-- /// PRODUCT ////////////////////////////////////////// -->
-            <section id="productSection">
+            <section id="productSection" class="scroll-section">
 
                 <div id="productCloudOne" class="cloud cloud--product"><img src="images/cloud2b.png" width="100%" height="100%" alt="product could 1"/></div>
                 <div id="productCloudTwo" class="cloud cloud--product"><img src="images/cloud6b.png" width="100%" height="100%" alt="product could 2"/></div>
@@ -164,9 +164,9 @@
                 <div id="productCloudFive" class="cloud cloud--product"><img src="images/cloud5b.png" width="100%" height="100%" alt="product could 5"/></div>
                 <div id="productCloudSix" class="cloud cloud--product"><img src="images/cloud4b.png" width="100%" height="100%" alt="product could 6"/></div>
 
-                <div id="productFlakeOne" class="snowflake snowflake--product snowflakeOne"><h3>PRODUCT</h3><img src="images/snowflake3.png" width="100%" height="100%" alt="product snowflake 1"/></div>
-                <div id="productFlakeTwo" class="snowflake snowflake--product snowflakeTwo"><h4>CAUSE</h4><img src="images/snowflake5.png" width="100%" height="100%" alt="product snowflake 2"/></div>
-                <div id="productFlakeThree" class="snowflake snowflake--product snowflakeThree"><h5>CONTACT</h5><img src="images/snowflake4.png" width="100%" height="100%" alt="product snowflake 3"/></div>
+                <div id="productFlakeOne" class="snowflake snowflake--product snowflakeOne" data-target="#productContent"><h3>PRODUCT</h3><img src="images/snowflake3.png" width="100%" height="100%" alt="product snowflake 1"/></div>
+                <div id="productFlakeTwo" class="snowflake snowflake-secondary snowflake--product snowflakeTwo footer-anchor" data-target="#causeContent"><h4>CAUSE</h4><img src="images/snowflake5.png" width="100%" height="100%" alt="product snowflake 2"/></div>
+                <div id="productFlakeThree" class="snowflake snowflake-secondary snowflake--product snowflakeThree" data-target="#productContent"><h5>CONTACT</h5><img src="images/snowflake4.png" width="100%" height="100%" alt="product snowflake 3"/></div>
 
 
                 <div class="hiddenContent avoidPointer" id="productContent">
@@ -240,7 +240,7 @@
 
 
     <!-- /// CAUSE //////////////////////////////////////// -->
-            <section id="causeSection">
+            <section id="causeSection" class="scroll-section">
 
                 <div id="causeCloudOne" class="cloud cloud--cause"><img src="images/cloud12b.png" width="100%" height="100%" alt="could 11"/></div>
                 <div id="causeCloudTwo" class="cloud cloud--cause"><img src="images/cloud15b.png" width="100%" height="100%" alt="could 12"/></div>
@@ -249,9 +249,9 @@
                 <div id="causeCloudFive" class="cloud cloud--cause"><img src="images/cloud14b.png" width="100%" height="100%" alt="could 15"/></div>
                 <div id="causeCloudSix" class="cloud cloud--cause"><img src="images/cloud11b.png" width="100%" height="100%" alt="could 16"/></div>
 
-                <div id="causeFlakeOne" class="snowflake snowflake--cause snowflakeOne"><h3>CAUSE</h3><img src="images/snowflake5.png" width="100%" height="100%" alt="cause snowflake 1"/></div>
-                <div id="causeFlakeTwo" class="snowflake snowflake--cause snowflakeTwo"><h4>CONTACT</h4><img src="images/snowflake4.png" width="100%" height="100%" alt="cause snowflake 2"/></div>
-                <div id="causeFlakeThree" class="snowflake snowflake--cause snowflakeThree"><img src="images/snowflake1.png" width="100%" height="100%" alt="cause snowflake 3"/></div>
+                <div id="causeFlakeOne" class="snowflake snowflake--cause snowflakeOne" data-target="#causeContent"><h3>CAUSE</h3><img src="images/snowflake5.png" width="100%" height="100%" alt="cause snowflake 1"/></div>
+                <div id="causeFlakeTwo" class="snowflake snowflake-secondary snowflake--cause snowflakeTwo footer-anchor" data-target="#"><h4>CONTACT</h4><img src="images/snowflake4.png" width="100%" height="100%" alt="cause snowflake 2"/></div>
+                <div id="causeFlakeThree" class="snowflake snowflake-secondary snowflake--cause snowflakeThree" data-target="#"><img src="images/snowflake1.png" width="100%" height="100%" alt="cause snowflake 3"/></div>
 
 
                 <div class="hiddenContent avoidPointer" id="causeContent">
@@ -277,7 +277,7 @@
 
 
     <!-- /// FOOTER ////////////////////////////////////////// -->
-            <footer id="footerSection">
+            <footer id="footerSection" class="scroll-section">
 
                 <div class="hiddenContent avoidPointer" id="snowingStats">
 
