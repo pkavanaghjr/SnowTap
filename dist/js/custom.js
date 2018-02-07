@@ -143,20 +143,6 @@ window.onload = function(){
 }
 
 
-//========================= SNOWFLAKE HOVERS ================
-	$(".snowflakeOne").mouseover(function(){
-		$("h3").stop(true).animate({color:"#2185C4"},500);
-	}).mouseout(function(){
-		$("h3").stop(true).animate({color:"#fff"},500);
-	});
-
-	$(".snowflakeTwo, .snowflakeThree").mouseover(function(){
-		$(this).children().stop(true).animate({color:"#85CBF0"},500);
-	}).mouseout(function(){
-		$(this).children().stop(true).animate({color:"#fff"},500);
-	});
-
-
 
 
 //========================= LANDING FMA  ================
@@ -327,7 +313,8 @@ $(document).ready(function() {
 	$('#navList a').on("click",function(event){
 		event.preventDefault();
 		var name = $(this).attr('data-name'),
-			content = '#'+name.toLowerCase()+'Content';
+			content = '#'+name.toLowerCase()+'Content',
+			scene = '';
 		if (content.indexOf("about") >= 0){
 			scene = sceneAbout;
 		}else if (content.indexOf("crisis") >= 0){
@@ -371,11 +358,11 @@ $(document).ready(function() {
 	//========================= EXPAND CONTENT ================
 	$(document).on("click", ".scroll-section .moreButton", function(){
 		console.log("more button open");
-		// $("body").css("overflow","hidden");			
+		$("body").css("overflow","hidden");
 		$("#aboutContent, #crisisContent, #productContent, #causeContent").stop(true).animate({height:"80vh"},1000,"easeInExpo",function(){
 			$(".moreContent").animate({opacity:1},500);
-			// $("#aboutContent, #crisisContent, #productContent, #causeContent").css("overflow","scroll").css("zIndex","50");
-			$("#aboutContent, #crisisContent, #productContent, #causeContent").css("zIndex","50");
+			$("#aboutContent, #crisisContent, #productContent, #causeContent").css("overflow","scroll").css("zIndex","50");
+			// $("#aboutContent, #crisisContent, #productContent, #causeContent").css("zIndex","50");
 			$(".moreButton").animate({opacity:0},500).css("pointer-events","none");
 		});
 	});
@@ -440,7 +427,7 @@ $(document).ready(function() {
 		$(".closeButton h2").stop(true).animate({opacity:1},500,function(){
 			$(".closeButton").css("pointer-events","all");
 		});
-	};
+	}
 
 	function hideButtons(){
 		hiddenActive = false;		
@@ -456,7 +443,7 @@ $(document).ready(function() {
 			$("#aboutContent, #crisisContent, #productContent, #causeContent").css("pointer-events","none").css("overflow","hidden").css("zIndex","3");
 			$(".moreContent").animate({opacity:0},500);
 		});
-	};
+	}
 
 
 

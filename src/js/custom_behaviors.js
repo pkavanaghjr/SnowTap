@@ -143,20 +143,6 @@ window.onload = function(){
 }
 
 
-//========================= SNOWFLAKE HOVERS ================
-	$(".snowflakeOne").mouseover(function(){
-		$("h3").stop(true).animate({color:"#2185C4"},500);
-	}).mouseout(function(){
-		$("h3").stop(true).animate({color:"#fff"},500);
-	});
-
-	$(".snowflakeTwo, .snowflakeThree").mouseover(function(){
-		$(this).children().stop(true).animate({color:"#85CBF0"},500);
-	}).mouseout(function(){
-		$(this).children().stop(true).animate({color:"#fff"},500);
-	});
-
-
 
 
 //========================= LANDING FMA  ================

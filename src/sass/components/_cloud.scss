@@ -1,7 +1,33 @@
+@include keyframes(live-cloud-one) {
+  0%   { @include transform(translate(-42%,-48%)); }
+  50%   { @include transform(translate(-58%,-51%)); }
+  100%   { @include transform(translate(-42%,-48%)); }
+}
+@include keyframes(live-cloud-two) {
+  0%   { @include transform(translate(-38%,-50%)); }
+  50%   { @include transform(translate(-50%,-52%)); }
+  100%   { @include transform(translate(-38%,-50%)); }
+}
+@include keyframes(live-cloud-three) {
+  0%   { @include transform(translate(-48%,-49%)); }
+  50%   { @include transform(translate(-58%,-52%)); }
+  100%   { @include transform(translate(-48%,-49%)); }
+}
+
 .cloud{
 	position: absolute;
 	pointer-events:none;
 	@include transform( translate(-50%,-50%) );
 
+	&:nth-of-type(3n-1){
+		@include animation('live-cloud-one 40s infinite');	
+	}
+	&:nth-of-type(3n-2){
+		@include animation('live-cloud-two 50s infinite');	
+	}
+	&:nth-of-type(3n){
+		@include animation('live-cloud-three 60s infinite');	
+	}
+	
 	
 }/* CLOSE: .cloud */

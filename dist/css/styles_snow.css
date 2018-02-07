@@ -802,43 +802,184 @@ a {
   z-index: 4;
   position: absolute;
   width: 20%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
   /* line 9, src/sass/components/_snowflake.scss */
   .snowflake:hover {
     -webkit-transition: width 1s ease;
     transition: width 1s ease; }
+  /* line 12, src/sass/components/_snowflake.scss */
+  .snowflake > * {
+    -webkit-transition: color 1s ease;
+    transition: color 1s ease; }
 
 /* close: .snowflake */
-/* line 15, src/sass/components/_snowflake.scss */
+@-webkit-keyframes live-snowlake-one {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes live-snowlake-one {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+/* line 22, src/sass/components/_snowflake.scss */
 .snowflakeOne {
   z-index: 4;
   width: 20%; }
-  /* line 18, src/sass/components/_snowflake.scss */
+  /* line 26, src/sass/components/_snowflake.scss */
   .snowflakeOne:hover {
     width: 21%; }
+    /* line 28, src/sass/components/_snowflake.scss */
+    .snowflakeOne:hover > * {
+      color: #2185C4; }
 
-/* line 23, src/sass/components/_snowflake.scss */
+@-webkit-keyframes live-snowlake-two {
+  0% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+
+@keyframes live-snowlake-two {
+  0% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg); }
+  100% {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg); } }
+
+/* line 38, src/sass/components/_snowflake.scss */
 .snowflakeTwo {
   z-index: 2;
   width: 15%; }
-  /* line 26, src/sass/components/_snowflake.scss */
+  /* line 42, src/sass/components/_snowflake.scss */
   .snowflakeTwo:hover {
     width: 16%; }
+    /* line 44, src/sass/components/_snowflake.scss */
+    .snowflakeTwo:hover > * {
+      color: #85CBF0; }
 
-/* line 31, src/sass/components/_snowflake.scss */
+@-webkit-keyframes live-snowlake-three {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+@keyframes live-snowlake-three {
+  0% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  100% {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg); } }
+
+/* line 54, src/sass/components/_snowflake.scss */
 .snowflakeThree {
   z-index: 2;
   width: 10%; }
-  /* line 34, src/sass/components/_snowflake.scss */
+  /* line 58, src/sass/components/_snowflake.scss */
   .snowflakeThree:hover {
     width: 10.5%; }
+    /* line 60, src/sass/components/_snowflake.scss */
+    .snowflakeThree:hover > * {
+      color: #85CBF0; }
 
-/* line 1, src/sass/components/_cloud.scss */
+@-webkit-keyframes live-cloud-one {
+  0% {
+    -webkit-transform: translate(-42%, -48%);
+    transform: translate(-42%, -48%); }
+  50% {
+    -webkit-transform: translate(-58%, -51%);
+    transform: translate(-58%, -51%); }
+  100% {
+    -webkit-transform: translate(-42%, -48%);
+    transform: translate(-42%, -48%); } }
+
+@keyframes live-cloud-one {
+  0% {
+    -webkit-transform: translate(-42%, -48%);
+    transform: translate(-42%, -48%); }
+  50% {
+    -webkit-transform: translate(-58%, -51%);
+    transform: translate(-58%, -51%); }
+  100% {
+    -webkit-transform: translate(-42%, -48%);
+    transform: translate(-42%, -48%); } }
+
+@-webkit-keyframes live-cloud-two {
+  0% {
+    -webkit-transform: translate(-38%, -50%);
+    transform: translate(-38%, -50%); }
+  50% {
+    -webkit-transform: translate(-50%, -52%);
+    transform: translate(-50%, -52%); }
+  100% {
+    -webkit-transform: translate(-38%, -50%);
+    transform: translate(-38%, -50%); } }
+
+@keyframes live-cloud-two {
+  0% {
+    -webkit-transform: translate(-38%, -50%);
+    transform: translate(-38%, -50%); }
+  50% {
+    -webkit-transform: translate(-50%, -52%);
+    transform: translate(-50%, -52%); }
+  100% {
+    -webkit-transform: translate(-38%, -50%);
+    transform: translate(-38%, -50%); } }
+
+@-webkit-keyframes live-cloud-three {
+  0% {
+    -webkit-transform: translate(-48%, -49%);
+    transform: translate(-48%, -49%); }
+  50% {
+    -webkit-transform: translate(-58%, -52%);
+    transform: translate(-58%, -52%); }
+  100% {
+    -webkit-transform: translate(-48%, -49%);
+    transform: translate(-48%, -49%); } }
+
+@keyframes live-cloud-three {
+  0% {
+    -webkit-transform: translate(-48%, -49%);
+    transform: translate(-48%, -49%); }
+  50% {
+    -webkit-transform: translate(-58%, -52%);
+    transform: translate(-58%, -52%); }
+  100% {
+    -webkit-transform: translate(-48%, -49%);
+    transform: translate(-48%, -49%); } }
+
+/* line 17, src/sass/components/_cloud.scss */
 .cloud {
   position: absolute;
   pointer-events: none;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+  /* line 22, src/sass/components/_cloud.scss */
+  .cloud:nth-of-type(3n-1) {
+    -webkit-animation: live-cloud-one 40s infinite;
+    animation: live-cloud-one 40s infinite; }
+  /* line 25, src/sass/components/_cloud.scss */
+  .cloud:nth-of-type(3n-2) {
+    -webkit-animation: live-cloud-two 50s infinite;
+    animation: live-cloud-two 50s infinite; }
+  /* line 28, src/sass/components/_cloud.scss */
+  .cloud:nth-of-type(3n) {
+    -webkit-animation: live-cloud-three 60s infinite;
+    animation: live-cloud-three 60s infinite; }
 
 /* CLOSE: .cloud */
 /* line 1, src/sass/components/_mountain.scss */
