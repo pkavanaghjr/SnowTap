@@ -1,0 +1,60 @@
+/*///////////////////////////////////////////////////////////
+						VARIABLES
+///////////////////////////////////////////////////////////*/
+
+/* COLORS */
+
+/* RGB VALUES
+DARK BLUE
+background-color:rgba(33,133,196,1);
+
+LIGHT BLUE
+background-color:rgba(133,203,240,1)
+
+TAP BLACK
+background-color:rgba(62,69,76,1)
+*/
+
+$black: #000000;
+$white: #FFFFFF;
+
+$blue: #2185C4;
+$off-black: #3E454C;
+
+
+
+// $gray1: #EEEEEE;
+// $gray2: #B7B5B2;
+// $gray3: #807E82;
+
+$light: 300;
+$semibold: 500;
+$bold: 700;
+
+
+/* FONTS */
+$josefin-bold:'josefinBold', Helvetica, Arial, sans-serif;
+$josefin-semi:'josefinSemibold', Helvetica, Arial, sans-serif;
+$josefin-reg: 'josefinRegular', Helvetica, Arial, sans-serif;
+
+$arborcrest: 'arborcrestHeavy', Helvetica, Arial, sans-serif;
+
+/* WIDTHS */
+$max-width: 1220px; /* CONTENT CONTAINER MAX WIDTH */
+$min-width: 325px;
+
+$beyond-width: 2600px;
+$xtra-width: 2300px;
+$large-width: 1500px;
+$desktop-width: 978px;
+$tablet-width: 768px;
+$mobile-width: 550px;
+
+$beyond-width-max: #{ $beyond-width } - 1;
+$xtra-width-max: #{ $xtra-width } - 1;
+$large-width-max: #{ $large-width } - 1;
+$desktop-width-max: #{ $desktop-width } - 1;
+$tablet-width-max: #{ $tablet-width } - 1;
+$mobile-width-max: #{ $mobile-width } - 1;
+
+$baseFontSize: 14px; /* Henseforth known as 1em  |  used for em() mixin */

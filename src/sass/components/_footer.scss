@@ -30,7 +30,6 @@
 	@include transform( translate(-50%,-50%) );
 	@media only screen and (max-width: $xtra-width-max){
 		height: 42vh;	
-		overflow: scroll;
 	}
 	@media only screen and (max-width: $large-width-max){
 		height:50vh;

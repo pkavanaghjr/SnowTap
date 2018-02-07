@@ -1,0 +1,355 @@
+/*///////////////////////////////////////////////////////////
+						MIXINS
+///////////////////////////////////////////////////////////*/
+// $start-width: ;
+// $end-width: ;
+
+/* FLUID TYPE MIXIN - VW */
+@function fluid($font-min, $font-max) {
+	@return calc(#{$font-min}#{px} + (#{$font-max} - #{$font-min}) * (100vw - #{$end-width}#{px}) / (#{$start-width} - #{$end-width}));
+}
+@mixin fontSize($font-min, $font-max) {
+	font-size: fluid($font-min, $font-max);
+	@media (min-width: $start-width#{px}) {
+		font-size: $font-max#{px};
+	}
+	@media(max-width: $end-width#{px}) {
+		font-size: $font-min#{px};
+	}
+}
+
+
+
+// mixins to handle prefixing:
+@mixin prefix($property, $value) {
+	-webkit-#{$property}: #{$value};
+	-moz-#{$property}: #{$value};
+	-ms-#{$property}: #{$value};
+	-o-#{$property}: #{$value};
+	#{$property}: #{$value};
+}
+
+@mixin border-radius($rad) {
+  -webkit-border-radius: $rad;
+  -moz-border-radius: $rad;
+  -o-border-radius: $rad;
+  border-radius: $rad;
+}
+
+@mixin transition($prop, $time) {
+	-webkit-transition: $prop $time ease;
+	-moz-transition: $prop $time ease;
+	-ms-transition: $prop $time ease;
+	-o-transition: $prop $time ease;
+	transition: $prop $time ease;
+}
+
+@mixin transform($prop) {
+	-webkit-transform: $prop;
+	-moz-transform: $prop;
+	-ms-transform: $prop;
+	-o-transform: $prop;
+	transform: $prop;
+}
+
+@mixin box-shadow($prop) {
+	-webkit-box-shadow: $prop;
+	-moz-box-shadow: $prop;
+	-ms-box-shadow: $prop;
+	-o-box-shadow: $prop;
+	box-shadow: $prop;
+}
+
+@mixin gradient($topColor, $bottomColor) {
+	background-color: -webkit-linear-gradient($topColor, $bottomColor);
+	background-color: -moz-linear-gradient($topColor, $bottomColor);
+	background-color: -ms-linear-gradient($topColor, $bottomColor);
+	background-color: -o-linear-gradient($topColor, $bottomColor);
+	background-color: linear-gradient($topColor, $bottomColor);
+}
+
+@mixin advGradient($direction, $firstColor, $firstDistance, $secondColor, $secondDistance, $thirdColor, $thirdDistance, $fourthColor, $fourthDistance) {
+	background: -webkit-linear-gradient( $direction, $firstColor $firstDistance, $secondColor $secondDistance, $thirdColor $thirdDistance, $fourthColor $fourthDistance );
+	background: -moz-linear-gradient( $direction, $firstColor $firstDistance, $secondColor $secondDistance, $thirdColor $thirdDistance, $fourthColor $fourthDistance );
+	background: -ms-linear-gradient( $direction, $firstColor $firstDistance, $secondColor $secondDistance, $thirdColor $thirdDistance, $fourthColor $fourthDistance );
+	background: -o-linear-gradient( $direction, $firstColor $firstDistance, $secondColor $secondDistance, $thirdColor $thirdDistance, $fourthColor $fourthDistance );
+	background: linear-gradient( $direction, $firstColor $firstDistance, $secondColor $secondDistance, $thirdColor $thirdDistance, $fourthColor $fourthDistance );
+}
+
+
+/* ===================== * RESPONSIVE 2X BG IMG ==================== */
+@mixin responsive_bg ($mobileSrc, $mobile2xSrc, $largeSrc, $large2xSrc){
+
+	@media only screen and (max-width: $mobile-width){ background-image:url($mobileSrc); }
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: $mobile-width),
+	only screen and (   -moz-min-device-pixel-ratio: 2)      and (max-width: $mobile-width),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: $mobile-width),
+	only screen and (        min-device-pixel-ratio: 2)      and (max-width: $mobile-width),
+	only screen and (                min-resolution: 192dpi) and (max-width: $mobile-width),
+	only screen and (                min-resolution: 2dppx)  and (max-width: $mobile-width) {
+		background-image:url($mobile2xSrc);
+	}
+
+	@media only screen and (min-width: $mobile-width){ background-image:url($largeSrc); }
+	@media
+	only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: $mobile-width),
+	only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: $mobile-width),
+	only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: $mobile-width),
+	only screen and (        min-device-pixel-ratio: 2)      and (min-width: $mobile-width),
+	only screen and (                min-resolution: 192dpi) and (min-width: $mobile-width),
+	only screen and (                min-resolution: 2dppx)  and (min-width: $mobile-width) {
+		background-image:url($large2xSrc);
+	}
+}
+
+
+/*//////////////////////////////////
+		F L E X  B O X
+//////////////////////////////////*/
+
+//Display Flex
+@mixin displayFlex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+}
+
+//Flex vertically center
+@mixin flexbox-vertical-center {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+
+//Flex Direction
+@mixin flexDirection($flexDirection) {
+
+	@if $flexDirection == "row" {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: row;
+		-ms-flex-direction: row;
+		flex-direction: row;
+	} @else if $flexDirection == "row-reverse" {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		-webkit-flex-direction: row-reverse;
+		-ms-flex-direction: row-reverse;
+		flex-direction: row-reverse;
+	} @else if $flexDirection == "column" {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+	} @else if $flexDirection == "column-reverse" {
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: reverse;
+		-webkit-flex-direction: column-reverse;
+		-ms-flex-direction: column-reverse;
+		flex-direction: column-reverse;
+	} @else {
+	@warn "Whooops no value could be found for flexDirection #{$flexDirection}";
+	}
+}
+//Flex Wrap
+@mixin flexWrap($flexWrap) {
+
+	@if $flexWrap == "nowrap" {
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+	} @else if $flexWrap == "wrap" {
+		-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+	} @else if $flexWrap == "wrap-reverse" {
+		-webkit-flex-wrap: wrap-reverse;
+		-ms-flex-wrap: wrap-reverse;
+		flex-wrap: wrap-reverse;
+	} @else {
+	@warn "Whooops no value could be found for flexWrap #{$flexWrap}";
+	}
+}
+//Flex Flow
+@mixin flexFlow($direction, $wrap) {
+
+	@if ($direction == "row") && ($wrap == "nowrap") {
+		-webkit-flex-flow: row nowrap;
+		-ms-flex-flow: row nowrap;
+		flex-flow: row nowrap;
+	} @else if ($direction == "row") && ($wrap == "wrap") {
+		-webkit-flex-wrap: row wrap;
+		-ms-flex-wrap: row wrap;
+		flex-wrap: row wrap;
+	} @else if ($direction == "row") && ($wrap == "wrap-reverse") {
+		-webkit-flex-wrap: row wrap-reverse;
+		-ms-flex-wrap: row wrap-reverse;
+		flex-wrap: row wrap-reverse;
+	} @else {
+	@warn "Whooops no value could be found for flexFlow #{$flexFlow}";
+	}
+}
+//Justify Content
+@mixin flexJustifyContent($justifyContent) {
+
+	@if $justifyContent == "flex-start" {
+		-webkit-box-pack: start;
+		-webkit-justify-content: flex-start;
+		-ms-flex-pack: start;
+		justify-content: flex-start;
+	} @else if $justifyContent == "flex-end" {
+		-webkit-box-pack: end;
+		-webkit-justify-content: flex-end;
+		-ms-flex-pack: end;
+		justify-content: flex-end;
+	} @else if $justifyContent == "center" {
+		-webkit-box-pack: center;
+		-webkit-justify-content: center;
+		-ms-flex-pack: center;
+		justify-content: center;
+	} @else if $justifyContent == "space-between" {
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+	} @else if $justifyContent == "space-around" {
+		-webkit-justify-content: space-around;
+		-ms-flex-pack: distribute;
+		justify-content: space-around;
+	} @else {
+	@warn "Whooops no value could be found for justifyContent #{$justifyContent}";
+	}
+}
+//Align Items
+@mixin flexAlignItems($alignItems) {
+
+	@if $alignItems == "flex-start" {
+		-webkit-box-align: start;
+		-webkit-align-items: flex-start;
+		-ms-flex-align: start;
+		align-items: flex-start;
+	} @else if $alignItems == "flex-end" {
+		-webkit-box-align: end;
+		-webkit-align-items: flex-end;
+		-ms-flex-align: end;
+		align-items: flex-end;
+	} @else if $alignItems == "center" {
+		-webkit-box-align: center;
+		-webkit-align-items: center;
+		-ms-flex-align: center;
+		align-items: center;
+	} @else if $alignItems == "stretch" {
+		-webkit-box-align: stretch;
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+	} @else if $alignItems == "baseline" {
+		-webkit-box-align: baseline;
+		-webkit-align-items: baseline;
+		-ms-flex-align: baseline;
+		align-items: baseline;
+	} @else {
+	@warn "Whooops no value could be found for alignItems #{$alignItems}";
+	}
+}
+//Align Content
+@mixin flexAlignContent($alignContent) {
+
+	@if $alignContent == "flex-start" {
+		-webkit-align-content: flex-start;
+		-ms-flex-line-pack: start;
+		align-content: flex-start;
+	} @else if $alignContent == "flex-end" {
+		-webkit-box-align: end;
+		-webkit-align-items: flex-end;
+		-ms-flex-align: end;
+		align-items: flex-end;
+	} @else if $alignContent == "center" {
+		-webkit-align-content: center;
+		-ms-flex-line-pack: center;
+		align-content: center;
+	} @else if $alignContent == "stretch" {
+		-webkit-align-content: stretch;
+		-ms-flex-line-pack: stretch;
+		align-content: stretch;
+	} @else if $alignContent == "baseline" {
+		-webkit-align-content: baseline;
+		-ms-flex-line-pack: baseline;
+		align-content: baseline;
+	} @else {
+	@warn "Whooops no value could be found for alignItems #{$alignItems}";
+	}
+}
+//Flex Order
+@mixin flexOrder($flexOrder) {
+	-webkit-box-ordinal-group: $flexOrder + 1;
+	-webkit-order: $flexOrder;
+	-ms-flex-order: $flexOrder;
+	order: $flexOrder;
+}
+//Flex Grow
+@mixin flexGrow($flexGrow) {
+	-webkit-box-flex: $flexGrow;
+	-webkit-flex-grow: $flexGrow;
+	-ms-flex-positive: $flexGrow;
+	flex-grow: $flexGrow;
+}
+//Flex Shrink
+@mixin flexShrink($flexShrink) {
+	-webkit-flex-shrink: $flexShrink;
+	-ms-flex-negative: $flexShrink;
+	flex-shrink: $flexShrink;
+}
+//Flex Basis
+@mixin flexBasis($flexBasis) {
+	-webkit-flex-basis: $flexBasis;
+	-ms-flex-preferred-size: $flexBasis;
+	flex-basis: $flexBasis;
+}
+//Align Content
+@mixin flexAlignSelf($alignSelf) {
+
+	@if $alignSelf == "flex-start" {
+		-webkit-align-self: flex-start;
+		-ms-flex-item-align: start;
+		align-self: flex-start;
+	} @else if $alignSelf == "flex-end" {
+		-webkit-align-self: flex-end;
+		-ms-flex-item-align: end;
+		align-self: flex-end;
+	} @else if $alignSelf == "center" {
+		-webkit-align-self: center;
+		-ms-flex-item-align: center;
+		align-self: center;
+	} @else if $alignSelf == "stretch" {
+		-webkit-align-self: stretch;
+		-ms-flex-item-align: stretch;
+		align-self: stretch;
+	} @else if $alignSelf == "baseline" {
+		-webkit-align-self: baseline;
+		-ms-flex-item-align: baseline;
+		align-self: baseline;
+	} @else if $alignSelf == "auto" {
+		-webkit-align-self: auto;
+		-ms-flex-item-align: auto;
+		align-self: auto;
+	}  @else {
+	@warn "Whooops no value could be found for flexAlignSelf #{$alignSelf}";
+	}
+}
+//Flex Shorthand For flex-grow | flex-shrink | flex-basis
+@mixin flex($flexGrow, $flexShrink, $flexBasis) {
+	-webkit-box-flex: $flexGrow $flexShrink $flexBasis;
+	-webkit-flex: $flexGrow $flexShrink $flexBasis;
+	-ms-flex: $flexGrow $flexShrink $flexBasis;
+	flex: $flexGrow $flexShrink $flexBasis;
+}

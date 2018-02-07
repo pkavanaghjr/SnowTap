@@ -494,7 +494,6 @@ optgroup::-moz-focus-inner {
 /* line 15, src/sass/components/global.scss */
 body {
   /*background-color:rgba(62,69,76,1);*/
-  overflow: hidden;
   background-image: url("../images/backgroundCloudsBlue.jpg");
   background-size: 100% 100vh;
   background-repeat: no-repeat;
@@ -875,43 +874,40 @@ a {
   top: 240vh;
   opacity: 0.8; }
 
-/* line 33, src/sass/components/_mountain.scss */
-#productContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 1;
-  -webkit-transform: translate(-10%, -50%);
-  transform: translate(-10%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 33, src/sass/components/_mountain.scss */
-    #productContent {
-      height: 42vh; } }
-
-/*================================================ ABOUT SECTION ===================*/
-/* line 2, src/sass/components/_sections.scss */
-#aboutSection {
+/* line 1, src/sass/components/_sections.scss */
+.scroll-section {
   width: 100%;
   height: 200vh;
-  position: relative;
+  position: relative; }
+  /* line 6, src/sass/components/_sections.scss */
+  .scroll-section .hiddenContent {
+    width: 35%;
+    height: 30vh;
+    z-index: 1;
+    pointer-events: none; }
+    @media only screen and (max-width: 1499px) {
+      /* line 6, src/sass/components/_sections.scss */
+      .scroll-section .hiddenContent {
+        height: 42vh; } }
+  /* line 15, src/sass/components/_sections.scss */
+  .scroll-section .hiddenContent-right {
+    -webkit-transform: translate(-10%, -50%);
+    transform: translate(-10%, -50%); }
+  /* line 18, src/sass/components/_sections.scss */
+  .scroll-section .hiddenContent-left {
+    -webkit-transform: translate(-90%, -50%);
+    transform: translate(-90%, -50%); }
+
+/*================================================ ABOUT SECTION ===================*/
+/* line 24, src/sass/components/_sections.scss */
+#aboutSection {
   top: -100vh; }
   @media only screen and (max-width: 1499px) {
-    /* line 2, src/sass/components/_sections.scss */
+    /* line 24, src/sass/components/_sections.scss */
     #aboutSection {
       top: -170vh; } }
 
-/* line 12, src/sass/components/_sections.scss */
-#aboutContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 1;
-  -webkit-transform: translate(-10%, -50%);
-  transform: translate(-10%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 12, src/sass/components/_sections.scss */
-    #aboutContent {
-      height: 42vh; } }
-
-/* line 22, src/sass/components/_sections.scss */
+/* line 31, src/sass/components/_sections.scss */
 #aboutCloudOne {
   z-index: 2;
   width: 20%;
@@ -919,189 +915,160 @@ a {
   top: 30%;
   left: -20%; }
 
-/* line 30, src/sass/components/_sections.scss */
+/* line 39, src/sass/components/_sections.scss */
 #aboutCloudTwo {
   z-index: 1;
   width: 8%; }
 
-/* line 35, src/sass/components/_sections.scss */
+/* line 44, src/sass/components/_sections.scss */
 #aboutCloudThree {
   z-index: 1;
   width: 12%; }
 
-/* line 40, src/sass/components/_sections.scss */
+/* line 49, src/sass/components/_sections.scss */
 #aboutCloudFour {
   z-index: 4;
   width: 40%; }
 
-/* line 45, src/sass/components/_sections.scss */
+/* line 54, src/sass/components/_sections.scss */
 #aboutCloudFive {
   z-index: 2;
   width: 35%; }
 
-/* line 50, src/sass/components/_sections.scss */
+/* line 59, src/sass/components/_sections.scss */
 #aboutCloudSix {
   z-index: 4;
   width: 55%; }
 
 /*================================================ CRISIS SECTION ===================*/
-/* line 56, src/sass/components/_sections.scss */
+/* line 65, src/sass/components/_sections.scss */
 #crisisSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
   top: -430vh; }
   @media only screen and (max-width: 1499px) {
-    /* line 56, src/sass/components/_sections.scss */
+    /* line 65, src/sass/components/_sections.scss */
     #crisisSection {
       top: -600vh; } }
 
-/* line 66, src/sass/components/_sections.scss */
-#crisisContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 1;
-  -webkit-transform: translate(-90%, -50%);
-  transform: translate(-90%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 66, src/sass/components/_sections.scss */
-    #crisisContent {
-      height: 42vh; } }
-
-/* line 76, src/sass/components/_sections.scss */
+/* line 72, src/sass/components/_sections.scss */
 #crisisCloudOne {
   z-index: 3;
   width: 30%; }
 
-/* line 81, src/sass/components/_sections.scss */
+/* line 77, src/sass/components/_sections.scss */
 #crisisCloudTwo {
   z-index: 1;
   width: 20%; }
 
-/* line 86, src/sass/components/_sections.scss */
+/* line 82, src/sass/components/_sections.scss */
 #crisisCloudThree {
   z-index: 1;
   width: 20%; }
 
-/* line 91, src/sass/components/_sections.scss */
+/* line 87, src/sass/components/_sections.scss */
 #crisisCloudFour {
   z-index: 4;
   width: 60%; }
 
-/* line 96, src/sass/components/_sections.scss */
+/* line 92, src/sass/components/_sections.scss */
 #crisisCloudFive {
   z-index: 2;
   width: 40%; }
 
-/* line 101, src/sass/components/_sections.scss */
+/* line 97, src/sass/components/_sections.scss */
 #crisisCloudSix {
   z-index: 2;
   width: 60%; }
 
 /*================================================ PRODUCT SECTION ===================*/
-/* line 108, src/sass/components/_sections.scss */
+/* line 104, src/sass/components/_sections.scss */
 #productSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
   top: -720vh;
   z-index: 3; }
   @media only screen and (max-width: 1499px) {
-    /* line 108, src/sass/components/_sections.scss */
+    /* line 104, src/sass/components/_sections.scss */
     #productSection {
       top: -980vh; } }
 
-/* line 119, src/sass/components/_sections.scss */
+/* line 112, src/sass/components/_sections.scss */
 #productCloudOne {
   z-index: 3;
   width: 30%; }
 
-/* line 124, src/sass/components/_sections.scss */
+/* line 117, src/sass/components/_sections.scss */
 #productCloudTwo {
   z-index: 1;
   width: 25%; }
 
-/* line 129, src/sass/components/_sections.scss */
+/* line 122, src/sass/components/_sections.scss */
 #productCloudThree {
   z-index: 1;
   width: 20%; }
 
-/* line 134, src/sass/components/_sections.scss */
+/* line 127, src/sass/components/_sections.scss */
 #productCloudFour {
   z-index: 4;
   width: 60%; }
 
-/* line 139, src/sass/components/_sections.scss */
+/* line 132, src/sass/components/_sections.scss */
 #productCloudFive {
   z-index: 2;
   width: 55%; }
 
-/* line 144, src/sass/components/_sections.scss */
+/* line 137, src/sass/components/_sections.scss */
 #productCloudSix {
   z-index: 2;
   width: 40%; }
 
 /*================================================ CAUSE SECTION ===================*/
-/* line 151, src/sass/components/_sections.scss */
+/* line 144, src/sass/components/_sections.scss */
 #causeSection {
-  width: 100%;
-  height: 200vh;
-  position: relative;
   top: -1030vh;
   z-index: 3; }
   @media only screen and (max-width: 1499px) {
-    /* line 151, src/sass/components/_sections.scss */
+    /* line 144, src/sass/components/_sections.scss */
     #causeSection {
       top: -1370vh; } }
 
-/* line 163, src/sass/components/_sections.scss */
+/* line 153, src/sass/components/_sections.scss */
 #causeContent {
-  width: 35%;
-  height: 30vh;
-  z-index: 3;
-  -webkit-transform: translate(-90%, -50%);
-  transform: translate(-90%, -50%); }
-  @media only screen and (max-width: 1499px) {
-    /* line 163, src/sass/components/_sections.scss */
-    #causeContent {
-      height: 42vh; } }
+  z-index: 3; }
 
-/* line 174, src/sass/components/_sections.scss */
+/* line 158, src/sass/components/_sections.scss */
 #causeCloudOne {
   z-index: 3;
   width: 40%; }
 
-/* line 179, src/sass/components/_sections.scss */
+/* line 163, src/sass/components/_sections.scss */
 #causeCloudTwo {
   z-index: 1;
   width: 25%; }
 
-/* line 184, src/sass/components/_sections.scss */
+/* line 168, src/sass/components/_sections.scss */
 #causeCloudThree {
   z-index: 1;
   width: 20%; }
 
-/* line 189, src/sass/components/_sections.scss */
+/* line 173, src/sass/components/_sections.scss */
 #causeCloudFour {
   z-index: 4;
   width: 60%;
   opacity: 1; }
 
-/* line 195, src/sass/components/_sections.scss */
+/* line 179, src/sass/components/_sections.scss */
 #causeCloudFive {
   z-index: 2;
   width: 50%; }
 
-/* line 200, src/sass/components/_sections.scss */
+/* line 184, src/sass/components/_sections.scss */
 #causeCloudSix {
   z-index: 2;
   width: 30%; }
 
-/* line 206, src/sass/components/_sections.scss */
+/* line 190, src/sass/components/_sections.scss */
 #causeFlakeThree {
   cursor: default; }
 
-/* line 210, src/sass/components/_sections.scss */
+/* line 194, src/sass/components/_sections.scss */
 #causeFlakeThree:hover {
   width: 10%; }
 
@@ -1116,8 +1083,7 @@ a {
   opacity: 0;
   position: fixed;
   left: 50%;
-  top: 50%;
-  overflow: hidden; }
+  top: 50%; }
 
 /* line 16, src/sass/components/_hidden-content.scss */
 .hiddenContent h1 {
@@ -1348,65 +1314,64 @@ a {
   @media only screen and (max-width: 2299px) {
     /* line 26, src/sass/components/_footer.scss */
     #snowingStats {
-      height: 42vh;
-      overflow: scroll; } }
+      height: 42vh; } }
   @media only screen and (max-width: 1499px) {
     /* line 26, src/sass/components/_footer.scss */
     #snowingStats {
       height: 50vh; } }
 
-/* line 41, src/sass/components/_footer.scss */
+/* line 40, src/sass/components/_footer.scss */
 .statsIcon {
   float: left;
   width: 15%;
   margin: 10% 18% 2% 17%; }
 
-/* line 47, src/sass/components/_footer.scss */
+/* line 46, src/sass/components/_footer.scss */
 .statsText {
   float: left;
   width: 45%;
   margin: 0% 0% 0% 5%; }
 
-/* line 54, src/sass/components/_footer.scss */
+/* line 53, src/sass/components/_footer.scss */
 #timeHolder {
   color: #2185C4; }
 
-/* line 58, src/sass/components/_footer.scss */
+/* line 57, src/sass/components/_footer.scss */
 .snowStatsHolder, #waterStatsHolder {
   color: #2185C4;
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
 
 /*============== COPYRIGHT =========**/
-/* line 65, src/sass/components/_footer.scss */
+/* line 64, src/sass/components/_footer.scss */
 #copyright {
   position: absolute;
   width: 100%;
   z-index: 10; }
 
-/* line 71, src/sass/components/_footer.scss */
+/* line 70, src/sass/components/_footer.scss */
 #copyright p {
   font-size: 16px;
   line-height: 16px;
   color: #FFFFFF; }
 
-/* line 77, src/sass/components/_footer.scss */
+/* line 76, src/sass/components/_footer.scss */
 #designby {
   position: absolute;
   left: 3%;
   color: #FFFFFF; }
 
-/* line 83, src/sass/components/_footer.scss */
+/* line 82, src/sass/components/_footer.scss */
 #copyrightText {
   position: absolute;
   right: 3%;
   color: #FFFFFF; }
 
-/* line 89, src/sass/components/_footer.scss */
+/* line 88, src/sass/components/_footer.scss */
 span {
   color: #FFFFFF;
   text-decoration: none; }
 
-/* line 94, src/sass/components/_footer.scss */
+/* line 93, src/sass/components/_footer.scss */
 span:hover {
   text-decoration: underline; }
 

@@ -29,13 +29,3 @@
 	top:240vh;
 	opacity:0.8;
 }
-
- #productContent{
- 	width:35%;
- 	height: 30vh;
- 	z-index:1;
-	@include transform( translate(-10%,-50%) );
-	@media only screen and (max-width: $large-width-max){
-		height:42vh;	
-	}
- }
