@@ -37,6 +37,7 @@ var input_vendor_js =  [
                             './src/vendor/js/jquery.gsap.min.js',
                             './src/vendor/js/EasePack.min.js',
                             './src/vendor/js/jquery.scrollmagic.min.js',
+
                             // './src/vendor/js/jquery.scrollmagic.debug.js',
                             // './src/vendor/js/retina.min.js',
                         ];

@@ -13,6 +13,15 @@ $(document).ready(function() {
 	// VARIABLES			
 
 
+//========================= LAZY LOAD IMAGES ================
+	[].forEach.call(document.querySelectorAll('img[data-src]'), function(img){
+		img.setAttribute('src', img.getAttribute('data-src'));
+		img.onload = function() {
+			img.removeAttribute('data-src');
+		};
+	});
+
+
 //========================= SHOW HIDE NAV LEFT ================
 	var state = "up";
 	var threshold = $("#fma").height();

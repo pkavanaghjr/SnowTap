@@ -499,7 +499,17 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; }
 
-/* line 25, src/sass/components/global.scss */
+/* line 24, src/sass/components/global.scss */
+img {
+  opacity: 1;
+  -webkit-transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease; }
+
+/* line 29, src/sass/components/global.scss */
+img[data-src] {
+  opacity: 0; }
+
+/* line 34, src/sass/components/global.scss */
 #snowCanvas {
   width: 100%;
   height: 100%;
@@ -508,52 +518,52 @@ body {
   opacity: 0;
   pointer-events: none; }
 
-/* line 34, src/sass/components/global.scss */
+/* line 43, src/sass/components/global.scss */
 .clear {
   clear: both; }
 
-/* line 38, src/sass/components/global.scss */
+/* line 47, src/sass/components/global.scss */
 .avoidPointer {
   pointer-events: none; }
 
 @media only screen and (min-width: 978px) {
-  /* line 42, src/sass/components/global.scss */
+  /* line 51, src/sass/components/global.scss */
   .hideForDesk {
     display: none; } }
 
 @media only screen and (max-width: 977px) {
-  /* line 48, src/sass/components/global.scss */
+  /* line 57, src/sass/components/global.scss */
   .hideForMobile {
     display: none; } }
 
-/* line 54, src/sass/components/global.scss */
+/* line 63, src/sass/components/global.scss */
 #extendBrowser {
   display: none; }
 
-/* line 58, src/sass/components/global.scss */
+/* line 67, src/sass/components/global.scss */
 #minimizeBrowser {
   display: none; }
 
-/* line 62, src/sass/components/global.scss */
+/* line 71, src/sass/components/global.scss */
 #mainScrollArea {
   overflow: hidden;
   height: 900vh;
   /*background-image: url("../images/backgroundCloudsBlue.jpg");
 	width:100%;	*/ }
   @media only screen and (max-width: 2299px) {
-    /* line 62, src/sass/components/global.scss */
+    /* line 71, src/sass/components/global.scss */
     #mainScrollArea {
       height: 1400vh; } }
   @media only screen and (max-width: 1499px) {
-    /* line 62, src/sass/components/global.scss */
+    /* line 71, src/sass/components/global.scss */
     #mainScrollArea {
       height: 2100vh; } }
   @media only screen and (max-width: 977px) {
-    /* line 62, src/sass/components/global.scss */
+    /* line 71, src/sass/components/global.scss */
     #mainScrollArea {
       height: 2000vh; } }
 
-/* line 80, src/sass/components/global.scss */
+/* line 89, src/sass/components/global.scss */
 #backgroundCloudsOne {
   position: fixed;
   pointer-events: none;
@@ -561,56 +571,56 @@ body {
   top: 0%;
   z-index: -1; }
   @media only screen and (max-width: 2299px) {
-    /* line 80, src/sass/components/global.scss */
+    /* line 89, src/sass/components/global.scss */
     #backgroundCloudsOne {
       width: 150%; } }
   @media only screen and (max-width: 1499px) {
-    /* line 80, src/sass/components/global.scss */
+    /* line 89, src/sass/components/global.scss */
     #backgroundCloudsOne {
       width: 130%; } }
   @media only screen and (max-width: 977px) {
-    /* line 80, src/sass/components/global.scss */
+    /* line 89, src/sass/components/global.scss */
     #backgroundCloudsOne {
       width: 200%; } }
 
 /*************************************************************
 	** TYPE
 *************************************************************/
-/* line 104, src/sass/components/global.scss */
+/* line 113, src/sass/components/global.scss */
 h1 {
   font-family: "arborcrestHeavy", Helvetica, Arial, sans-serif; }
 
-/* line 108, src/sass/components/global.scss */
+/* line 117, src/sass/components/global.scss */
 h2 {
   font-family: "josefinBold", Helvetica, Arial, sans-serif; }
 
-/* line 112, src/sass/components/global.scss */
+/* line 121, src/sass/components/global.scss */
 h3 {
   font-family: "josefinBold", Helvetica, Arial, sans-serif;
   font-size: 28px;
   color: #FFFFFF; }
 
-/* line 118, src/sass/components/global.scss */
+/* line 127, src/sass/components/global.scss */
 h4 {
   font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
   font-size: 24px;
   color: #FFFFFF; }
 
-/* line 124, src/sass/components/global.scss */
+/* line 133, src/sass/components/global.scss */
 h5 {
   font-family: "josefinSemibold", Helvetica, Arial, sans-serif;
   font-size: 21px;
   color: #FFFFFF; }
 
-/* line 130, src/sass/components/global.scss */
+/* line 139, src/sass/components/global.scss */
 h6 {
   font-family: "josefinRegular", Helvetica, Arial, sans-serif; }
 
-/* line 134, src/sass/components/global.scss */
+/* line 143, src/sass/components/global.scss */
 p {
   font-family: "josefinRegular", Helvetica, Arial, sans-serif; }
 
-/* line 138, src/sass/components/global.scss */
+/* line 147, src/sass/components/global.scss */
 a {
   text-decoration: none; }
 
@@ -920,25 +930,25 @@ a {
 
 @-webkit-keyframes live-cloud-two {
   0% {
-    -webkit-transform: translate(-38%, -50%);
-    transform: translate(-38%, -50%); }
+    -webkit-transform: translate(-58%, -50%);
+    transform: translate(-58%, -50%); }
   50% {
-    -webkit-transform: translate(-50%, -52%);
-    transform: translate(-50%, -52%); }
+    -webkit-transform: translate(-46%, -52%);
+    transform: translate(-46%, -52%); }
   100% {
-    -webkit-transform: translate(-38%, -50%);
-    transform: translate(-38%, -50%); } }
+    -webkit-transform: translate(-58%, -50%);
+    transform: translate(-58%, -50%); } }
 
 @keyframes live-cloud-two {
   0% {
-    -webkit-transform: translate(-38%, -50%);
-    transform: translate(-38%, -50%); }
+    -webkit-transform: translate(-58%, -50%);
+    transform: translate(-58%, -50%); }
   50% {
-    -webkit-transform: translate(-50%, -52%);
-    transform: translate(-50%, -52%); }
+    -webkit-transform: translate(-46%, -52%);
+    transform: translate(-46%, -52%); }
   100% {
-    -webkit-transform: translate(-38%, -50%);
-    transform: translate(-38%, -50%); } }
+    -webkit-transform: translate(-58%, -50%);
+    transform: translate(-58%, -50%); } }
 
 @-webkit-keyframes live-cloud-three {
   0% {

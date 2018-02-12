@@ -4,9 +4,9 @@
   100%   { @include transform(translate(-42%,-48%)); }
 }
 @include keyframes(live-cloud-two) {
-  0%   { @include transform(translate(-38%,-50%)); }
-  50%   { @include transform(translate(-50%,-52%)); }
-  100%   { @include transform(translate(-38%,-50%)); }
+  0%   { @include transform(translate(-58%,-50%)); }
+  50%   { @include transform(translate(-46%,-52%)); }
+  100%   { @include transform(translate(-58%,-50%)); }
 }
 @include keyframes(live-cloud-three) {
   0%   { @include transform(translate(-48%,-49%)); }
