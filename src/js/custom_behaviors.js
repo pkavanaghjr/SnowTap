@@ -1,11 +1,9 @@
 //========================= GLOBAL ================
 
 //======= SCROLL TOP ON REFRESH =======
-$(document).ready(function(){
-    $('html').animate({scrollTop:0}, 1);
-    $('body').animate({scrollTop:0}, 1);
-    // $('#mainScrollArea').animate({scrollTop:0}, 1);
-});
+window.onbeforeunload = function(){ 
+	window.scrollTo(0,0); 
+};
 
 
 //========================= PAGE LOAD ================
@@ -13,6 +11,15 @@ $(document).ready(function() {
 
 
 	// VARIABLES			
+
+
+//========================= LAZY LOAD IMAGES ================
+	[].forEach.call(document.querySelectorAll('img[data-src]'), function(img){
+		img.setAttribute('src', img.getAttribute('data-src'));
+		img.onload = function() {
+			img.removeAttribute('data-src');
+		};
+	});
 
 
 //========================= SHOW HIDE NAV LEFT ================
@@ -145,32 +152,6 @@ window.onload = function(){
 }
 
 
-//========================= SNOWFLAKE HOVERS ================
-	$("#aboutFlakeOne, #crisisFlakeOne, #productFlakeOne, #causeFlakeOne").mouseover(function(){
-		console.log("about 1 hover");
-		$("h3").stop(true).animate({color:"#2185C4"},500);
-	}).mouseout(function(){
-		console.log("about 1 off hover");
-		$("h3").stop(true).animate({color:"#fff"},500);
-	});
-
-	$("#aboutFlakeTwo, #crisisFlakeTwo, #productFlakeTwo, #causeFlakeTwo").mouseover(function(){
-		console.log("about 2 hover");
-		$("h4").stop(true).animate({color:"#85CBF0"},500);
-	}).mouseout(function(){
-		console.log("about 2 off hover");
-		$("h4").stop(true).animate({color:"#fff"},500);
-	});
-
-	$("#aboutFlakeThree, #crisisFlakeThree, #productFlakeThree, #causeFlakeThree").mouseover(function(){
-		console.log("about 3 hover");
-		$("h5").stop(true).animate({color:"#85CBF0"},500);
-	}).mouseout(function(){
-		console.log("about 3 off hover");
-		$("h5").stop(true).animate({color:"#fff"},500);
-	});
-
-
 
 
 //========================= LANDING FMA  ================
@@ -182,7 +163,7 @@ window.onload = function(){
 		$("#fmaCloudThree").stop(true).delay(1200).animate({opacity:.7, left:"45%"},2500,"easeNone");
 		$("#fmaCloudFour").stop(true).delay(1200).animate({opacity:.3, left:"55%"},2500,"easeNone");
 		$("#loadColor").stop(true).delay(1750).animate({opacity:0},2500,function(){
-			$("body").css("overflow","scroll");		
+			// $("body").css("overflow","scroll");		
 		});
 		$("#snowCanvas").stop(true).delay(2200).animate({opacity:1},8000);
 		$("#scrollDownArrow").stop(true).delay(3500).animate({opacity:.8},1000,"easeNone");
@@ -224,7 +205,7 @@ if (document.documentElement.clientWidth < 767) {
 	function hideButtons(){
 		hiddenActive = false;		
 		hiddenMore = false;	
-		$("body").css("overflow","scroll");
+		// $("body").css("overflow","scroll");
 		$(".closeButton h2").stop(true).animate({opacity:0},500,function(){
 			$(".closeButton").css("pointer-events","none");
 		});

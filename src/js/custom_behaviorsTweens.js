@@ -43,7 +43,6 @@ $(document).ready(function() {
 // _______________________ WRITE QUERY STRING TO PAGE _____________________________________
 	function writeTextToPage(textToWrite, destination){
 		$(destination).html(textToWrite);
-		
 	};	
 
 
@@ -54,7 +53,7 @@ $(document).ready(function() {
 	function snowTimer(){
 		snowTimer = setInterval(function(){
 			snowCounter++;
-			console.log("counter: "+snowCounter);
+			// console.log("counter: "+snowCounter);
 		}, 2000);	
 	};
 
@@ -95,56 +94,31 @@ $(document).ready(function() {
 		console.log("Nav Arrow: "+sceneScroll);	
 	});
 
-	$('#navAbout').on("click",function(event){
+	// GLOBAL NAV EH
+	$('#navList a').on("click",function(event){
 		event.preventDefault();
-	    var sceneScroll = sceneAbout.scrollOffset() + sceneAbout.duration() / 3.3;
+		var name = $(this).attr('data-name'),
+			content = '#'+name.toLowerCase()+'Content',
+			scene = '';
+		if (content.indexOf("about") >= 0){
+			scene = sceneAbout;
+		}else if (content.indexOf("crisis") >= 0){
+			scene = sceneCrisis;
+		}else if (content.indexOf("product") >= 0){
+			scene = sceneProduct;
+		}else if (content.indexOf("cause") >= 0){
+			scene = sceneCause;
+		}else if (content.indexOf("footer") >= 0){
+			scene = sceneFooter;
+		}
+	    var sceneScroll = scene.scrollOffset() + scene.duration() / 2.8;
 		hideButtons();
 	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#aboutContent").stop(true).animate({opacity:1},500,function(){
+	    	$(content).stop(true).animate({opacity:1},500,function(){
 	    		showButtons();
 				$(this).css("pointer-events","all");
 	    	});
 	    });
-		console.log("Nav About: "+sceneScroll);	
-	});
-
-	$('#navCrisis').on("click",function(event){
-		event.preventDefault();
-	    var sceneScroll = sceneCrisis.scrollOffset() + sceneCrisis.duration() / 2.3;
-	    hideButtons();
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#crisisContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Crisis: "+sceneScroll);	
-	});
-
-	$('#navProduct').on("click",function(event){
-		event.preventDefault();
-	    var sceneScroll = sceneProduct.scrollOffset() + sceneProduct.duration() / 2.6;
-	    hideButtons();
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#productContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Product: "+sceneScroll);	
-	});
-
-	$('#navCause').on("click",function(event){
-		event.preventDefault();
-	    var sceneScroll = sceneCause.scrollOffset() + sceneCause.duration() / 2.2;
-	    hideButtons();
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#causeContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Cause: "+sceneScroll);	
 	});
 
 	$('#navContact').on("click",function(event){
@@ -161,162 +135,73 @@ $(document).ready(function() {
 
 	$(".closeButton, .doneButton").on("click", function(event){
 		event.preventDefault();
-		$("body").css("overflow","scroll");			
+		// $("body").css("overflow","scroll");			
 		$(".hiddenContent").stop(true).animate({opacity:0,scrollTop:0},500);
 		hideButtons();		
 	});
 
 	//========================= EXPAND CONTENT ================
-	$("#aboutContent .moreButton, #crisisContent .moreButton, #productContent .moreButton, #causeContent .moreButton").on("click", function(){
+	$(document).on("click", ".scroll-section .moreButton", function(){
 		console.log("more button open");
-		$("body").css("overflow","hidden");			
+		$("body").css("overflow","hidden");
 		$("#aboutContent, #crisisContent, #productContent, #causeContent").stop(true).animate({height:"80vh"},1000,"easeInExpo",function(){
 			$(".moreContent").animate({opacity:1},500);
 			$("#aboutContent, #crisisContent, #productContent, #causeContent").css("overflow","scroll").css("zIndex","50");
+			// $("#aboutContent, #crisisContent, #productContent, #causeContent").css("zIndex","50");
 			$(".moreButton").animate({opacity:0},500).css("pointer-events","none");
 		});
 	});
 
-	//========================= ABOUT SECTION HANDLERS ================
-	$("#aboutFlakeOne").on("click",function(){
-		console.log("about click: " + hiddenActive);
+	//========================= SECTION HANDLERS ================
+	$(document).on("click", ".snowflake", function(){
+		console.log("click: " + hiddenActive);
+		var target = $(this).attr('data-target');
 		if(hiddenActive == false){
-			$("#aboutContent").stop(true).animate({opacity:1},500,function(){
+			$(target).stop(true).animate({opacity:1},500,function(){
 				showButtons();
 				$(this).css("pointer-events","all");
-			});		
+			});
 		}else if(hiddenActive == true){
-			$("#aboutContent").stop(true).animate({opacity:0},500,function(){
+			$(target).stop(true).animate({opacity:0},500,function(){
 				hideButtons();
 				$(this).css("pointer-events","none");
-			});			
+			});
 		}
 	});
 
-
-	//========================= CRISIS SECTION HANDLERS ================
-	$("#crisisFlakeOne").on("click",function(){
-		console.log("crisis click: "+ hiddenActive);
-		if(hiddenActive == false){
-			$("#crisisContent").stop(true).animate({opacity:1},500,function(){
-				showButtons();
-				$(this).css("pointer-events","all");
-			});		
-		}else if(hiddenActive == true){
-			$("#crisisContent").stop(true).animate({opacity:0},500,function(){
-				hideButtons();
-				$(this).css("pointer-events","none");
-			});			
+	$(document).on("click", ".snowflakeTwo:not(.footer-anchor), .snowflakeThree:not(.footer-anchor)", function(){
+		var target = $(this).attr('data-target'),
+			scene = '';
+		if (target.indexOf("about") >= 0){
+			scene = sceneAbout;
+		}else if (target.indexOf("crisis") >= 0){
+			scene = sceneCrisis;
+		}else if (target.indexOf("product") >= 0){
+			scene = sceneProduct;
+		}else if (target.indexOf("cause") >= 0){
+			scene = sceneCause;
+		}else if (target.indexOf("footer") >= 0){
+			scene = sceneFooter;
 		}
-	});
-
-
-	//========================= PRODUCTS SECTION HANDLERS ================
-	$("#productFlakeOne").on("click",function(){
-		console.log("product click: "+ hiddenActive);
-		if(hiddenActive == false){
-			$("#productContent").stop(true).animate({opacity:1},500,function(){
-				showButtons();
-				$(this).css("pointer-events","all");
-			});		
-		}else if(hiddenActive == true){
-			$("#productContent").stop(true).animate({opacity:0},500,function(){
-				hideButtons();
-				$(this).css("pointer-events","none");
-			});			
-		}
-	});
-
-	//========================= CAUSE SECTION HANDLERS ================
-	$("#causeFlakeOne").on("click",function(){
-		console.log("cause click: "+ hiddenActive);
-		if(hiddenActive == false){
-			$("#causeContent").stop(true).animate({opacity:1},500,function(){
-				showButtons();
-				$(this).css("pointer-events","all");
-			});		
-		}else if(hiddenActive == true){
-			$("#causeContent").stop(true).animate({opacity:0},500,function(){
-				hideButtons();
-				$(this).css("pointer-events","none");
-			});			
-		}
-	});
-
-
-//========================= NAV FLAKES  ================
-	//========================= ABOUT FLAKES  ================
-	$("#aboutFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneCrisis.scrollOffset() + sceneCrisis.duration() / 2.3;
+	    var sceneScroll = scene.scrollOffset() + scene.duration() / 2.6;
 	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#crisisContent").stop(true).animate({opacity:1},500,function(){
+	    	$(target).stop(true).animate({opacity:1},500,function(){
 	    		showButtons();
 				$(this).css("pointer-events","all");
 	    	});
 	    });
-		console.log("Nav Crisis: "+sceneScroll);	
+		console.log("Snowflake Nav : "+sceneScroll);
 	});
 
-	$("#aboutFlakeThree").on("click",function(){
-	    var sceneScroll = sceneProduct.scrollOffset() + sceneProduct.duration() / 2.6;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#productContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Product: "+sceneScroll);	
-	});
-
-
-	//========================= CRISIS FLAKES  ================
-	$("#crisisFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneProduct.scrollOffset() + sceneProduct.duration() / 2.6;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#productContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Product: "+sceneScroll);	
-	});
-
-	$("#crisisFlakeThree").on("click",function(){
-	    var sceneScroll = sceneCause.scrollOffset() + sceneCause.duration() / 2.2;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#causeContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Cause: "+sceneScroll);	
-	});
-
-
-	//========================= PRODUCT FLAKES  ================
-	$("#productFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneCause.scrollOffset() + sceneCause.duration() / 2.2;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo', function(){
-	    	$("#causeContent").stop(true).animate({opacity:1},500,function(){
-	    		showButtons();
-				$(this).css("pointer-events","all");
-	    	});
-	    });
-		console.log("Nav Cause: "+sceneScroll);	
-	});
-
-	$("#productFlakeThree").on("click",function(){
+	$(document).on("click", ".footer-anchor", function(e){
+		e.preventDefault();
 	    var sceneScroll = sceneFooter.scrollOffset() + 1000;
 	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo');	    
 		console.log("Nav Contact: "+sceneScroll);	
 	});
 
-	//========================= CAUSE FLAKES  ================
-	$("#causeFlakeTwo").on("click",function(){
-	    var sceneScroll = sceneFooter.scrollOffset() + 1000;
-	    $('html, body').stop(true).animate({scrollTop:sceneScroll}, 2000,'easeInOutExpo');	    
-		console.log("Nav Contact: "+sceneScroll);	
-	});
+
+
 
 //========================= SHOW / HIDE HIDDEN CONTENT  ================
 	function showButtons(){
@@ -327,12 +212,12 @@ $(document).ready(function() {
 		$(".closeButton h2").stop(true).animate({opacity:1},500,function(){
 			$(".closeButton").css("pointer-events","all");
 		});
-	};
+	}
 
 	function hideButtons(){
 		hiddenActive = false;		
 		hiddenMore = false;	
-		$("body").css("overflow","scroll");
+		// $("body").css("overflow","scroll");
 		$(".closeButton h2").stop(true).animate({opacity:0},500,function(){
 			$(".closeButton").css("pointer-events","none");
 		});
@@ -343,7 +228,7 @@ $(document).ready(function() {
 			$("#aboutContent, #crisisContent, #productContent, #causeContent").css("pointer-events","none").css("overflow","hidden").css("zIndex","3");
 			$(".moreContent").animate({opacity:0},500);
 		});
-	};
+	}
 
 
 

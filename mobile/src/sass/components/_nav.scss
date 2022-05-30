@@ -1,0 +1,68 @@
+/*================================================ NAVIGATION ===================*/
+ #navSection{
+	height:100vh;
+	z-index:100;
+	left:-125px;
+	position:fixed;
+}
+
+#navigation{
+	width:125px;
+	display:block;
+	z-index:100;
+	position:relative;
+}
+
+#logo{
+	cursor:pointer;
+	font-size:16px;
+	line-height:50px;	
+	margin-bottom:3%;
+	margin-left:3%;
+	color:$blue;	
+	@include transition(color, 0.5s);
+}
+
+#logoSpan{
+	font-family:$josefin-reg;
+	color:$white;
+	margin-left:2%;
+}
+
+#navList nav{
+	margin-bottom:3%;
+	margin-left:5%;
+}
+
+#navList h2{
+	font-size:22px;
+	line-height:50px;
+	color:$blue;
+	@include transition(color, 0.5s);	
+}
+
+#navList nav:hover{
+	color:$white;
+	@include transition(color, 0.5s);
+}
+
+#logo h2:hover{
+	color:$white;
+	@include transition(color, 0.5s);
+}
+
+#navList h1{
+	font-size:18px;
+	line-height:30px;
+	color:$blue;
+	@include transition(color, 0.5s);
+}
+
+#navList h1:hover{
+	color:$white;
+	@include transition(color, 0.5s);
+}
+
+.activeNav{
+	color:$white;
+}

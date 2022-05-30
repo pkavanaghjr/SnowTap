@@ -1,0 +1,2264 @@
+/*
+Theme Name: SnowTap
+Author: Pat Kavanagh
+Text Domain: snowtap
+*/
+/* GLOBAL DEPENDENCIES */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, mobile/src/sass/components/reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+/* line 27, mobile/src/sass/components/reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+/* line 31, mobile/src/sass/components/reset.scss */
+body {
+  line-height: 1; }
+
+/* line 34, mobile/src/sass/components/reset.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 37, mobile/src/sass/components/reset.scss */
+blockquote, q {
+  quotes: none; }
+
+/* line 40, mobile/src/sass/components/reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 45, mobile/src/sass/components/reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 1, mobile/src/sass/components/fonts.scss */
+h1 {
+  font-family: arborcrestHeavy; }
+
+/* line 5, mobile/src/sass/components/fonts.scss */
+h2 {
+  font-family: josefinBold, Helvetica, Arial, sans-serif; }
+
+/* line 9, mobile/src/sass/components/fonts.scss */
+h3 {
+  font-family: josefinBold, Helvetica, Arial, sans-serif; }
+
+/* line 13, mobile/src/sass/components/fonts.scss */
+h4 {
+  font-family: josefinSemibold, Helvetica, Arial, sans-serif; }
+
+/* line 17, mobile/src/sass/components/fonts.scss */
+h5 {
+  font-family: josefinSemibold, Helvetica, Arial, sans-serif; }
+
+/* line 21, mobile/src/sass/components/fonts.scss */
+h6 {
+  font-family: josefinRegular, Helvetica, Arial, sans-serif; }
+
+/* line 25, mobile/src/sass/components/fonts.scss */
+p {
+  font-family: josefinRegular, Helvetica, Arial, sans-serif; }
+
+/* line 29, mobile/src/sass/components/fonts.scss */
+a {
+  text-decoration: none; }
+
+@font-face {
+  font-family: 'josefinBold';
+  src: url("../../fonts/josefinsans-bold-webfont.eot");
+  src: url("../../fonts/josefinsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-bold-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-bold-webfont.woff") format("woff"), url("../../fonts/josefinsans-bold-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-bold-webfont.svg#josefinBold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefinLight';
+  src: url("../../fonts/josefinsans-light-webfont.eot");
+  src: url("../../fonts/josefinsans-light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-light-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-light-webfont.woff") format("woff"), url("../../fonts/josefinsans-light-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-light-webfont.svg#josefinLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefinRegular';
+  src: url("../../fonts/josefinsans-regular-webfont.eot");
+  src: url("../../fonts/josefinsans-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-regular-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-regular-webfont.woff") format("woff"), url("../../fonts/josefinsans-regular-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-regular-webfont.svg#josefinRegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'josefinSemibold';
+  src: url("../../fonts/josefinsans-semibold-webfont.eot");
+  src: url("../../fonts/josefinsans-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/josefinsans-semibold-webfont.woff2") format("woff2"), url("../../fonts/josefinsans-semibold-webfont.woff") format("woff"), url("../../fonts/josefinsans-semibold-webfont.ttf") format("truetype"), url("../../fonts/josefinsans-semibold-webfont.svg#josefinSemibold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'arborcrestHeavy';
+  src: url("../../fonts/sf_arborcrest_heavy-webfont.eot");
+  src: url("../../fonts/sf_arborcrest_heavy-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sf_arborcrest_heavy-webfont.woff2") format("woff2"), url("../../fonts/sf_arborcrest_heavy-webfont.woff") format("woff"), url("../../fonts/sf_arborcrest_heavy-webfont.ttf") format("truetype"), url("../../fonts/sf_arborcrest_heavy-webfont.svg#arborcrestHeavy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'arborcrestLight';
+  src: url("../../fonts/sf_arborcrest_light-webfont.eot");
+  src: url("../../fonts/sf_arborcrest_light-webfont.eot?#iefix") format("embedded-opentype"), url("../../fonts/sf_arborcrest_light-webfont.woff2") format("woff2"), url("../../fonts/sf_arborcrest_light-webfont.woff") format("woff"), url("../../fonts/sf_arborcrest_light-webfont.ttf") format("truetype"), url("../../fonts/sf_arborcrest_light-webfont.svg#arborcrestLight") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/* line 1, mobile/src/sass/components/formalize.scss */
+.input_tiny {
+  width: 50px; }
+
+/* line 5, mobile/src/sass/components/formalize.scss */
+.input_small {
+  width: 100px; }
+
+/* line 9, mobile/src/sass/components/formalize.scss */
+.input_medium {
+  width: 150px; }
+
+/* line 13, mobile/src/sass/components/formalize.scss */
+.input_large {
+  width: 200px; }
+
+/* line 17, mobile/src/sass/components/formalize.scss */
+.input_xlarge {
+  width: 250px; }
+
+/* line 21, mobile/src/sass/components/formalize.scss */
+.input_xxlarge {
+  width: 300px; }
+
+/* line 25, mobile/src/sass/components/formalize.scss */
+.input_full {
+  width: 100%; }
+
+/* line 29, mobile/src/sass/components/formalize.scss */
+.input_full_wrap {
+  display: block;
+  padding-right: 8px; }
+
+/* line 34, mobile/src/sass/components/formalize.scss */
+input[type="search"]::-webkit-search-decoration {
+  display: none; }
+
+/* line 38, mobile/src/sass/components/formalize.scss */
+input:invalid,
+button:invalid,
+a.button:invalid,
+select:invalid,
+textarea:invalid {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 47, mobile/src/sass/components/formalize.scss */
+input:focus,
+button:focus,
+a.button:focus,
+select:focus,
+textarea:focus {
+  -webkit-box-shadow: #0066ff 0 0 5px 0;
+  box-shadow: #0066ff 0 0 5px 0;
+  z-index: 1; }
+
+/* line 58, mobile/src/sass/components/formalize.scss */
+input[type="file"]:focus, input[type="file"]:active,
+input[type="radio"]:focus,
+input[type="radio"]:active,
+input[type="checkbox"]:focus,
+input[type="checkbox"]:active {
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 68, mobile/src/sass/components/formalize.scss */
+button,
+a.button,
+input[type="reset"],
+input[type="submit"],
+input[type="button"] {
+  -webkit-appearance: none;
+  border-radius: 4px;
+  background-clip: padding-box;
+  background: #dddddd url("../images/button.png?1298351022") repeat-x;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dddddd));
+  background-image: linear-gradient(#ffffff, #dddddd);
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #999999;
+  cursor: pointer;
+  color: #333333;
+  display: inline-block;
+  font: bold 12px/1.3 "Helvetica Neue", Arial, "Liberation Sans", FreeSans, sans-serif;
+  outline: 0;
+  overflow: visible;
+  margin: 0;
+  padding: 3px 10px;
+  text-shadow: white 0 1px 1px;
+  text-decoration: none;
+  vertical-align: top;
+  width: auto;
+  *padding-top: 2px;
+  *padding-bottom: 0; }
+
+/* line 105, mobile/src/sass/components/formalize.scss */
+button:hover,
+a.button:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover {
+  background-image: linear-gradient(#ffffff, #eeeeee 1px, #cccccc);
+  text-decoration: none; }
+
+/* line 117, mobile/src/sass/components/formalize.scss */
+button:active,
+a.button:active,
+input[type="reset"]:active,
+input[type="submit"]:active,
+input[type="button"]:active {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dddddd), to(#eeeeee));
+  background-image: linear-gradient(#dddddd, #eeeeee);
+  -webkit-box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  box-shadow: inset rgba(0, 0, 0, 0.25) 0 1px 2px 0;
+  border-color: #999999 #bbbbbb #dddddd; }
+
+/* line 132, mobile/src/sass/components/formalize.scss */
+button::-moz-focus-inner,
+a.button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 141, mobile/src/sass/components/formalize.scss */
+a.button {
+  *padding-bottom: 3px; }
+
+/* line 145, mobile/src/sass/components/formalize.scss */
+button {
+  *padding-top: 1px;
+  *padding-bottom: 1px; }
+
+/* line 150, mobile/src/sass/components/formalize.scss */
+textarea,
+select,
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background-clip: padding-box;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: white;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: black;
+  outline: 0;
+  margin: 0;
+  padding: 2px 3px;
+  text-align: left;
+  font-size: 13px;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif;
+  height: 1.8em;
+  vertical-align: top;
+  *padding-top: 2px;
+  *padding-bottom: 1px;
+  *height: auto; }
+
+/* line 193, mobile/src/sass/components/formalize.scss */
+textarea[disabled],
+select[disabled],
+input[type="date"][disabled],
+input[type="datetime"][disabled],
+input[type="datetime-local"][disabled],
+input[type="email"][disabled],
+input[type="month"][disabled],
+input[type="number"][disabled],
+input[type="password"][disabled],
+input[type="search"][disabled],
+input[type="tel"][disabled],
+input[type="text"][disabled],
+input[type="time"][disabled],
+input[type="url"][disabled],
+input[type="week"][disabled] {
+  background-color: #eeeeee; }
+
+/* line 211, mobile/src/sass/components/formalize.scss */
+button[disabled],
+input[disabled],
+select[disabled],
+select[disabled] option,
+select[disabled] optgroup,
+textarea[disabled],
+a.button_disabled {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+  color: #888888;
+  cursor: default; }
+
+/* line 229, mobile/src/sass/components/formalize.scss */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #888888; }
+
+/* line 234, mobile/src/sass/components/formalize.scss */
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #888888; }
+
+/* line 239, mobile/src/sass/components/formalize.scss */
+input.placeholder_text,
+textarea.placeholder_text {
+  color: #888888; }
+
+/* line 244, mobile/src/sass/components/formalize.scss */
+textarea,
+select[size],
+select[multiple] {
+  height: auto; }
+
+/* line 250, mobile/src/sass/components/formalize.scss */
+select[size="0"],
+select[size="1"] {
+  height: 1.8em;
+  *height: auto; }
+
+@media (-webkit-min-device-pixel-ratio: 0) {
+  /* line 257, mobile/src/sass/components/formalize.scss */
+  select[size],
+  select[multiple],
+  select[multiple][size] {
+    background-image: none;
+    padding-right: 3px; }
+  /* line 264, mobile/src/sass/components/formalize.scss */
+  select,
+  select[size="0"],
+  select[size="1"] {
+    background-image: url(data:image/png;base64,R0lGODlhDQAEAIAAAAAAAP8A/yH5BAEHAAEALAAAAAANAAQAAAILhA+hG5jMDpxvhgIAOw==);
+    background-repeat: no-repeat;
+    background-position: right center;
+    padding-right: 20px; }
+  /* line 273, mobile/src/sass/components/formalize.scss */
+  ::-webkit-validation-bubble-message {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #666666), color-stop(1, black));
+    border: 0;
+    color: white;
+    font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
+    overflow: hidden;
+    padding: 15px 15px 17px;
+    text-shadow: black 0 0 1px;
+    min-height: 16px; }
+  /* line 286, mobile/src/sass/components/formalize.scss */
+  ::-webkit-validation-bubble-arrow,
+  ::-webkit-validation-bubble-top-outer-arrow,
+  ::-webkit-validation-bubble-top-inner-arrow {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: #666666;
+    border-color: #666666; } }
+
+/* line 295, mobile/src/sass/components/formalize.scss */
+textarea {
+  min-height: 40px;
+  overflow: auto;
+  resize: vertical;
+  width: 100%; }
+
+/* line 302, mobile/src/sass/components/formalize.scss */
+optgroup {
+  color: black;
+  font-style: normal;
+  font-weight: normal;
+  font-family: Arial, "Liberation Sans", FreeSans, sans-serif; }
+
+/* line 308, mobile/src/sass/components/formalize.scss */
+optgroup::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 313, mobile/src/sass/components/formalize.scss */
+.ie6_button,
+* html button,
+* html a.button {
+  background: #dddddd url("../images/button.png?1298351022") repeat-x;
+  border: 1px solid;
+  border-color: #dddddd #bbbbbb #999999;
+  cursor: pointer;
+  color: #333333;
+  font: bold 12px/1.2 Arial, sans-serif;
+  padding: 2px 10px 0;
+  text-decoration: none;
+  overflow: visible;
+  vertical-align: top;
+  width: auto; }
+
+/* line 329, mobile/src/sass/components/formalize.scss */
+* html a.button {
+  position: relative;
+  top: 3px;
+  padding-bottom: 2px; }
+
+/* line 335, mobile/src/sass/components/formalize.scss */
+* html button {
+  padding-top: 1px;
+  padding-bottom: 1px; }
+
+/* line 340, mobile/src/sass/components/formalize.scss */
+.ie6_input,
+* html textarea,
+* html select {
+  background: white;
+  border: 1px solid;
+  border-color: #848484 #c1c1c1 #e1e1e1;
+  color: black;
+  padding: 2px 3px 1px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  vertical-align: top; }
+
+/* line 353, mobile/src/sass/components/formalize.scss */
+* html select {
+  margin-top: 1px; }
+
+/* line 357, mobile/src/sass/components/formalize.scss */
+.placeholder_text,
+.ie6_input_disabled,
+.ie6_button_disabled {
+  color: #888888; }
+
+/* line 363, mobile/src/sass/components/formalize.scss */
+.ie6_input_disabled {
+  background: #eeeeee; }
+
+/* ELEMENTS */
+/* RGB VALUES
+DARK BLUE
+background-color:rgba(33,133,196,1);
+
+LIGHT BLUE
+background-color:rgba(133,203,240,1)
+
+TAP BLACK
+background-color:rgba(62,69,76,1)
+*/
+/* MOBILE STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (max-width: 767px) {
+  /* line 16, mobile/src/sass/components/_styles-mobile.scss */
+  body {
+    background-color: #3E454C;
+    overflow: hidden; }
+  /* line 21, mobile/src/sass/components/_styles-mobile.scss */
+  .clear {
+    clear: both; }
+  /* line 25, mobile/src/sass/components/_styles-mobile.scss */
+  .avoidPointer {
+    pointer-events: none; }
+  /* line 29, mobile/src/sass/components/_styles-mobile.scss */
+  #snowCanvas {
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none; }
+  /*============== FMA ==============*/
+  /* line 39, mobile/src/sass/components/_styles-mobile.scss */
+  #fma {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden; }
+  /* line 45, mobile/src/sass/components/_styles-mobile.scss */
+  #loadColor {
+    width: 100%;
+    height: 100%;
+    background-color: #3E454C;
+    z-index: 100px; }
+  /* line 52, mobile/src/sass/components/_styles-mobile.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0%;
+    z-index: -1; }
+  /* line 60, mobile/src/sass/components/_styles-mobile.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 22%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 73, mobile/src/sass/components/_styles-mobile.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 55%;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 86, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 170%;
+    left: -80%;
+    top: 75%;
+    opacity: 0; }
+  /* line 95, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 40%;
+    left: 52%;
+    top: 55%;
+    opacity: 0; }
+  /* line 104, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 20%;
+    left: 15%;
+    top: 45%;
+    opacity: 0; }
+  /* line 113, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 60%;
+    top: 40%;
+    opacity: 0; }
+  /* line 122, mobile/src/sass/components/_styles-mobile.scss */
+  #arrowDownAbout {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*================================================ NAVIGATION ===================*/
+  /* line 136, mobile/src/sass/components/_styles-mobile.scss */
+  #navSection {
+    width: 100%;
+    z-index: 100;
+    top: -10vh;
+    position: fixed;
+    background-color: rgba(62, 69, 76, 0.6); }
+  /* line 144, mobile/src/sass/components/_styles-mobile.scss */
+  #navigation {
+    height: 8vh;
+    display: block;
+    z-index: 100;
+    position: relative; }
+  /* line 151, mobile/src/sass/components/_styles-mobile.scss */
+  #logo {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 10vh;
+    float: left;
+    margin-left: 5%;
+    color: #2185C4; }
+  /* line 160, mobile/src/sass/components/_styles-mobile.scss */
+  #logoSpan {
+    font-family: "josefinRegular", helvetica;
+    color: #fff; }
+  /* line 165, mobile/src/sass/components/_styles-mobile.scss */
+  #navList h2 {
+    font-size: 18px;
+    color: #2185C4; }
+  /* line 170, mobile/src/sass/components/_styles-mobile.scss */
+  #mobileMenu {
+    z-index: 101;
+    width: 5%;
+    float: right;
+    margin-right: 5%;
+    line-height: 10vh;
+    cursor: pointer; }
+  /* line 179, mobile/src/sass/components/_styles-mobile.scss */
+  #hiddenMenu {
+    z-index: 100;
+    position: absolute;
+    top: 10vh;
+    right: 3%;
+    width: 20%;
+    padding: 0% 2% 2% 2%;
+    background-color: rgba(62, 69, 76, 0.6);
+    display: none; }
+  /* line 190, mobile/src/sass/components/_styles-mobile.scss */
+  #hiddenMenu nav {
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    float: left; }
+  /* line 197, mobile/src/sass/components/_styles-mobile.scss */
+  #navList h1 {
+    font-size: 14px;
+    line-height: 25px;
+    color: #fff; }
+  /*.scrollDownArrows{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 90%;
+	top: 94%;
+	opacity: 0;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+
+ .scrollUpArrows{
+	z-index: 10;
+	position: absolute;
+	width:25px;
+	left: 10%;
+	top: 94%;
+	opacity: 0;
+	transform:translate(-50%,-50%);
+	-o-transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+ }
+*/
+  /* line 231, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrows {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    width: 45%;
+    height: 5vh;
+    /*margin-right:2.5%;*/
+    /*float:right;
+	margin-top:95.5%;*/
+    position: absolute;
+    bottom: 2vh;
+    right: 2.5%;
+    opacity: 0; }
+  /* line 246, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrows {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    width: 45%;
+    height: 5vh;
+    /*margin-left:2.5%;	
+	float:left;
+	margin-top:95.5%;*/
+    position: absolute;
+    bottom: 2vh;
+    left: 2.5%;
+    opacity: 0; }
+  /* line 261, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrows h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: left;
+    margin-left: 48%;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg); }
+  /* line 274, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrows h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: right;
+    margin-right: 48%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+  /*======================================= CONTENT STYlES ===================*/
+  /* line 288, mobile/src/sass/components/_styles-mobile.scss */
+  .snowflakeOne {
+    z-index: 4;
+    width: 20%;
+    padding-top: 20%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0; }
+  /* line 297, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection h1, #crisisSection h1, #productSection h1, #causeSection h1 {
+    font-size: 21px;
+    color: #2185C4;
+    text-align: center;
+    padding-top: 2%;
+    z-index: 10;
+    opacity: 0; }
+  /* line 306, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 10% 5% 2.5% 5%;
+    border-radius: 3%;
+    opacity: 0;
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: 37vh;
+    left: 50%;
+    height: 42vh;
+    width: 85%;
+    transform: translate(-50%, 0%);
+    -o-transform: translate(-50%, 0%);
+    -webkit-transform: translate(-50%, 0%);
+    -moz-transform: translate(-50%, 0%);
+    overflow: hidden; }
+  /* line 325, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 2%; }
+  /* line 332, mobile/src/sass/components/_styles-mobile.scss */
+  .whiteTitle {
+    color: #fff; }
+  /* line 336, mobile/src/sass/components/_styles-mobile.scss */
+  .closeButton {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+    z-index: 2; }
+  /* line 343, mobile/src/sass/components/_styles-mobile.scss */
+  .closeBottom h2 {
+    font-family: 'arborcrestHeavy';
+    font-size: 24px;
+    color: #2185C4;
+    cursor: pointer;
+    opacity: 0; }
+  /* line 351, mobile/src/sass/components/_styles-mobile.scss */
+  .moreButton {
+    width: 90%;
+    height: 6vh;
+    background-color: #2185C4;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 50; }
+  /* line 364, mobile/src/sass/components/_styles-mobile.scss */
+  .moreButton h6 {
+    color: #fff;
+    line-height: 6vh;
+    text-align: center; }
+  /* line 370, mobile/src/sass/components/_styles-mobile.scss */
+  .buyButton {
+    width: 47%;
+    height: 4vh;
+    background-color: #2185C4;
+    border-radius: 3px;
+    float: right;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 50;
+    margin-bottom: 3%; }
+  /* line 382, mobile/src/sass/components/_styles-mobile.scss */
+  .buyButton h6 {
+    font-size: 12px;
+    color: #fff;
+    line-height: 4vh;
+    text-align: center; }
+  /* line 389, mobile/src/sass/components/_styles-mobile.scss */
+  .doneButton {
+    width: 100%;
+    height: 4vh;
+    background-color: #3E454C;
+    border-radius: 3px;
+    opacity: 0;
+    float: left;
+    cursor: pointer;
+    z-index: 50;
+    margin-top: 5%; }
+  /* line 401, mobile/src/sass/components/_styles-mobile.scss */
+  .doneButton h3 {
+    font-size: 14px;
+    color: #fff;
+    line-height: 4vh;
+    text-align: center; }
+  /* line 408, mobile/src/sass/components/_styles-mobile.scss */
+  .moreContent {
+    opacity: 0; }
+  /* line 412, mobile/src/sass/components/_styles-mobile.scss */
+  .moreIcon {
+    width: 25%;
+    margin: 13% auto 2% auto; }
+  /* line 417, mobile/src/sass/components/_styles-mobile.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 422, mobile/src/sass/components/_styles-mobile.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 427, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList {
+    margin: 5% 0% 5% 0%; }
+  /* line 431, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList li {
+    margin-bottom: 3%; }
+  /* line 435, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 18px;
+    line-height: 24px; }
+  /* line 442, mobile/src/sass/components/_styles-mobile.scss */
+  .bullet {
+    width: 8px;
+    height: 8px;
+    background: url(../images/bulletPoint.png) center no-repeat;
+    z-index: 2;
+    display: inline-block;
+    margin-right: 1%;
+    line-height: 2px; }
+  /* line 452, mobile/src/sass/components/_styles-mobile.scss */
+  .boldMore {
+    font-family: josefinBold, Helvetica, Arial, sans-serif;
+    font-size: 18px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 459, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection {
+    width: 100%;
+    height: 100vh;
+    position: relative; }
+  /* line 465, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutCloudOne {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    opacity: .5;
+    top: 25%;
+    left: -5%; }
+  /* line 474, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    opacity: .3;
+    top: 10%;
+    left: 70%; }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 484, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection {
+    width: 100%;
+    height: 100vh;
+    position: relative; }
+  /* line 490, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 30%; }
+  /* line 496, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 20%; }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 504, mobile/src/sass/components/_styles-mobile.scss */
+  #productSection {
+    width: 100%;
+    height: 100vh;
+    position: relative; }
+  /* line 511, mobile/src/sass/components/_styles-mobile.scss */
+  #productCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 30%; }
+  /* line 517, mobile/src/sass/components/_styles-mobile.scss */
+  #productCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 25%; }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 524, mobile/src/sass/components/_styles-mobile.scss */
+  #causeSection {
+    width: 100%;
+    height: 100vh;
+    position: relative; }
+  /* line 530, mobile/src/sass/components/_styles-mobile.scss */
+  #causeCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 40%; }
+  /* line 536, mobile/src/sass/components/_styles-mobile.scss */
+  #causeCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 25%; }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 543, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative; }
+  /* line 550, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 10%;
+    opacity: 0;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 562, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    padding: 40% 0% 5% 0%;
+    opacity: 0; }
+  /* line 570, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection h4 {
+    color: #3E454C;
+    text-align: center;
+    font-size: 18px;
+    line-height: 21px;
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0; }
+  /* line 581, mobile/src/sass/components/_styles-mobile.scss */
+  #socialMail {
+    top: 60%;
+    left: 20%; }
+  /* line 586, mobile/src/sass/components/_styles-mobile.scss */
+  #socialTweet {
+    top: 60%;
+    left: 40%; }
+  /* line 591, mobile/src/sass/components/_styles-mobile.scss */
+  #socialInsta {
+    top: 60%;
+    left: 60%; }
+  /* line 596, mobile/src/sass/components/_styles-mobile.scss */
+  #socialYou {
+    top: 60%;
+    left: 80%; }
+  /* line 601, mobile/src/sass/components/_styles-mobile.scss */
+  #arrowScrollTop {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*============== COPYRIGHT =========**/
+  /* line 616, mobile/src/sass/components/_styles-mobile.scss */
+  #copyright {
+    padding-top: 45%;
+    opacity: 0; }
+  /* line 621, mobile/src/sass/components/_styles-mobile.scss */
+  #copyright p {
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+    line-height: 14px;
+    color: #3E454C; }
+  /* line 629, mobile/src/sass/components/_styles-mobile.scss */
+  span {
+    color: #3E454C;
+    text-decoration: none; }
+  /* line 634, mobile/src/sass/components/_styles-mobile.scss */
+  span:hover {
+    text-decoration: underline; }
+  /* line 638, mobile/src/sass/components/_styles-mobile.scss */
+  #designby {
+    margin: 0px 0px 1% 0%;
+    text-decoration: none; }
+  /* line 647, mobile/src/sass/components/_styles-mobile.scss */
+  #copyrightText {
+    margin: 0px 3.125% 2% 0px; } }
+
+/*============================ CLOSE MOBILE RESPONSIVE ================*/
+/* TABLET STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 768px) and (max-width: 977px) {
+  /* line 668, mobile/src/sass/components/_styles-mobile.scss */
+  body {
+    background-color: #999;
+    overflow: hidden; }
+  /* line 673, mobile/src/sass/components/_styles-mobile.scss */
+  .hideForTablet {
+    display: none; }
+  /* line 677, mobile/src/sass/components/_styles-mobile.scss */
+  .clear {
+    clear: both; }
+  /* line 681, mobile/src/sass/components/_styles-mobile.scss */
+  .avoidPointer {
+    pointer-events: none; }
+  /* line 685, mobile/src/sass/components/_styles-mobile.scss */
+  #snowCanvas {
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none; }
+  /*============== FMA ==============*/
+  /* line 695, mobile/src/sass/components/_styles-mobile.scss */
+  #fma {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+  /* line 701, mobile/src/sass/components/_styles-mobile.scss */
+  #loadColor {
+    width: 100%;
+    height: 100%;
+    background-color: #3E454C;
+    z-index: 100px; }
+  /* line 708, mobile/src/sass/components/_styles-mobile.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%; }
+  /* line 716, mobile/src/sass/components/_styles-mobile.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 15%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 729, mobile/src/sass/components/_styles-mobile.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 35%;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 742, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 170%;
+    left: -80%;
+    top: 75%;
+    opacity: 0; }
+  /* line 751, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 40%;
+    left: 52%;
+    top: 55%;
+    opacity: 0; }
+  /* line 760, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 20%;
+    left: 15%;
+    top: 45%;
+    opacity: 0; }
+  /* line 769, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 60%;
+    top: 40%;
+    opacity: 0; }
+  /* line 778, mobile/src/sass/components/_styles-mobile.scss */
+  #arrowDownAbout {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*================================================ NAVIGATION ===================*/
+  /* line 792, mobile/src/sass/components/_styles-mobile.scss */
+  #navSection {
+    width: 100%;
+    z-index: 100;
+    top: -10vh;
+    position: fixed;
+    background-color: rgba(62, 69, 76, 0.6); }
+  /* line 800, mobile/src/sass/components/_styles-mobile.scss */
+  #navigation {
+    height: 8vh;
+    display: block;
+    z-index: 100;
+    position: relative; }
+  /* line 807, mobile/src/sass/components/_styles-mobile.scss */
+  #logo {
+    cursor: pointer;
+    line-height: 10vh;
+    float: left;
+    margin-left: 5%;
+    color: #2185C4; }
+  /* line 815, mobile/src/sass/components/_styles-mobile.scss */
+  #logoSpan {
+    font-family: "josefinRegular", helvetica;
+    color: #fff; }
+  /* line 820, mobile/src/sass/components/_styles-mobile.scss */
+  #navList h2 {
+    font-size: 21px;
+    color: #2185C4; }
+  /* line 825, mobile/src/sass/components/_styles-mobile.scss */
+  #mobileMenu {
+    z-index: 101;
+    width: 3%;
+    float: right;
+    margin-right: 5%;
+    margin-top: 2.4%;
+    cursor: pointer; }
+  /* line 834, mobile/src/sass/components/_styles-mobile.scss */
+  #hiddenMenu {
+    z-index: 100;
+    position: absolute;
+    top: 10vh;
+    right: 3%;
+    width: 10%;
+    padding: 2% 2% 2% 2%;
+    background-color: rgba(62, 69, 76, 0.6);
+    display: none; }
+  /* line 845, mobile/src/sass/components/_styles-mobile.scss */
+  #hiddenMenu nav {
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0; }
+  /* line 851, mobile/src/sass/components/_styles-mobile.scss */
+  #navList h1 {
+    font-size: 14px;
+    line-height: 25px;
+    color: #fff; }
+  /* line 857, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrows {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    width: 20%;
+    margin-left: 2.5%;
+    height: 5vh;
+    float: left;
+    margin-top: 13%;
+    opacity: 1; }
+  /* line 869, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrows {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    margin-left: 2.5%;
+    width: 20%;
+    height: 5vh;
+    float: left;
+    margin-top: 13%;
+    opacity: 1; }
+  /* line 881, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrows h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: left;
+    margin-left: 48%;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg); }
+  /* line 894, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrows h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: right;
+    margin-right: 48%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+  /*======================================= CONTENT SWITCH ===================*/
+  /* line 908, mobile/src/sass/components/_styles-mobile.scss */
+  .snowflakeSwitch {
+    z-index: 4;
+    width: 20%;
+    padding-top: 15%;
+    margin-right: 14%;
+    opacity: 1;
+    float: right; }
+  /* line 917, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection .switchTitle, #crisisSection .switchTitle, #productSection .switchTitle, #causeSection .switchTitle {
+    font-size: 21px;
+    color: #2185C4;
+    text-align: center;
+    width: 50%;
+    padding-top: 3%;
+    z-index: 10;
+    opacity: 1;
+    float: right; }
+  /* line 928, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContentSwitch {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 4% 5% 2.5% 5%;
+    border-radius: 3%;
+    opacity: 1;
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: 35%;
+    left: 5%;
+    height: 50vh;
+    width: 40%;
+    transform: translate(-5%, -2%);
+    -o-transform: translate(-5%, -2%);
+    -webkit-transform: translate(-5%, -2%);
+    -moz-transform: translate(-5%, -2%); }
+  /* line 946, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrowsSwitch {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    width: 20%;
+    margin-right: 2.5%;
+    height: 5vh;
+    float: right;
+    margin-top: 13%;
+    opacity: 1; }
+  /* line 958, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrowsSwitch {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    margin-right: 2.5%;
+    width: 20%;
+    height: 5vh;
+    float: right;
+    margin-top: 13%;
+    opacity: 1; }
+  /* line 970, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrowsSwitch h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: left;
+    margin-left: 48%;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg); }
+  /* line 983, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrowsSwitch h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: right;
+    margin-right: 48%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+  /*======================================= CONTENT STYlES ===================*/
+  /* line 998, mobile/src/sass/components/_styles-mobile.scss */
+  .snowflakeOne {
+    z-index: 4;
+    width: 20%;
+    padding-top: 15%;
+    margin-left: 14%;
+    opacity: 1; }
+  /* line 1006, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection h1, #crisisSection h1, #productSection h1, #causeSection h1 {
+    font-size: 21px;
+    color: #2185C4;
+    text-align: center;
+    width: 50%;
+    padding-top: 3%;
+    z-index: 10;
+    opacity: 1; }
+  /* line 1016, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 4% 5% 2.5% 5%;
+    border-radius: 3%;
+    opacity: 1;
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: 40vh;
+    left: 50%;
+    height: 45vh;
+    width: 40%;
+    transform: translate(-5%, -2%);
+    -o-transform: translate(-5%, -2%);
+    -webkit-transform: translate(-5%, -2%);
+    -moz-transform: translate(-5%, -2%); }
+  /* line 1034, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 2%; }
+  /* line 1041, mobile/src/sass/components/_styles-mobile.scss */
+  .whiteTitle {
+    color: #fff; }
+  /* line 1045, mobile/src/sass/components/_styles-mobile.scss */
+  .closeButton {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+    z-index: 2; }
+  /* line 1052, mobile/src/sass/components/_styles-mobile.scss */
+  .closeButton h2 {
+    font-family: 'arborcrestHeavy';
+    font-size: 24px;
+    color: #2185C4;
+    cursor: pointer;
+    opacity: 0; }
+  /* line 1060, mobile/src/sass/components/_styles-mobile.scss */
+  .moreButton {
+    width: 90%;
+    height: 6vh;
+    background-color: #2185C4;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 50; }
+  /* line 1073, mobile/src/sass/components/_styles-mobile.scss */
+  .moreButton h6 {
+    color: #fff;
+    line-height: 6vh;
+    text-align: center; }
+  /* line 1079, mobile/src/sass/components/_styles-mobile.scss */
+  .buyButton {
+    width: 47%;
+    height: 4vh;
+    background-color: #2185C4;
+    border-radius: 3px;
+    float: right;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 50; }
+  /* line 1090, mobile/src/sass/components/_styles-mobile.scss */
+  .buyButton h6 {
+    font-size: 14px;
+    color: #fff;
+    line-height: 4vh;
+    text-align: center; }
+  /* line 1097, mobile/src/sass/components/_styles-mobile.scss */
+  .doneButton {
+    width: 100%;
+    height: 4vh;
+    background-color: #3E454C;
+    border-radius: 3px;
+    opacity: 1;
+    float: left;
+    cursor: pointer;
+    z-index: 50;
+    margin-top: 5%; }
+  /* line 1109, mobile/src/sass/components/_styles-mobile.scss */
+  .doneButton h3 {
+    font-size: 14px;
+    color: #fff;
+    line-height: 4vh;
+    text-align: center; }
+  /* line 1116, mobile/src/sass/components/_styles-mobile.scss */
+  .moreContent {
+    opacity: 0; }
+  /* line 1120, mobile/src/sass/components/_styles-mobile.scss */
+  .moreIcon {
+    width: 25%;
+    margin: 13% auto 2% auto; }
+  /* line 1125, mobile/src/sass/components/_styles-mobile.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 1130, mobile/src/sass/components/_styles-mobile.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 1135, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList {
+    margin: 5% 0% 5% 0%; }
+  /* line 1139, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList li {
+    margin-bottom: 3%; }
+  /* line 1143, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 18px;
+    line-height: 24px; }
+  /* line 1150, mobile/src/sass/components/_styles-mobile.scss */
+  .bullet {
+    width: 8px;
+    height: 8px;
+    background: url(../images/bulletPoint.png) center no-repeat;
+    z-index: 2;
+    display: inline-block;
+    margin-right: 1%;
+    line-height: 2px; }
+  /* line 1160, mobile/src/sass/components/_styles-mobile.scss */
+  .boldMore {
+    font-family: josefinBold, Helvetica, Arial, sans-serif;
+    font-size: 18px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 1167, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1174, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection .doneButton {
+    display: none; }
+  /* line 1178, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutCloudOne {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    opacity: .5;
+    top: 25%;
+    left: -5%; }
+  /* line 1187, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    opacity: .3;
+    top: 10%;
+    left: 70%; }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 1197, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1204, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 30%; }
+  /* line 1210, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 20%; }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 1218, mobile/src/sass/components/_styles-mobile.scss */
+  #productSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1225, mobile/src/sass/components/_styles-mobile.scss */
+  #productCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 30%; }
+  /* line 1231, mobile/src/sass/components/_styles-mobile.scss */
+  #productCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 25%; }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 1238, mobile/src/sass/components/_styles-mobile.scss */
+  #causeSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1245, mobile/src/sass/components/_styles-mobile.scss */
+  #causeCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 40%; }
+  /* line 1251, mobile/src/sass/components/_styles-mobile.scss */
+  #causeCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 25%; }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 1258, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    overflow: hidden; }
+  /* line 1266, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 6%;
+    opacity: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 1278, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 15% 0% 3% 0%;
+    opacity: 1; }
+  /* line 1286, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection h4 {
+    color: #3E454C;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 1; }
+  /* line 1297, mobile/src/sass/components/_styles-mobile.scss */
+  #socialMail {
+    top: 60%;
+    left: 35%; }
+  /* line 1302, mobile/src/sass/components/_styles-mobile.scss */
+  #socialTweet {
+    top: 60%;
+    left: 45%; }
+  /* line 1307, mobile/src/sass/components/_styles-mobile.scss */
+  #socialInsta {
+    top: 60%;
+    left: 55%; }
+  /* line 1312, mobile/src/sass/components/_styles-mobile.scss */
+  #socialYou {
+    top: 60%;
+    left: 65%; }
+  /* line 1317, mobile/src/sass/components/_styles-mobile.scss */
+  #arrowScrollTop {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 95%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*============== COPYRIGHT =========**/
+  /* line 1332, mobile/src/sass/components/_styles-mobile.scss */
+  #copyright {
+    position: absolute;
+    bottom: 5%;
+    width: 100%; }
+  /* line 1338, mobile/src/sass/components/_styles-mobile.scss */
+  #copyright p {
+    font-size: 16px;
+    line-height: 16px;
+    color: #3E454C; }
+  /* line 1344, mobile/src/sass/components/_styles-mobile.scss */
+  #designby {
+    position: absolute;
+    left: 5%;
+    color: #3E454C; }
+  /* line 1350, mobile/src/sass/components/_styles-mobile.scss */
+  #copyrightText {
+    position: absolute;
+    right: 5%;
+    color: #3E454C; }
+  /* line 1356, mobile/src/sass/components/_styles-mobile.scss */
+  span {
+    color: #3E454C;
+    text-decoration: none; }
+  /* line 1361, mobile/src/sass/components/_styles-mobile.scss */
+  span:hover {
+    text-decoration: underline; } }
+
+/*======== CLOSE TABLET RESPONSIVE =========*/
+/* DESKTOP STYLES ////////////////////////////////////////////////////////////////////////////////////////////////*/
+@media only screen and (min-width: 978px) {
+  /* line 1383, mobile/src/sass/components/_styles-mobile.scss */
+  body {
+    background-color: #999;
+    overflow: hidden; }
+  /* line 1388, mobile/src/sass/components/_styles-mobile.scss */
+  .hideForTablet {
+    display: none; }
+  /* line 1392, mobile/src/sass/components/_styles-mobile.scss */
+  .clear {
+    clear: both; }
+  /* line 1396, mobile/src/sass/components/_styles-mobile.scss */
+  .avoidPointer {
+    pointer-events: none; }
+  /* line 1400, mobile/src/sass/components/_styles-mobile.scss */
+  #snowCanvas {
+    width: 100%;
+    height: 100vh;
+    z-index: 4;
+    opacity: 0;
+    position: absolute;
+    pointer-events: none; }
+  /*============== FMA ==============*/
+  /* line 1410, mobile/src/sass/components/_styles-mobile.scss */
+  #fma {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; }
+  /* line 1416, mobile/src/sass/components/_styles-mobile.scss */
+  #loadColor {
+    width: 100%;
+    height: 100%;
+    background-color: #3E454C;
+    z-index: 100px; }
+  /* line 1423, mobile/src/sass/components/_styles-mobile.scss */
+  #backgroundCloudsOne {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0%; }
+  /* line 1431, mobile/src/sass/components/_styles-mobile.scss */
+  #logoDrop {
+    z-index: 2;
+    position: absolute;
+    width: 10%;
+    left: 50%;
+    top: -15%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 1444, mobile/src/sass/components/_styles-mobile.scss */
+  #logoText {
+    z-index: 2;
+    position: absolute;
+    width: 27%;
+    left: 50%;
+    top: 66%;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    opacity: 0; }
+  /* line 1457, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 170%;
+    left: -80%;
+    top: 75%;
+    opacity: 0; }
+  /* line 1466, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudTwo {
+    z-index: 3;
+    position: absolute;
+    width: 40%;
+    left: 52%;
+    top: 55%;
+    opacity: 0; }
+  /* line 1475, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudThree {
+    z-index: 1;
+    position: absolute;
+    width: 20%;
+    left: 15%;
+    top: 45%;
+    opacity: 0; }
+  /* line 1484, mobile/src/sass/components/_styles-mobile.scss */
+  #fmaCloudFour {
+    z-index: 1;
+    position: absolute;
+    width: 12%;
+    left: 60%;
+    top: 40%;
+    opacity: 0; }
+  /* line 1493, mobile/src/sass/components/_styles-mobile.scss */
+  #arrowDownAbout {
+    z-index: 10;
+    position: absolute;
+    width: 2%;
+    left: 50%;
+    top: 95%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*================================================ NAVIGATION ===================*/
+  /* line 1507, mobile/src/sass/components/_styles-mobile.scss */
+  #navSection {
+    width: 100%;
+    z-index: 100;
+    top: -10vh;
+    position: fixed;
+    background-color: rgba(62, 69, 76, 0.6); }
+  /* line 1515, mobile/src/sass/components/_styles-mobile.scss */
+  #navigation {
+    height: 8vh;
+    display: block;
+    z-index: 100;
+    position: relative; }
+  /* line 1522, mobile/src/sass/components/_styles-mobile.scss */
+  #logo {
+    cursor: pointer;
+    line-height: 10vh;
+    float: left;
+    margin-left: 5%;
+    color: #2185C4; }
+  /* line 1530, mobile/src/sass/components/_styles-mobile.scss */
+  #logoSpan {
+    font-family: "josefinRegular", helvetica;
+    color: #fff; }
+  /* line 1535, mobile/src/sass/components/_styles-mobile.scss */
+  #navList h2 {
+    font-size: 24px;
+    color: #2185C4; }
+  /* line 1540, mobile/src/sass/components/_styles-mobile.scss */
+  #mobileMenu {
+    z-index: 101;
+    width: 3%;
+    float: right;
+    margin-right: 5%;
+    margin-top: 1.5%;
+    cursor: pointer; }
+  /* line 1549, mobile/src/sass/components/_styles-mobile.scss */
+  #hiddenMenu {
+    z-index: 100;
+    position: absolute;
+    top: 10vh;
+    right: 3%;
+    width: 10%;
+    padding: 2% 2% 2% 2%;
+    background-color: rgba(62, 69, 76, 0.6);
+    display: none; }
+  /* line 1560, mobile/src/sass/components/_styles-mobile.scss */
+  #hiddenMenu nav {
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0; }
+  /* line 1566, mobile/src/sass/components/_styles-mobile.scss */
+  #navList h1 {
+    font-size: 18px;
+    line-height: 28px;
+    color: #fff; }
+  /* line 1572, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrows {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    width: 20%;
+    margin-left: 2.5%;
+    height: 5vh;
+    float: left;
+    margin-top: 4%;
+    opacity: 1; }
+  /* line 1584, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrows {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    margin-left: 2.5%;
+    width: 20%;
+    height: 5vh;
+    float: left;
+    margin-top: 4%;
+    opacity: 1; }
+  /* line 1596, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollUpArrows h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: left;
+    margin-left: 48%;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg); }
+  /* line 1609, mobile/src/sass/components/_styles-mobile.scss */
+  .scrollDownArrows h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: right;
+    margin-right: 48%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+  /*======================================= CONTENT SWITCH ===================*/
+  /* line 1623, mobile/src/sass/components/_styles-mobile.scss */
+  .snowflakeSwitch {
+    z-index: 4;
+    width: 15%;
+    padding-top: 15%;
+    margin-right: 17%;
+    opacity: 1;
+    float: right; }
+  /* line 1632, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection .switchTitle, #causeSection .switchTitle {
+    font-size: 26px;
+    color: #2185C4;
+    text-align: center;
+    width: 50%;
+    padding-top: 3%;
+    z-index: 10;
+    opacity: 1;
+    float: right; }
+  /* line 1643, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection .hiddenContentSwitch, #causeSection .hiddenContentSwitch {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 4% 5% 2.5% 5%;
+    border-radius: 3%;
+    opacity: 1;
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: 35vh;
+    left: 5%;
+    height: 42vh;
+    width: 40%;
+    transform: translate(-5%, -2%);
+    -o-transform: translate(-5%, -2%);
+    -webkit-transform: translate(-5%, -2%);
+    -moz-transform: translate(-5%, -2%); }
+  /* line 1661, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection .scrollDownArrowsSwitch, #causeSection .scrollDownArrowsSwitch {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    width: 20%;
+    margin-right: 2.5%;
+    height: 5vh;
+    float: right;
+    margin-top: 4%;
+    opacity: 1; }
+  /* line 1673, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection .scrollUpArrowsSwitch, #causeSection .scrollUpArrowsSwitch {
+    z-index: 10;
+    background-color: rgba(33, 133, 196, 0.7);
+    border-radius: 5%;
+    margin-right: 2.5%;
+    width: 20%;
+    height: 5vh;
+    float: right;
+    margin-top: 4%;
+    opacity: 1; }
+  /* line 1685, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection .scrollUpArrowsSwitch h3, #causeSection .scrollUpArrowsSwitch h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: left;
+    margin-left: 48%;
+    transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg); }
+  /* line 1698, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection .scrollDownArrowsSwitch h3, #causeSection .scrollDownArrowsSwitch h3 {
+    font-size: 18px;
+    opacity: 1;
+    color: #fff;
+    line-height: 5vh;
+    float: right;
+    margin-right: 48%;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -o-transform: rotate(90deg); }
+  /*======================================= CONTENT STYlES ===================*/
+  /* line 1713, mobile/src/sass/components/_styles-mobile.scss */
+  .snowflakeOne {
+    z-index: 4;
+    width: 15%;
+    padding-top: 15%;
+    margin-left: 17%;
+    opacity: 1; }
+  /* line 1721, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection h1, #crisisSection h1, #productSection h1, #causeSection h1 {
+    font-size: 26px;
+    color: #2185C4;
+    text-align: center;
+    width: 50%;
+    padding-top: 3%;
+    z-index: 10;
+    opacity: 1; }
+  /* line 1731, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContent {
+    background-color: rgba(250, 250, 250, 0.7);
+    padding: 4% 5% 2.5% 5%;
+    border-radius: 3%;
+    opacity: 1;
+    position: absolute;
+    right: auto;
+    left: auto;
+    top: 35vh;
+    left: 50%;
+    height: 42vh;
+    width: 40%;
+    transform: translate(-5%, -2%);
+    -o-transform: translate(-5%, -2%);
+    -webkit-transform: translate(-5%, -2%);
+    -moz-transform: translate(-5%, -2%); }
+  /* line 1749, mobile/src/sass/components/_styles-mobile.scss */
+  .hiddenContent p {
+    color: #3E454C;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 2%; }
+  /* line 1756, mobile/src/sass/components/_styles-mobile.scss */
+  .whiteTitle {
+    color: #fff; }
+  /* line 1760, mobile/src/sass/components/_styles-mobile.scss */
+  .closeButton {
+    position: absolute;
+    top: 2.5%;
+    right: 5%;
+    z-index: 2; }
+  /* line 1767, mobile/src/sass/components/_styles-mobile.scss */
+  .closeButton h2 {
+    font-family: 'arborcrestHeavy';
+    font-size: 24px;
+    color: #2185C4;
+    cursor: pointer;
+    opacity: 0; }
+  /* line 1775, mobile/src/sass/components/_styles-mobile.scss */
+  .moreButton {
+    width: 90%;
+    height: 6vh;
+    background-color: #2185C4;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    border-radius: 3px;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 50; }
+  /* line 1788, mobile/src/sass/components/_styles-mobile.scss */
+  .moreButton h6 {
+    font-family: "josefinSemibold";
+    color: #fff;
+    line-height: 6vh;
+    text-align: center; }
+  /* line 1795, mobile/src/sass/components/_styles-mobile.scss */
+  .buyButton {
+    width: 47%;
+    height: 4vh;
+    background-color: #2185C4;
+    border-radius: 3px;
+    float: right;
+    opacity: 1;
+    cursor: pointer;
+    z-index: 50; }
+  /* line 1806, mobile/src/sass/components/_styles-mobile.scss */
+  .buyButton h6 {
+    font-size: 14px;
+    color: #fff;
+    line-height: 4vh;
+    text-align: center; }
+  /* line 1813, mobile/src/sass/components/_styles-mobile.scss */
+  .doneButton {
+    width: 100%;
+    height: 4vh;
+    background-color: #3E454C;
+    border-radius: 3px;
+    opacity: 1;
+    float: left;
+    cursor: pointer;
+    z-index: 50;
+    margin-top: 5%; }
+  /* line 1825, mobile/src/sass/components/_styles-mobile.scss */
+  .doneButton h3 {
+    font-size: 14px;
+    color: #fff;
+    line-height: 4vh;
+    text-align: center; }
+  /* line 1832, mobile/src/sass/components/_styles-mobile.scss */
+  .moreContent {
+    opacity: 0; }
+  /* line 1836, mobile/src/sass/components/_styles-mobile.scss */
+  .moreIcon {
+    width: 25%;
+    margin: 13% auto 2% auto; }
+  /* line 1841, mobile/src/sass/components/_styles-mobile.scss */
+  .productIcon {
+    width: 30%;
+    margin: 13% auto 2% auto; }
+  /* line 1846, mobile/src/sass/components/_styles-mobile.scss */
+  #productMock {
+    width: 80%;
+    margin: 13% auto 2% auto; }
+  /* line 1851, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList {
+    margin: 5% 0% 5% 0%; }
+  /* line 1855, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList li {
+    margin-bottom: 3%; }
+  /* line 1859, mobile/src/sass/components/_styles-mobile.scss */
+  .moreList p {
+    font-family: josefinSemibold, Helvetica, Arial, sans-serif;
+    color: #3E454C;
+    font-size: 18px;
+    line-height: 24px; }
+  /* line 1866, mobile/src/sass/components/_styles-mobile.scss */
+  .bullet {
+    width: 8px;
+    height: 8px;
+    background: url(../images/bulletPoint.png) center no-repeat;
+    z-index: 2;
+    display: inline-block;
+    margin-right: 1%;
+    line-height: 2px; }
+  /* line 1876, mobile/src/sass/components/_styles-mobile.scss */
+  .boldMore {
+    font-family: josefinBold, Helvetica, Arial, sans-serif;
+    font-size: 18px; }
+  /*======================================== ABOUT SECTION ===================*/
+  /* line 1883, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1890, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutSection .doneButton {
+    display: none; }
+  /* line 1894, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutCloudOne {
+    z-index: 1;
+    position: absolute;
+    width: 50%;
+    opacity: .5;
+    top: 25%;
+    left: -5%; }
+  /* line 1903, mobile/src/sass/components/_styles-mobile.scss */
+  #aboutCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    opacity: .3;
+    top: 10%;
+    left: 70%; }
+  /*========================================== CRISIS SECTION ===================*/
+  /* line 1913, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1920, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 30%; }
+  /* line 1926, mobile/src/sass/components/_styles-mobile.scss */
+  #crisisCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 20%; }
+  /*============================================ PRODUCT SECTION ===================*/
+  /* line 1934, mobile/src/sass/components/_styles-mobile.scss */
+  #productSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1941, mobile/src/sass/components/_styles-mobile.scss */
+  #productCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 30%; }
+  /* line 1947, mobile/src/sass/components/_styles-mobile.scss */
+  #productCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 25%; }
+  /*============================================ CAUSE SECTION ===================*/
+  /* line 1954, mobile/src/sass/components/_styles-mobile.scss */
+  #causeSection {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden; }
+  /* line 1961, mobile/src/sass/components/_styles-mobile.scss */
+  #causeCloudOne {
+    z-index: 3;
+    position: absolute;
+    width: 40%; }
+  /* line 1967, mobile/src/sass/components/_styles-mobile.scss */
+  #causeCloudTwo {
+    z-index: 1;
+    position: absolute;
+    width: 25%; }
+  /*=========================================== FOOTER SECTION ===================*/
+  /* line 1974, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection {
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: relative;
+    overflow: hidden; }
+  /* line 1982, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection .social {
+    z-index: 4;
+    cursor: pointer;
+    width: 6%;
+    opacity: 1;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /* line 1994, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 30px;
+    padding: 15% 0% 3% 0%;
+    opacity: 1; }
+  /* line 2002, mobile/src/sass/components/_styles-mobile.scss */
+  #footerSection h4 {
+    color: #3E454C;
+    text-align: center;
+    font-size: 24px;
+    line-height: 28px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 1; }
+  /* line 2013, mobile/src/sass/components/_styles-mobile.scss */
+  #socialMail {
+    top: 70%;
+    left: 35%; }
+  /* line 2018, mobile/src/sass/components/_styles-mobile.scss */
+  #socialTweet {
+    top: 70%;
+    left: 45%; }
+  /* line 2023, mobile/src/sass/components/_styles-mobile.scss */
+  #socialInsta {
+    top: 70%;
+    left: 55%; }
+  /* line 2028, mobile/src/sass/components/_styles-mobile.scss */
+  #socialYou {
+    top: 70%;
+    left: 65%; }
+  /* line 2033, mobile/src/sass/components/_styles-mobile.scss */
+  #arrowScrollTop {
+    z-index: 10;
+    position: absolute;
+    width: 25px;
+    left: 50%;
+    top: 90%;
+    opacity: 1;
+    transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%); }
+  /*============== COPYRIGHT =========**/
+  /* line 2048, mobile/src/sass/components/_styles-mobile.scss */
+  #copyright {
+    position: absolute;
+    bottom: 5%;
+    width: 100%; }
+  /* line 2054, mobile/src/sass/components/_styles-mobile.scss */
+  #copyright p {
+    font-size: 16px;
+    line-height: 16px;
+    color: #3E454C; }
+  /* line 2060, mobile/src/sass/components/_styles-mobile.scss */
+  #designby {
+    position: absolute;
+    left: 5%;
+    color: #3E454C; }
+  /* line 2066, mobile/src/sass/components/_styles-mobile.scss */
+  #copyrightText {
+    position: absolute;
+    right: 5%;
+    color: #3E454C; }
+  /* line 2072, mobile/src/sass/components/_styles-mobile.scss */
+  span {
+    color: #3E454C;
+    text-decoration: none; }
+  /* line 2077, mobile/src/sass/components/_styles-mobile.scss */
+  span:hover {
+    text-decoration: underline; } }
+
+/*======== CLOSE DESKTOP RESPONSIVE =========*/
+
+/*# sourceMappingURL=../../../sass */

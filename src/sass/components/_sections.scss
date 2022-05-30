@@ -1,21 +1,30 @@
-/*================================================ ABOUT SECTION ===================*/
-#aboutSection{
+.scroll-section{
 	width:100%;
-	height: 200vh;	
+	height: 200vh;
 	position: relative;
-	top:-100vh;
-	@media only screen and (max-width: $large-width-max){
-		top:-170vh;
+
+	.hiddenContent{
+		width:35%;
+ 		height: 30vh;
+ 		z-index:1;
+ 		pointer-events:none;
+ 		@media only screen and (max-width: $large-width-max){
+			height:42vh;
+		}
+	}
+	.hiddenContent-right{
+		@include transform( translate(-10%,-50%) );
+	}
+	.hiddenContent-left{
+		@include transform( translate(-90%,-50%) );
 	}
 }
 
-#aboutContent{
- 	width:35%;
- 	height: 30vh;
- 	z-index:1;
-	@include transform( translate(-10%,-50%) );
+/*================================================ ABOUT SECTION ===================*/
+#aboutSection{
+	top:-100vh;
 	@media only screen and (max-width: $large-width-max){
-		height:42vh;	
+		top:-170vh;
 	}
 }
 
@@ -54,22 +63,9 @@
 
 /*================================================ CRISIS SECTION ===================*/
 #crisisSection{
-	width:100%;
-	height: 200vh;	
-	position: relative;
 	top:-430vh;
 	@media only screen and (max-width: $large-width-max){
 		top:-600vh;
-	}
-}
-
-#crisisContent{
- 	width:35%;
- 	height: 30vh;
- 	z-index:1;
-	@include transform( translate(-90%,-50%) );
-	@media only screen and (max-width: $large-width-max){
-		height:42vh;	
 	}
 }
 
@@ -106,9 +102,6 @@
 
 /*================================================ PRODUCT SECTION ===================*/
 #productSection{
-	width:100%;
-	height: 200vh;	
-	position: relative;
 	top:-720vh;
 	z-index: 3;
 	@media only screen and (max-width: $large-width-max){
@@ -149,9 +142,6 @@
 
 /*================================================ CAUSE SECTION ===================*/
 #causeSection{
-	width:100%;
-	height: 200vh;	
-	position: relative;
 	top:-1030vh;
 	z-index: 3;
 	@media only screen and (max-width: $large-width-max){
@@ -161,13 +151,7 @@
 
 
 #causeContent{
- 	width:35%;
- 	height: 30vh;
  	z-index:3;
-	@include transform( translate(-90%,-50%) );
-	@media only screen and (max-width: $large-width-max){
-		height:42vh;
-	}
 }
 
 
